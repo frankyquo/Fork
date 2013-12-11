@@ -40,7 +40,7 @@ $this->breadcrumbs=array(
 		<form action="?r=site/login" method="post" accept-charset="utf-8" class="form uniformForm validateForm" >		
 			<div class="login_fields">
 				<div class="field">
-					<label for="email">Username or Email</label>
+					<label for="email">Username or Email Address</label>
 					<input type="text" name="email" value="" id="email" tabindex="1" placeholder="johnsmith12 or email@example.com" class="validate[required,minSize[5]]" />		
 				</div>
 				
