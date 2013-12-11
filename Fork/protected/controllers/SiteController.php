@@ -173,4 +173,8 @@ class SiteController extends Controller
 	public function actionAccess () {
 		$this->render('menuGroupAccess');
 	}
+	public function actionForgotPass () {
+		$this->layout = false;
+		$this->render('forgotPassword');
+	}
 }

@@ -22,7 +22,7 @@ class Controller extends CController
 	public $breadcrumbs=array();
 	
 	public function beforeRender($view) {
-		if(Yii::app()->user->isGuest && strcmp($view,'login')!=0) {
+		if(Yii::app()->user->isGuest && strcmp($view,'login')!=0 && strcmp($view,'forgotPassword')!=0) {
 			$this->layout = false;
 			$data = array();
 			if(strcmp($view,'login')!=0 && strcmp($view,'index')!=0)
