@@ -10,8 +10,10 @@
 	</form>
 </div-->
 
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/all.js"></script> <!-- ini yg load js-nya kan ya? -->
+
 <div class="widget-content">
-	<form class="form uniformForm validateForm">
+	<form method="post" class="form uniformForm validateForm">
 		<div class="field-group">
 			<label for="required">Group Name:</label>
 			<div class="field">
@@ -38,3 +40,6 @@
 		</div>
 	</form>
 </div>
+<script>
+	$('.btn-primary').focus();
+</script>
