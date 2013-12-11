@@ -20,6 +20,7 @@ Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
 -->
 
+
 <div id="contentHeader">
 	<h1><?php echo Yii::app()->name; ?> - Groups</h1>
 </div>
@@ -55,7 +56,7 @@ should you have any questions.</p>
 							<td><?=$group['application_name']?></td>
 							<td>
 								<button name2="<?=$group['group_id']?>" class="btn btn-gray addGroup"><span class="icon-pen"></span></button>
-								<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
+								<button name2="<?=$group['group_id']?>" class="btn btn-red"><span class="icon-trash-fill"></span></button>
 							</td>
 						</tr>
 						<?php
