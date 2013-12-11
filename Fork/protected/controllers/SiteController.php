@@ -125,17 +125,26 @@ class SiteController extends Controller
 	}
 	
 	public function actionGroups() {
-		/*
+		
 		$connection = Yii::app()->db;
-		$command = $connection->createCommand("SELECT groupname FROM group");
+		$command = $connection->createCommand("SELECT group_id, group_name, application_name FROM groups g JOIN application a ON g.application_id = a.application_id");
 		$groupList = $command->queryAll();
 		$this->render('groups',array('groupList'=>$groupList));
-		*/
-		$this->render('groups');
+		//$this->render('groups');
 	}
 	public function actionGroupPop () {
-		$this->layout = false;
-		$this->render('groupPop');
+		if(isset($_GET['id'])) {
+			$id = $_GET['id'];
+			$connection = Yii::app()->db;
+			$command = $connection->createCommand("SELECT group_id, group_name FROM groups WHERE group_id='$id'");
+			$result = $command->queryAll();
+			$this->layout = false;
+			$this->render('groupPop',array('groupData'=>$result));
+		}
+		else {
+			$this->layout = false;
+			$this->render('groupPop');
+		}
 	}
 
 	/**
@@ -164,7 +173,11 @@ class SiteController extends Controller
 		$this->render('addUser');
 	}
 	public function actionApplication () {
-		$this->render('application');
+		$connection = Yii::app()->db;
+		$command = $connection->createCommand("SELECT application_name, application_link, copyright FROM application");
+		$applicationList = $command->queryAll();
+		$this->render('application',array('applicationList'=>$applicationList));
+		//$this->render('application');
 	}
 	public function actionApplicationPop () {
 		$this->layout=false;

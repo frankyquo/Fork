@@ -30,7 +30,7 @@ should you have any questions.</p>
 					
 			<div class="widget-header">
 				<h3 class="icon chart">Group Data</h3>
-				<button id="addGroup" class="btn btn-primary btn-header">
+				<button name2="0" class="btn btn-primary btn-header addGroup">
 					<span class="icon-plus-alt"></span>Add
 				</button>				
 			</div>
@@ -46,46 +46,21 @@ should you have any questions.</p>
 						</tr>
 					</thead>
 					<tbody>
+						<?php
+							foreach($groupList as $group)
+							{
+						?>
 						<tr class="gradeA">
-							<td>User Management</td>
-							<td>Admin</td>
+							<td><?=$group['group_name']?></td>
+							<td><?=$group['application_name']?></td>
 							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
+								<button name2="<?=$group['group_id']?>" class="btn btn-gray addGroup"><span class="icon-pen"></span></button>
+								<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
 							</td>
 						</tr>
-						<tr class="gradeA">
-							<td>User Management</td>
-							<td>Group2</td>
-							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>				
-						<tr class="gradeA">
-							<td>User Management</td>
-							<td>Group3</td>
-							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>		
-						<tr class="gradeA">
-							<td>User Management</td>
-							<td>Group4</td>
-							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>		
-						<tr class="gradeA">
-							<td>User Management</td>
-							<td>Group5</td>
-							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>												
+						<?php
+							}
+						?>											
 					</tbody>
 				</table>
 			</div> <!-- .widget-content -->
@@ -97,14 +72,17 @@ should you have any questions.</p>
 <script>
 $(function () {
 	
-	$('#addGroup').live ('click', function (e) {
+	$('.addGroup').live ('click', function (e) {
+		$id = $(this).attr('name2');
+		$url = '<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/groupPop';
+		$id=='0' ? $url+='' : $url+='&id='+$id;
 		e.preventDefault ();
 		$.ajax({
-			url:'<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/groupPop',
+			url:$url,
 			type:'get',
 			success: function(data) {
 				$.modal({
-					title:'Add Group',
+					title: $id=='0'?'Add Group':'Edit Group',
 					html:data
 				});
 			}

@@ -23,7 +23,6 @@ should you have any questions.</p>
 <div id="contentHeader">
 	<h1><?php echo Yii::app()->name; ?> - Forks</h1>
 </div>
-
 <div class="container">
 	<div class="row">
 		<div class="grid-24">				
@@ -38,42 +37,27 @@ should you have any questions.</p>
 							<tr>
 								<th>Application Name</th>
 								<th>Application Link</th>
+								<th>Copyright</th>
 								<th>Modify</th>
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+								foreach($applicationList as $application)
+								{
+							?>
 							<tr class="gradeA">
-								<td>Menu Management</td>
-								<td>?r=menu</td>
+								<td><?=$application['application_name']?></td>
+								<td><?=$application['application_link']?></td>
+								<td><?=$application['copyright']?></td>
 								<td>
 									<button class="btn btn-gray"><span class="icon-pen"></span></button>
 									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
 								</td>
 							</tr>
-							<tr class="gradeA">
-								<td>User Management</td>
-								<td>?r=user</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Forks</td>
-								<td>?r=fork</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Application 4</td>
-								<td>?r=app4</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Application 5</td>
-								<td>?r=app5</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>													
+							<?php
+								}
+							?>
 						</tbody>
 					</table>
 				</div>
@@ -88,7 +72,7 @@ $(function () {
 		e.preventDefault ();
 		
 		$.ajax({
-			url: '<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/applicationPop',
+			url: '<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/applicationPop&id='+$(this).attr('name2'),
 			type:'get',
 			success: function(data){
 				$.modal({
