@@ -1,0 +1,1552 @@
+2013/11/23 14:34:48 [error] [php] Undefined variable: model (D:\xampp\htdocs\New1\protected\views\site\login.php:28)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\New1\protected\components\Controller.php(26): SiteController->renderPartial()
+#2 D:\xampp\htdocs\framework\web\CController.php(780): SiteController->beforeRender()
+#3 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(32): SiteController->render()
+#4 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#5 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#7 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#9 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/
+in D:\xampp\htdocs\New1\protected\views\site\login.php (28)
+in D:\xampp\htdocs\New1\protected\components\Controller.php (26)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (32)
+2013/11/23 14:36:29 [error] [php] Undefined variable: model (D:\xampp\htdocs\New1\protected\views\site\login.php:28)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\New1\protected\components\Controller.php(27): SiteController->renderPartial()
+#2 D:\xampp\htdocs\framework\web\CController.php(780): SiteController->beforeRender()
+#3 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(32): SiteController->render()
+#4 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#5 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#7 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#9 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/
+in D:\xampp\htdocs\New1\protected\views\site\login.php (28)
+in D:\xampp\htdocs\New1\protected\components\Controller.php (27)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (32)
+2013/11/23 14:36:32 [error] [php] Undefined variable: model (D:\xampp\htdocs\New1\protected\views\site\login.php:28)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\New1\protected\components\Controller.php(27): SiteController->renderPartial()
+#2 D:\xampp\htdocs\framework\web\CController.php(780): SiteController->beforeRender()
+#3 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(32): SiteController->render()
+#4 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#5 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#7 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#9 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/
+in D:\xampp\htdocs\New1\protected\views\site\login.php (28)
+in D:\xampp\htdocs\New1\protected\components\Controller.php (27)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (32)
+2013/11/23 14:38:37 [error] [php] Undefined variable: model (D:\xampp\htdocs\New1\protected\views\site\login.php:28)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\xampp\htdocs\New1\protected\components\Controller.php(26): SiteController->render()
+#3 D:\xampp\htdocs\framework\web\CController.php(780): SiteController->beforeRender()
+#4 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(32): SiteController->render()
+#5 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#6 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#8 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#10 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/
+in D:\xampp\htdocs\New1\protected\views\site\login.php (28)
+in D:\xampp\htdocs\New1\protected\components\Controller.php (26)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (32)
+2013/11/23 14:39:42 [error] [php] Undefined variable: model (D:\xampp\htdocs\New1\protected\views\site\login.php:28)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\xampp\htdocs\New1\protected\components\Controller.php(27): SiteController->render()
+#3 D:\xampp\htdocs\framework\web\CController.php(780): SiteController->beforeRender()
+#4 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(32): SiteController->render()
+#5 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#6 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#8 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#10 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/
+in D:\xampp\htdocs\New1\protected\views\site\login.php (28)
+in D:\xampp\htdocs\New1\protected\components\Controller.php (27)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (32)
+2013/11/25 07:37:28 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.rememberMe" is not defined.' in D:\xampp\htdocs\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\helpers\CHtml.php(2529): CComponent->__get('rememberMe')
+#1 D:\xampp\htdocs\framework\web\helpers\CHtml.php(1743): CHtml::resolveValue(Object(LoginForm), 'rememberMe')
+#2 D:\xampp\htdocs\framework\web\widgets\CActiveForm.php(831): CHtml::activeCheckBox(Object(LoginForm), 'rememberMe', Array)
+#3 D:\xampp\htdocs\New1\protected\views\site\login.php(95): CActiveForm->checkBox(Object(LoginForm), 'rememberMe')
+#4 D:\xampp\htdocs\framework\web\CBaseController.php(126): require('D:\xampp\htdocs...')
+#5 D:\xampp\htdocs\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#6 D:\xampp\htdocs\framework\web\CController.php(869): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#7 D:\xampp\htdocs\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#8 D:\xampp\htdocs\New1\protected\components\Controller.php(27): CController->render('login', Array)
+#9 D:\xampp\htdocs\framework\web\CController.php(780): Controller->beforeRender('index')
+#10 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(32): CController->render('index')
+#11 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('')
+#16 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/New1/
+---
+2013/11/25 08:10:54 [error] [php] Object of class SiteController could not be converted to string (D:\xampp\htdocs\New1\protected\controllers\SiteController.php:106)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (106)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:15:12 [error] [php] Undefined index: email (D:\xampp\htdocs\New1\protected\controllers\SiteController.php:105)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (105)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:16:02 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:16:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:16:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/
+---
+2013/11/25 08:18:47 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:18:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 26 file is encrypted or is not a database. The SQL statement executed was: SELECT * FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:18:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 26 file is encrypted or is not a database. The SQL statement executed was: SELECT * FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/
+---
+2013/11/25 08:22:39 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:22:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:22:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/
+---
+2013/11/25 08:22:43 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:22:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:22:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/
+---
+2013/11/25 08:23:58 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (112)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:23:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (112)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:23:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(112): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/
+---
+2013/11/25 08:24:59 [error] [php] Undefined variable: view (D:\xampp\htdocs\New1\protected\controllers\SiteController.php:37)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (37)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:25:52 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:25:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:25:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/
+---
+2013/11/25 08:27:10 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:27:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:27:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/
+---
+2013/11/25 08:27:14 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT * FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:27:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:27:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT * FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/?r=site/login
+---
+2013/11/25 08:33:05 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT username, password FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:33:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT username, password FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:33:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: MsUser. The SQL statement executed was: SELECT username, password FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/?r=site/login
+---
+2013/11/25 08:33:47 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT username, password FROM MsUser
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:33:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: username. The SQL statement executed was: SELECT username, password FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 08:33:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: username. The SQL statement executed was: SELECT username, password FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/?r=site/login
+---
+2013/11/25 08:34:41 [error] [exception.CException] exception 'CException' with message 'Property "SiteController._identity" is not defined.' in D:\xampp\htdocs\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(108): CComponent->__get('_identity')
+#1 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#6 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#7 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/?r=site/login
+---
+2013/11/25 09:14:24 [error] [php] Array to string conversion (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (30)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:14:45 [error] [php] Array to string conversion (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#1 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#3 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (30)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:16:39 [error] [php] Array to string conversion (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#1 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#3 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#5 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (29)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:23:00 [error] [php] Undefined variable: array (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:28)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (28)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:23:13 [error] [php] Array to string conversion (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:32)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (32)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:23:43 [error] [php] Array to string conversion (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:34)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (34)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:24:38 [error] [php] Undefined variable: _value (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:34)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (34)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:34:23 [error] [php] Undefined variable: testing (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:40)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (40)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:39:03 [error] [php] Array to string conversion (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:47)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (47)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:43:32 [error] [php] Undefined offset: 0 (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:40)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (40)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:44:01 [error] [php] Undefined offset: 1 (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:40)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (40)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:46:29 [error] [php] Array to string conversion (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:48)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (48)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 09:49:38 [error] [php] Undefined index: hello (D:\xampp\htdocs\New1\protected\components\UserIdentity.php:40)
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\New1\index.php(13): CWebApplication->run()
+REQUEST_URI=/New1/?r=site/login
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (40)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/25 13:07:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('about')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('about')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/New1/index.php?r=site/about
+---
+2013/11/27 13:39:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in D:\xampp\htdocs\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\xampp\htdocs\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\xampp\htdocs\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\xampp\htdocs\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 D:\xampp\htdocs\framework\web\CFormModel.php(39): CrudCode->init()
+#6 D:\xampp\htdocs\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\xampp\htdocs\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('index')
+#13 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#14 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/New1/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/New1/index.php?r=gii/default/index
+---
+2013/11/27 14:00:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'new1'' in D:\xampp\htdocs\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\xampp\htdocs\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\xampp\htdocs\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\xampp\htdocs\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 D:\xampp\htdocs\framework\web\CFormModel.php(39): CrudCode->init()
+#6 D:\xampp\htdocs\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\xampp\htdocs\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('index')
+#13 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#14 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/New1/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/New1/index.php?r=gii/module/index
+---
+2013/11/27 15:15:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new1.msuser' doesn't exist. The SQL statement executed was: SELECT email, password FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/27 15:15:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new1.msuser' doesn't exist. The SQL statement executed was: SELECT email, password FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/index.php?r=site/login
+HTTP_REFERER=http://localhost/New1/index.php?user/index
+---
+2013/11/27 15:18:46 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "login".' in D:\xampp\htdocs\framework\web\CController.php:878
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#1 D:\xampp\htdocs\New1\protected\components\Controller.php(30): CController->render('login', Array)
+#2 D:\xampp\htdocs\framework\web\CController.php(780): Controller->beforeRender('index')
+#3 D:\xampp\htdocs\New1\protected\controllers\UserController.php(7): CController->render('index')
+#4 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#5 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('index')
+#9 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#10 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/New1/?r=user/index
+---
+2013/11/27 15:19:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new1.msuser' doesn't exist. The SQL statement executed was: SELECT email, password FROM MsUser.
+in D:\xampp\htdocs\New1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\New1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\New1\index.php (13)
+2013/11/27 15:19:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new1.msuser' doesn't exist. The SQL statement executed was: SELECT email, password FROM MsUser' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\New1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\New1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\New1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/New1/?r=site/login
+HTTP_REFERER=http://localhost/New1/
+---
+2013/12/08 10:38:44 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "getErrorMessage".' in D:\xampp\htdocs\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\Fork1\protected\views\site\login.php(55): CComponent->__call('getErrorMessage', Array)
+#1 D:\xampp\htdocs\Fork1\protected\views\site\login.php(55): CWebUser->getErrorMessage(1)
+#2 D:\xampp\htdocs\framework\web\CBaseController.php(126): require('D:\xampp\htdocs...')
+#3 D:\xampp\htdocs\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#4 D:\xampp\htdocs\framework\web\CController.php(869): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#5 D:\xampp\htdocs\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#6 D:\xampp\htdocs\Fork1\protected\controllers\SiteController.php(117): CController->render('login', Array)
+#7 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#12 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Fork1/index.php?r=site/login
+HTTP_REFERER=http://localhost/Fork1/index.php
+---
+2013/12/08 11:57:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new1.users' doesn't exist. The SQL statement executed was: SELECT username, email, password, hash FROM users.
+in D:\xampp\htdocs\Fork1\protected\components\UserIdentity.php (22)
+in D:\xampp\htdocs\Fork1\protected\controllers\SiteController.php (107)
+in D:\xampp\htdocs\Fork1\index.php (13)
+2013/12/08 11:57:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new1.users' doesn't exist. The SQL statement executed was: SELECT username, email, password, hash FROM users' in D:\xampp\htdocs\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\xampp\htdocs\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\Fork1\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\Fork1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Fork1/index.php?r=site/login
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/login
+---
+2013/12/08 12:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('menu')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('menu')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/menu
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/index
+---
+2013/12/08 12:59:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "groups".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('groups')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('groups')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groups')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/groups
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/menu
+---
+2013/12/08 12:59:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "access".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('access')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('access')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/access')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/access
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/groups
+---
+2013/12/08 12:59:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/access
+---
+2013/12/08 13:00:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/access
+---
+2013/12/08 13:00:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/index
+---
+2013/12/08 13:00:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/index
+---
+2013/12/08 13:01:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/index
+---
+2013/12/08 13:20:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('menu')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('menu')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/menu
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/index
+---
+2013/12/08 13:20:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/menu
+---
+2013/12/08 13:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "access".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('access')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('access')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/access')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/access
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/users
+---
+2013/12/08 13:20:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\xampp\htdocs\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork1/index.php?r=site/index
+---
+2013/12/09 09:46:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in D:\FR\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\FR\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\FR\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\FR\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\FR\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\FR\Fork1\protected\components\UserIdentity.php(20): CModule->__get('db')
+#5 D:\FR\Fork1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#6 D:\FR\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\FR\framework\web\CWebApplication.php(282): CController->run('login')
+#11 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\FR\Fork1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/FR/Fork1/?r=site/login
+HTTP_REFERER=http://localhost:8088/FR/Fork1/
+---
+2013/12/09 09:57:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in D:\FR\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\FR\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\FR\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\FR\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\FR\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\FR\Fork1\protected\components\UserIdentity.php(20): CModule->__get('db')
+#5 D:\FR\Fork1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#6 D:\FR\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\FR\framework\web\CWebApplication.php(282): CController->run('login')
+#11 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\FR\Fork1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/FR/Fork1/?r=site/login
+HTTP_REFERER=http://localhost:8088/FR/Fork1/
+---
+2013/12/09 10:02:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/index
+---
+2013/12/09 10:02:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('menu')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('menu')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/menu
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/users
+---
+2013/12/09 10:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('menu')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('menu')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/menu
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/menu
+---
+2013/12/09 10:02:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('menu')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('menu')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/menu
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/menu
+---
+2013/12/09 10:02:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/menu
+---
+2013/12/09 10:03:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('menu')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('menu')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/menu
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/users
+---
+2013/12/09 10:03:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/menu
+---
+2013/12/09 10:03:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "access".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('access')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('access')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/access')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/access
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/users
+---
+2013/12/09 10:03:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "groups".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('groups')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('groups')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groups')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/groups
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/access
+---
+2013/12/09 10:04:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/groups
+---
+2013/12/09 10:07:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/groups
+---
+2013/12/09 10:07:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/groups
+---
+2013/12/09 10:07:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('users')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('users')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/groups
+---
+2013/12/09 10:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pages/about".' in D:\FR\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/about')
+#1 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\FR\Fork1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=pages/about
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/users
+---
+2013/12/09 10:37:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "locations".' in D:\FR\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR\framework\web\CController.php(270): CController->missingAction('locations')
+#1 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#2 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#3 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=site/index
+---
+2013/12/09 10:38:14 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "location".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('location', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('location')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:34 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:35 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:35 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:35 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:35 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:49 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:50 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:50 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:50 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+HTTP_REFERER=http://localhost:8088/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:38:51 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "locations".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('locations', NULL, true)
+#1 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#2 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#3 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#7 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#8 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 10:49:24 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "login".' in D:\FR\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#1 D:\FR\Fork1\protected\components\Controller.php(30): CController->render('login', Array)
+#2 D:\FR\framework\web\CController.php(780): Controller->beforeRender('locations')
+#3 D:\FR\Fork1\protected\controllers\ForkController.php(9): CController->render('locations')
+#4 D:\FR\framework\web\actions\CInlineAction.php(49): ForkController->actionLocations()
+#5 D:\FR\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\FR\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\FR\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\FR\framework\web\CWebApplication.php(282): CController->run('locations')
+#9 D:\FR\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locations')
+#10 D:\FR\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\FR\Fork1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/FR/Fork1/index.php?r=fork/locations
+---
+2013/12/09 11:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pages".' in D:\FR(Fork)\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR(Fork)\framework\web\CController.php(270): CController->missingAction('pages')
+#1 D:\FR(Fork)\framework\web\CWebApplication.php(282): CController->run('pages')
+#2 D:\FR(Fork)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/pages')
+#3 D:\FR(Fork)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR(Fork)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR(Fork)/Fork1/index.php?r=site/pages&view=modal
+HTTP_REFERER=http://localhost:8088/FR(Fork)/Fork1/index.php?r=fork/locations
+---
+2013/12/09 11:51:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "modal".' in D:\FR(Fork)\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR(Fork)\framework\web\CController.php(270): CController->missingAction('modal')
+#1 D:\FR(Fork)\framework\web\CWebApplication.php(282): CController->run('modal')
+#2 D:\FR(Fork)\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/modal')
+#3 D:\FR(Fork)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR(Fork)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR(Fork)/Fork1/index.php?r=fork/modal
+HTTP_REFERER=http://localhost:8088/FR(Fork)/Fork1/index.php?r=fork/locations
+---
+2013/12/09 12:13:51 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "modal".' in D:\FR(Fork)\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR(Fork)\framework\web\CController.php(782): CController->renderPartial('modal', NULL, true)
+#1 D:\FR(Fork)\Fork1\protected\controllers\ForkController.php(17): CController->render('modal')
+#2 D:\FR(Fork)\framework\web\actions\CInlineAction.php(49): ForkController->actionLocationPop()
+#3 D:\FR(Fork)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR(Fork)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR(Fork)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR(Fork)\framework\web\CWebApplication.php(282): CController->run('locationPop')
+#7 D:\FR(Fork)\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locationPo...')
+#8 D:\FR(Fork)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR(Fork)\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR(Fork)/Fork1/index.php?r=fork/locationPop
+HTTP_REFERER=http://localhost:8088/FR(Fork)/Fork1/index.php?r=fork/locations
+---
+2013/12/09 12:13:57 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "modal".' in D:\FR(Fork)\framework\web\CController.php:878
+Stack trace:
+#0 D:\FR(Fork)\framework\web\CController.php(782): CController->renderPartial('modal', NULL, true)
+#1 D:\FR(Fork)\Fork1\protected\controllers\ForkController.php(17): CController->render('modal')
+#2 D:\FR(Fork)\framework\web\actions\CInlineAction.php(49): ForkController->actionLocationPop()
+#3 D:\FR(Fork)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\FR(Fork)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\FR(Fork)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\FR(Fork)\framework\web\CWebApplication.php(282): CController->run('locationPop')
+#7 D:\FR(Fork)\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/locationPo...')
+#8 D:\FR(Fork)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\FR(Fork)\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FR(Fork)/Fork1/index.php?r=fork/locationPop
+HTTP_REFERER=http://localhost:8088/FR(Fork)/Fork1/index.php?r=fork/locations
+---
+2013/12/09 12:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "foodCategory".' in D:\FR(Fork)\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR(Fork)\framework\web\CController.php(270): CController->missingAction('foodCategory')
+#1 D:\FR(Fork)\framework\web\CWebApplication.php(282): CController->run('foodCategory')
+#2 D:\FR(Fork)\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/foodCatego...')
+#3 D:\FR(Fork)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR(Fork)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR(Fork)/Fork1/index.php?r=fork/foodCategory
+HTTP_REFERER=http://localhost:8088/FR(Fork)/Fork1/index.php?r=fork/restaurant
+---
+2013/12/09 12:30:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "foodCategoryPop".' in D:\FR(Fork)\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR(Fork)\framework\web\CController.php(270): CController->missingAction('foodCategoryPop')
+#1 D:\FR(Fork)\framework\web\CWebApplication.php(282): CController->run('foodCategoryPop')
+#2 D:\FR(Fork)\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/foodCatego...')
+#3 D:\FR(Fork)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR(Fork)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR(Fork)/Fork1/index.php?r=fork/foodCategoryPop
+HTTP_REFERER=http://localhost:8088/FR(Fork)/Fork1/index.php?r=fork/foodCategory
+---
+2013/12/09 12:30:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "foodCategoryPop".' in D:\FR(Fork)\framework\web\CController.php:483
+Stack trace:
+#0 D:\FR(Fork)\framework\web\CController.php(270): CController->missingAction('foodCategoryPop')
+#1 D:\FR(Fork)\framework\web\CWebApplication.php(282): CController->run('foodCategoryPop')
+#2 D:\FR(Fork)\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/foodCatego...')
+#3 D:\FR(Fork)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\FR(Fork)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FR(Fork)/Fork1/index.php?r=fork/foodCategoryPop
+HTTP_REFERER=http://localhost:8088/FR(Fork)/Fork1/index.php?r=fork/foodCategory
+---
+2013/12/09 15:50:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'prk'@'localhost' (using password: YES)' in C:\xampp\htdocs\Fork (FR JK)\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\components\UserIdentity.php(20): CModule->__get('db')
+#5 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#6 C:\xampp\htdocs\Fork (FR JK)\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/?r=site/login
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/
+---
+2013/12/09 22:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "groupUsers".' in C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(270): CController->missingAction('groupUsers')
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('groupUsers')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupUsers')
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/groupUsers
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/?r=site/index
+---
+2013/12/09 22:53:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "groupUsers".' in C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(270): CController->missingAction('groupUsers')
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('groupUsers')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupUsers')
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/groupUsers
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/?r=site/index
+---
+2013/12/09 22:53:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "groupUsers".' in C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(270): CController->missingAction('groupUsers')
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('groupUsers')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupUsers')
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/groupUsers
+---
+2013/12/09 22:53:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(270): CController->missingAction('users')
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('users')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/groupUsers
+---
+2013/12/09 22:53:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "groupUsers".' in C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(270): CController->missingAction('groupUsers')
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('groupUsers')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupUsers')
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/groupUsers
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/users
+---
+2013/12/09 23:19:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu".' in C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(270): CController->missingAction('menu')
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('menu')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu')
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/menu
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?cardtype=Fork&cardtype=Admin
+---
+2013/12/10 00:04:35 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "layout".' in C:\xampp\htdocs\Fork (FR JK)\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): CComponent->__call('layout', Array)
+#1 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): SiteController->layout('false')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\actions\CInlineAction.php(49): SiteController->actionMenuPop()
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('menuPop')
+#7 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menuPop')
+#8 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/menuPop
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/menu
+---
+2013/12/10 00:04:37 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "layout".' in C:\xampp\htdocs\Fork (FR JK)\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): CComponent->__call('layout', Array)
+#1 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): SiteController->layout('false')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\actions\CInlineAction.php(49): SiteController->actionMenuPop()
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('menuPop')
+#7 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menuPop')
+#8 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/menuPop
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/menu
+---
+2013/12/10 00:04:38 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "layout".' in C:\xampp\htdocs\Fork (FR JK)\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): CComponent->__call('layout', Array)
+#1 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): SiteController->layout('false')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\actions\CInlineAction.php(49): SiteController->actionMenuPop()
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('menuPop')
+#7 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menuPop')
+#8 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/menuPop
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/menu
+---
+2013/12/10 00:04:38 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "layout".' in C:\xampp\htdocs\Fork (FR JK)\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): CComponent->__call('layout', Array)
+#1 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): SiteController->layout('false')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\actions\CInlineAction.php(49): SiteController->actionMenuPop()
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('menuPop')
+#7 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menuPop')
+#8 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/menuPop
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/menu
+---
+2013/12/10 00:04:43 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "layout".' in C:\xampp\htdocs\Fork (FR JK)\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): CComponent->__call('layout', Array)
+#1 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(157): SiteController->layout('false')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\actions\CInlineAction.php(49): SiteController->actionMenuPop()
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('menuPop')
+#7 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menuPop')
+#8 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/menuPop
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/menu
+---
+2013/12/10 00:33:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "users".' in C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(270): CController->missingAction('users')
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('users')
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/menu
+---
+2013/12/10 12:47:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\xampp\htdocs\Fork (FR JK)\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\Fork (FR JK)\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\Fork (FR JK)\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\Fork (FR JK)\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\Fork (FR JK)\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\components\UserIdentity.php(20): CModule->__get('db')
+#5 C:\xampp\htdocs\Fork (FR JK)\Fork1\protected\controllers\SiteController.php(107): UserIdentity->authenticate()
+#6 C:\xampp\htdocs\Fork (FR JK)\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\Fork (FR JK)\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\Fork (FR JK)\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\Fork (FR JK)\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\Fork (FR JK)\Fork1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Fork%20(FR%20JK)/Fork1/index.php?r=site/login
+HTTP_REFERER=http://localhost/Fork%20(FR%20JK)/Fork1/index.php?r=site/menu
+---
