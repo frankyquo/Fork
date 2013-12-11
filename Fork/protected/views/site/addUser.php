@@ -28,20 +28,41 @@ should you have any questions.</p>
 	<div class="grid-24">				
 		<div class="widget">
 			<div class="widget-header">
-				<h3>Add Promotion</h3>
+				<h3><?php
+				$data = null;
+				if(!isset($_GET['id'])||$_GET['id']<1)
+					echo "Add User";
+				else
+				{
+					echo "Edit User";
+					$id = $_GET['id'];
+					$connection = Yii::app()->db;
+					$command = $connection->createCommand("SELECT user_id, username, email, gender, age, location_name FROM users u JOIN location l ON u.location_id = l.location_id WHERE u.stsrc=1 AND l.stsrc=1 AND user_id='$id'");
+					$userList = $command->queryAll();
+					$data = $userList[0];
+				}
+				?></h3>
 			</div>
 			<div class="widget-content">
-				<form class="form uniformForm validateForm">
+				<form action="?r=site/addUser" method="post" class="form uniformForm validateForm">
+				<?php
+					if($data!=null)
+					{
+				?>
+				<input type="hidden" name="uid" id="uid" value="<?=$data['user_id']?>" />
+				<?php
+					}
+				?>
 					<div class="field-group">
-						<label for="name">Username:</label>
+						<label for="uname">Username:</label>
 						<div class="field">
-							<input type="text" name="name" id="name" size="20" class="validate[required,minSize[5]]" />	
+							<input type="text" name="uname" id="uname" size="20" class="validate[required,minSize[5]]" <?php if($data!=null) echo "value=\"".$data['username']."\""?> />	
 						</div>
 					</div>
 					<div class="field-group">
-						<label for="name">Email:</label>
+						<label for="email">Email:</label>
 						<div class="field">
-							<input type="text" name="name" id="name" size="20" class="validate[required,minSize[5],custom[email]]" />	
+							<input type="text" name="email" id="email" size="20" class="validate[required,minSize[5],custom[email]]" <?php if($data!=null) echo "value=\"".$data['email']."\""?> />	
 						</div>
 					</div>
 					<div class="field-group">
@@ -57,46 +78,48 @@ should you have any questions.</p>
 							<input type="password" name="password2" id="password2" size="25" class="validate[required,equals[password1]]" value="">	
 						</div>
 					</div>
-					<div class="field-group inlineField">
-						<label for="datepicker">Password:</label>
-						<div class="field">
-							<input type="text" name="datepicker" id="datepicker" class="hasDatepicker">
-						</div>
-					</div>
-					<div class="field-group inlineField">
-						<label for="datepicker2">Confirm Password:</label>
-						<div class="field">
-							<input type="text" name="datepicker2" id="datepicker2" class="hasDatepicker">
-						</div>
-					</div>
 					<div class="field-group control-group inline">	
 						<label>Gender:</label>	
 		
 						<div class="field">
-							<div class="radio" id="uniform-radio1"><span><input type="radio" name="radio" id="radio1" value="1" class="validate[required]" style="opacity: 0;"></span></div>
+							<div class="radio" id="uniform-radio1"><span><input type="radio" name="gender" id="radio1" value="1" class="validate[required]" style="opacity: 0;" <?php if($data!=null && $data['gender']==1) echo "checked=\"checked\""?> /></span></div>
 							<label for="radio1">Male</label>
 						</div>
 		
 						<div class="field">
-							<div class="radio" id="uniform-radio2"><span><input type="radio" name="radio" id="radio2" value="2" class="validate[required]" style="opacity: 0;"></span></div>
+							<div class="radio" id="uniform-radio2"><span><input type="radio" name="gender" id="radio2" value="2" class="validate[required]" style="opacity: 0;" <?php if($data!=null && $data['gender']==2) echo "checked=\"checked\""?> /></span></div>
 							<label for="radio2">Female</label>
 						</div>
 					</div>
 					<div class="field-group inlineField">
-						<label for="datepicker2">Age:</label>
+						<label for="age">Age:</label>
 						<div class="field">
-							<input type="text" name="name" id="name" size="20" class="validate[required]" />	
+							<input type="text" name="age" id="age" size="8" class="validate[required,min[16],max[100]]" <?php if($data!=null) echo "value=\"".$data['age']."\""?> />
 						</div>
 					</div>
 					<div class="field-group">
-						<label for="required">Location:</label>
+						<label for="location">Location:</label>
 						<div class="field">
-							<select name="cardtype" id="cardtype">
-								<option>Jakarta</option>
-								<option>Surabaya</option>
+							<select name="location" id="location">
+								<?php
+									foreach($locationList as $location) {
+								?>
+								<option value="<?=$location['location_id']?>" <?php if($data!=null && $data['location_name']==$location['location_name']) echo "selected=\"selected\""; ?> ><?=$location['location_name']?></option>
+								<?php
+									}
+								?>
 							</select>
 						</div>	
 					</div>
+					<?php
+						if(isset($error)) {
+						?>
+					<div class="field">
+						<span class="ticket ticket-important"><?=UserData::getErrorMessage($error)?><?=$error?></span>
+					</div>
+					<?php
+						}
+					?>
 					<div class="actions">						
 						<button type="submit" class="btn btn-primary">Submit</button>
 						<button type="reset" class="btn btn-error">Reset</button>
