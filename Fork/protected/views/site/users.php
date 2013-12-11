@@ -23,6 +23,19 @@ should you have any questions.</p>
 <div id="contentHeader">
 	<h1><?php echo Yii::app()->name; ?> - Index</h1>
 </div>
+<?php
+	if(isset($success)&&$success==1) {
+		?>
+		<script>
+			$.alert ({ 
+				type: 'ok'
+				, title: '<?=$success=='1'?'Insert Success':'Update Success'?>'
+				, callback: function () { }	
+			});	
+		</script>
+		<?php
+	}
+?>
 
 <div class="container">
 	<div class="grid-24">
@@ -50,66 +63,25 @@ should you have any questions.</p>
 						</tr>
 					</thead>
 					<tbody>
+						<?php
+							foreach($userList as $user)
+							{
+						?>
 						<tr class="gradeA">
-							<td>admin1</td>
-							<td>admin@fork.com</td>
+							<td><?=$user['username']?></td>
+							<td><?=$user['email']?></td>
 							<td>********</td>
-							<td>Male</td>
-							<td>20</td>
-							<td>Jakarta</td>
+							<td><?php if($user['gender']==1) echo "Male"; else echo "Female";?></td>
+							<td><?=$user['age']?></td>
+							<td><?=$user['location_name']?></td>
 							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
+								<a href="?r=site/addUser&id=<?=$user['user_id']?>"><button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button></a>
 								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
 							</td>
 						</tr>
-						<tr class="gradeA">
-							<td>admin5</td>
-							<td>admin5@fork.com</td>
-							<td>********</td>
-							<td>Male</td>
-							<td>20</td>
-							<td>Jakarta</td>
-							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>				
-						<tr class="gradeA">
-							<td>admin4</td>
-							<td>admin4@fork.com</td>
-							<td>********</td>
-							<td>Male</td>
-							<td>20</td>
-							<td>Jakarta</td>
-							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>		
-						<tr class="gradeA">
-							<td>admin3</td>
-							<td>admin3@fork.com</td>
-							<td>********</td>
-							<td>Male</td>
-							<td>20</td>
-							<td>Jakarta</td>
-							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>		
-						<tr class="gradeA">
-							<td>admin2</td>
-							<td>admin2@fork.com</td>
-							<td>********</td>
-							<td>Male</td>
-							<td>20</td>
-							<td>Jakarta</td>
-							<td>
-								<button id="editGroup" class="btn btn-gray"><span class="icon-pen"></span></button>
-								<button id="deleteGroup" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>												
+						<?php
+							}
+						?>
 					</tbody>
 				</table>
 			</div> <!-- .widget-content -->
