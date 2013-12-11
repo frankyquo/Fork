@@ -27,7 +27,7 @@ should you have any questions.</p>
 <div class="container">
 	<div class="row">
 		<div class="grid-24">				
-			<div class="widget widget-table">
+			<div class="widget">
 				<div class="widget-header">
 					<h3>Add Provider</h3>
 				</div>
