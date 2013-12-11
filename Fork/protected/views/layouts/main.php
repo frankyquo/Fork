@@ -29,9 +29,6 @@
 
 <body>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/all.js"></script>
-<script>
-	
-</script>
 <div id="wrapper">
 	
 	<div id="header">
