@@ -24,6 +24,30 @@ should you have any questions.</p>
 <div id="contentHeader">
 	<h1><?php echo Yii::app()->name; ?> - Groups</h1>
 </div>
+<?php
+	if($success==1||$success==2) {
+		?>
+		<script>
+			$.alert ({ 
+				type: 'ok'
+				, title: '<?=$success=='1'?'Insert Success':'Update Success'?>'
+				, callback: function () { }	
+			});	
+		</script>
+		<?php
+	}
+	else if($success==-1||$success==-2) {
+		?>
+		<script>
+			$.alert ({ 
+				type: 'ok'
+				, title: '<?=$success=='-1'?'Insert Failed':'Update Failed'?>'
+				, callback: function () { }	
+			});	
+		</script>
+		<?php
+	}
+?>
 
 <div class="container">
 	<div class="grid-24">
@@ -37,7 +61,6 @@ should you have any questions.</p>
 			</div>
 		
 			<div class="widget-content">
-				
 				<table class="table table-bordered table-striped data-table">
 					<thead>
 						<tr>
