@@ -53,13 +53,22 @@ return array(
 		),*/
 		// uncomment the following to use a MySQL database
 		
+		//*
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=test',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
-		),
+		),//*/
+		/*
+		'db'=>array(
+			'connectionString' => 'mysql:host=localhost;dbname=prk',
+			'emulatePrepare' => true,
+			'username' => 'prk',
+			'password' => 'prk',
+			'charset' => 'utf8',
+		),//*/
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
