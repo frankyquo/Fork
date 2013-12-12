@@ -71,6 +71,7 @@
 				<a href="javascript:;">Forks</a>
 				<ul class="subNav">
 					<li><a href="index.php?r=fork/locations">Location</a></li>
+					<li><a href="index.php?r=fork/food">Food</a></li>
 					<li><a href="index.php?r=fork/provider">Provider</a></li>
 					<li><a href="index.php?r=fork/restaurant">Restaurant</a></li>
 					<li><a href="index.php?r=fork/restaurantPromo">Restaurant Promo</a></li>
@@ -88,7 +89,7 @@
 	<div id="topNav">
 		 <ul>
 		 	<li>
-		 		<a href="#menuProfile" class="menu"><?php echo "username"; ?></a>
+		 		<a href="#menuProfile" class="menu"><?php echo Yii::app()->user->name; ?></a>
 		 		
 		 		<div id="menuProfile" class="menu-container menu-dropdown">
 					<div class="menu-content">
