@@ -49,6 +49,7 @@ class SiteController extends Controller
 	/**
 	 * Displays the contact page
 	 */
+	/*
 	public function actionContact()
 	{
 		$model=new ContactForm;
@@ -70,34 +71,13 @@ class SiteController extends Controller
 			}
 		}
 		$this->render('contact',array('model'=>$model));
-	}
+	}*/
 
 	/**
 	 * Displays the login page
 	 */
 	public function actionLogin()
 	{
-		/*
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-		*/
 		if(!Yii::app()->user->isGuest) {
 			$this->redirect("?r=site/index");
 		}
@@ -124,8 +104,145 @@ class SiteController extends Controller
 		}
 	}
 	
-	public function actionGroups() {
-		
+	public function actionApplication ()
+	{
+		$connection = Yii::app()->db;
+		$command = $connection->createCommand("SELECT application_id, application_name, application_link, copyright FROM application WHERE stsrc='a'");
+		$applicationList = $command->queryAll();
+		$this->render('application',array('applicationList'=>$applicationList));
+	}
+	
+	public function actionAddApplication ()
+	{
+		$success = 0;
+		$success2 = 0;
+		if(isset($_POST['app_name']) && isset($_POST['app_link']) && isset($_POST['app_copy'])) {
+			//insert or update submit
+			$name = $_POST['app_name'];
+			$link = $_POST['app_link'];
+			$copy = $_POST['app_copy'];
+			if(isset($_POST['app_id']))
+			{
+				//update submit
+				$id = $_POST['app_id'];
+				$connection = Yii::app()->db;
+				$command = $connection->createCommand("UPDATE application SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE application_id='$id'");
+				$success = $command->execute();
+				if($success==1)
+				{
+					$command = $connection->createCommand("INSERT INTO application(application_name, application_link, copyright, stsrc, userchange, datechange) VALUES('$name','$link','$copy','a','".Yii::app()->user->name."',NOW())");
+					$success2 = $command->execute();
+				}
+				if($success==1 && $success2==1)
+				{
+					$this->redirect("index.php?r=site/application",array('success'=>2));
+				}
+			}
+			else
+			{
+				//insert submit
+				$connection = Yii::app()->db;
+				$command = $connection->createCommand("INSERT INTO application(application_name, application_link, copyright, stsrc, userchange, datechange) VALUES('$name','$link','$copy','a','".Yii::app()->user->name."',NOW())");
+				$success = $command->execute();
+				if($success==1)
+				{
+					$this->redirect("index.php?r=site/application",array('success'=>1));
+				}
+			}
+		}
+		$id = 0;
+		$data = null;
+		if(isset($_GET['id'])) {
+			//update
+			$id = $_GET['id'];
+			$connection = Yii::app()->db;
+			$command = $connection->createCommand("SELECT application_id, application_name, application_link, copyright FROM application WHERE stsrc='a' AND application_id='$id'");
+			$applicationList = $command->queryAll();
+			$data = $applicationList[0];
+		}
+		$this->render('addApplication',array('id'=>$id,'data'=>$data));
+	}
+	
+	public function actionUsers ()
+	{
+	
+		$connection = Yii::app()->db;
+		$command = $connection->createCommand("SELECT user_id, username, email, gender, age, location_name FROM users u JOIN location l ON u.location_id = l.location_id WHERE u.stsrc='a' AND l.stsrc='a'");
+		$userList = $command->queryAll();
+		$this->render('users',array('userList'=>$userList));
+	}
+	
+	public function actionAddUser ()
+	{
+		$success = 0;
+		$success2 = 0;
+		if(isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['password1']) && isset($_POST['gender']) && isset($_POST['age']) && isset($_POST['location'])) {
+			//insert or update submit
+			$uname = $_POST['uname'];
+			$email = $_POST['email'];
+			$password1 = $_POST['password1'];
+			$gender = $_POST['gender'];
+			$age = $_POST['age'];
+			$location = $_POST['location'];
+			
+			$randomHash = "";
+			for($i = 0;$i<5;$i++) {
+				$temp = rand()%62;
+				if($temp<10)
+					$randomHash .= $temp;
+				else if($temp<36)
+					$randomHash .= chr(($temp-10)+97);
+				else
+					$randomHash .= chr(($temp-36)+65);
+			}
+			$password = md5($randomHash.md5($password1).$randomHash);
+			
+			if(isset($_POST['user_id']))
+			{
+				//update submit
+				$id = $_POST['user_id'];
+				$connection = Yii::app()->db;
+				$command = $connection->createCommand("UPDATE users SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE user_id='$id'");
+				$success = $command->execute();
+				if($success==1)
+				{
+					$command = $connection->createCommand("INSERT INTO users(username, email, password, hash, gender, age, location_id, stsrc, userchange, datechange) VALUES('$uname','$email','$password','$randomHash','$gender','$age','$location','a','".Yii::app()->user->name."',NOW())");
+					$success2 = $command->execute();
+				}
+				if($success==1 && $success2==1)
+				{
+					$this->redirect("index.php?r=site/users",array('success'=>2));
+				}
+			}
+			else
+			{
+				//insert submit
+				$connection = Yii::app()->db;
+				$command = $connection->createCommand("INSERT INTO users(username, email, password, hash, gender, age, location_id, stsrc, userchange, datechange) VALUES('$uname','$email','$password','$randomHash','$gender','$age','$location','a','".Yii::app()->user->name."',NOW())");
+				$success = $command->execute();
+				if($success==1)
+				{
+					$this->redirect("index.php?r=site/users",array('success'=>1));
+				}
+			}
+		}
+		$id = 0;
+		$data = null;
+		$connection = Yii::app()->db;
+		if(isset($_GET['id'])) {
+			//update
+			$id = $_GET['id'];
+			$command = $connection->createCommand("SELECT user_id, username, email, gender, age, location_name FROM users u JOIN location l ON u.location_id = l.location_id WHERE u.stsrc='a' AND l.stsrc='a' AND user_id='$id'");
+			$userList = $command->queryAll();
+			$data = $userList[0];
+		}
+		$command = $connection->createCommand("SELECT location_id, location_name FROM location WHERE stsrc='a'");
+		$locationList = $command->queryAll();
+		$this->render('addUser',array('id'=>$id,'data'=>$data,'locationList'=>$locationList));
+	}
+	
+	public function actionGroups()
+	{
 		if(isset($_POST['group_id']) && isset($_POST['name'])) {
 			$id = $_POST['group_id'];
 			$name = $_POST['name'];
@@ -162,7 +279,8 @@ class SiteController extends Controller
 		$this->render('groups',array('groupList'=>$groupList,'success'=>$result));
 		//$this->render('groups');
 	}
-	public function actionGroupPop () {
+	public function actionGroupPop ()
+	{
 		if(isset($_GET['id'])) {
 			$id = $_GET['id'];
 			$connection = Yii::app()->db;
@@ -186,126 +304,25 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 	
-	public function actionGroupUsers(){
+	public function actionGroupUsers()
+	{
 		$this->render('groupUsers');
 	}
-	public function actionMenu(){
+	public function actionMenu()
+	{
 		$this->render('menu');
 	}
-	public function actionMenuPop(){
+	public function actionMenuPop()
+	{
 		$this->layout=false;
 		$this->render('menuPop');
 	}
-	public function actionUsers () {
-		$connection = Yii::app()->db;
-		$command = $connection->createCommand("SELECT user_id, username, email, gender, age, location_name FROM users u JOIN location l ON u.location_id = l.location_id WHERE u.stsrc=1 AND l.stsrc=1");
-		$userList = $command->queryAll();
-		$this->render('users',array('userList'=>$userList));
-	}
-	public function actionAddUser () {
-		if(isset($_POST['uid']) && isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['password1']) && isset($_POST['gender']) && isset($_POST['age']) && isset($_POST['location'])) {
-			$connection = Yii::app()->db;
-			$id = $_POST['uid'];
-			$query = "UPDATE users SET stsrc=0 WHERE user_id='$id'";
-			$command = $connection->createCommand($query);
-			$result = $command->execute();
-			$user = new UserData($_POST['uname'], $_POST['email'], $_POST['password1'], $_POST['gender'], $_POST['age'], $_POST['location']);
-			$user->authenticate();
-			if($user->errorCode===UserData::ERROR_NONE)
-			{
-				$uname = $_POST['uname'];
-				$email = $_POST['email'];
-				$password = $_POST['password1'];
-				$gender = $_POST['gender'];
-				$age = $_POST['age'];
-				$location = $_POST['location'];
-				$randomHash = "";
-				for($i = 0;$i<5;$i++) {
-					$temp = rand()%62;
-					if($temp<10)
-						$randomHash .= $temp;
-					else if($temp<36)
-						$randomHash .= chr(($temp-10)+97);
-					else
-						$randomHash .= chr(($temp-36)+65);
-				}
-				$password = md5($randomHash.md5($password).$randomHash);
-				$query = "INSERT INTO users(username, email, password, hash, gender, age, location_id, stsrc, userchange, datechange) VALUES('$uname','$email','$password','$randomHash','$gender','$age','$location','1','".Yii::app()->user->name."',NOW())";
-				$command = $connection->createCommand($query);
-				$result = $command->execute();
-				$query = "UPDATE users SET stsrc=0, userchange='".Yii::app()->user->name."', datechange=NOW() WHERE user_id='$id'";
-				$command = $connection->createCommand($query);
-				$result = $command->execute();
-				$this->redirect("index.php?r=site/users&success=1");
-				//$this->render("users",array('success'=>1));
-			}
-			else {
-				$id = $_POST['uid'];
-				$query = "UPDATE users SET stsrc=1 WHERE user_id='$id'";
-				$command = $connection->createCommand($query);
-				$result = $command->execute();
-				$command = $connection->createCommand("SELECT location_id, location_name FROM location WHERE stsrc=1");
-				$locationList = $command->queryAll();
-				$this->render('addUser',array('locationList'=>$locationList,'error'=>$user->errorCode));
-			}
-		}
-		else if(isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['password1']) && isset($_POST['gender']) && isset($_POST['age']) && isset($_POST['location'])) {
-			$user = new UserData($_POST['uname'], $_POST['email'], $_POST['password1'], $_POST['gender'], $_POST['age'], $_POST['location']);
-			$user->authenticate();
-			if($user->errorCode===UserData::ERROR_NONE)
-			{
-				$connection = Yii::app()->db;
-				$uname = $_POST['uname'];
-				$email = $_POST['email'];
-				$password = $_POST['password1'];
-				$gender = $_POST['gender'];
-				$age = $_POST['age'];
-				$location = $_POST['location'];
-				$randomHash = "";
-				for($i = 0;$i<5;$i++) {
-					$temp = rand()%62;
-					if($temp<10)
-						$randomHash .= $temp;
-					else if($temp<36)
-						$randomHash .= chr(($temp-10)+97);
-					else
-						$randomHash .= chr(($temp-36)+65);
-				}
-				$password = md5($randomHash.md5($password).$randomHash);
-				$query = "INSERT INTO users(username, email, password, hash, gender, age, location_id, stsrc, userchange, datechange) VALUES('$uname','$email','$password','$randomHash','$gender','$age','$location','1','".Yii::app()->user->name."',NOW())";
-				$command = $connection->createCommand($query);
-				$result = $command->execute();
-				$this->render("users",array('success'=>1));
-			}
-			else {
-				$connection = Yii::app()->db;
-				$command = $connection->createCommand("SELECT location_id, location_name FROM location WHERE stsrc=1");
-				$locationList = $command->queryAll();
-				$this->render('addUser',array('locationList'=>$locationList,'error'=>$user->errorCode));
-			}
-		}
-		else {
-			$connection = Yii::app()->db;
-			$command = $connection->createCommand("SELECT location_id, location_name FROM location WHERE stsrc=1");
-			$locationList = $command->queryAll();
-			$this->render('addUser',array('locationList'=>$locationList));
-		}
-	}
-	public function actionApplication () {
-		$connection = Yii::app()->db;
-		$command = $connection->createCommand("SELECT application_name, application_link, copyright FROM application WHERE stsrc=1");
-		$applicationList = $command->queryAll();
-		$this->render('application',array('applicationList'=>$applicationList));
-		//$this->render('application');
-	}
-	public function actionApplicationPop () {
-		$this->layout=false;
-		$this->render('applicationPop');
-	}
-	public function actionAccess () {
+	public function actionAccess ()
+	{
 		$this->render('menuGroupAccess');
 	}
-	public function actionForgotPass () {
+	public function actionForgotPass ()
+	{
 		$this->layout = false;
 		$this->render('forgotPassword');
 	}
