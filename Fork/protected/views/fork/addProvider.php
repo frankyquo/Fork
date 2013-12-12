@@ -25,34 +25,44 @@ should you have any questions.</p>
 </div>
 
 <div class="container">
-	<div class="row">
-		<div class="grid-24">				
-			<div class="widget">
-				<div class="widget-header">
-					<h3>Add Provider</h3>
-				</div>
-				<div class="widget-content">
-					<form class="form uniformForm validateForm">
-						<div class="field-group">
-							<label for="required">Provider Name:</label>
-							<div class="field">
-								<input type="text" name="name" id="name" size="20" class="validate[required]" />	
-							</div>
+	<div class="grid-24">				
+		<div class="widget">
+			<div class="widget-header">
+				<h3><?php
+				if($id<1)
+					echo "Add Provider";
+				else
+					echo "Edit Provider";
+				?></h3>
+			</div>
+			<div class="widget-content">
+				<form method="post" class="form uniformForm validateForm">
+					<?php
+					if($id>=1)
+					{
+					?>
+					<input type="hidden" name="provider_id" id="provider_id" value="<?=$id?>" />
+					<?php
+					}
+					?>
+					<div class="field-group">
+						<label for="provider_name">Provider Name:</label>
+						<div class="field">
+							<input type="text" name="provider_name" id="provider_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data['provider_name']; ?>" />	
 						</div>
-						<div class="field-group inlineField">	
-							<label for="myfile">Provider Image:</label>
-	
-							<div class="field">
-								<input type="file" name="myfile" id="myfile" />
-							</div>	
-						</div>
-						<div class="actions">						
-							<button type="submit" class="btn btn-primary">Submit</button>
-							<button type="reset" class="btn btn-error">Reset</button>
-						</div>
-					</form>
-				</div>
-			</div>					
-		</div>
+					</div>
+					<div class="field-group inlineField">	
+						<label for="provider_img">Provider Image:</label>
+						<div class="field">
+							<input type="file" name="provider_img" id="provider_img" value="<?php if($data!=null) echo $data['provider_image']; ?>" />
+						</div>	
+					</div>
+					<div class="actions">						
+						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="reset" class="btn btn-error">Reset</button>
+					</div>
+				</form>
+			</div>
+		</div>					
 	</div>
 </div>
