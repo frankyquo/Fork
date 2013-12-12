@@ -163,6 +163,29 @@ class SiteController extends Controller
 		$this->render('addApplication',array('id'=>$id,'data'=>$data));
 	}
 	
+	public function actionDeleteApplication ()
+	{
+		if(isset($_GET['id']))
+		{
+			$connection = Yii::app()->db;
+			$id = $_GET['id'];
+			$command = $connection->createCommand("UPDATE application SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE application_id='$id'");
+			$success = $command->execute();
+			if($success==1)
+			{
+				$this->redirect("index.php?r=site/application",array('success'=>3));
+			}
+			else
+			{
+				$this->redirect("index.php?r=site/application",array('success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('index.php?r=site/application');
+		}
+	}
+	
 	public function actionUsers ()
 	{
 	
@@ -239,6 +262,29 @@ class SiteController extends Controller
 		$command = $connection->createCommand("SELECT location_id, location_name FROM location WHERE stsrc='a'");
 		$locationList = $command->queryAll();
 		$this->render('addUser',array('id'=>$id,'data'=>$data,'locationList'=>$locationList));
+	}
+	
+	public function actionDeleteUser ()
+	{
+		if(isset($_GET['id']))
+		{
+			$connection = Yii::app()->db;
+			$id = $_GET['id'];
+			$command = $connection->createCommand("UPDATE users SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE user_id='$id'");
+			$success = $command->execute();
+			if($success==1)
+			{
+				$this->redirect("index.php?r=site/users",array('success'=>3));
+			}
+			else
+			{
+				$this->redirect("index.php?r=site/users",array('success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('index.php?r=site/users');
+		}
 	}
 	
 	public function actionGroups()

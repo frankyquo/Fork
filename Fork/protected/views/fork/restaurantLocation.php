@@ -80,7 +80,7 @@ should you have any questions.</p>
 								<td><?=$restaurantLocation['maxprice']?></td>
 								<td>
 									<a href="?r=fork/addRestaurantLocation&id=<?=$restaurantLocation['restaurant_location_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
+									<button name2="<?=$restaurantLocation['restaurant_location_id']?>" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button>
 								</td>
 							</tr>
 							<?php
@@ -93,3 +93,16 @@ should you have any questions.</p>
 		</div>
 	</div>
 </div>
+
+<script>
+$('.delete-button').live ('click', function (e) {
+	$id = $(this).attr('name2');
+	e.preventDefault ();
+	$.alert ({ 
+		type: 'confirm'
+		, title: 'Delete Restaurant Location?'
+		, text: '<p>Are you sure you want to delete this restaurant location?</p>'
+		, callback: function () { window.location.replace('index.php?r=fork/deleteRestaurantLocation&id='+$id); }	
+	});		
+});
+</script>

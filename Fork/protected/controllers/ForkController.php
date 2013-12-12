@@ -59,6 +59,30 @@ class ForkController extends Controller
 		}
 		$this->render('addLocations',array('id'=>$id,'data'=>$data));
 	}
+	
+	public function actionDeleteLocations ()
+	{
+		if(isset($_GET['id']))
+		{
+			$connection = Yii::app()->db;
+			$id = $_GET['id'];
+			$command = $connection->createCommand("UPDATE location SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE location_id='$id'");
+			$success = $command->execute();
+			if($success==1)
+			{
+				$this->redirect("index.php?r=fork/locations",array('success'=>3));
+			}
+			else
+			{
+				$this->redirect("index.php?r=fork/locations",array('success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('index.php?r=fork/locations');
+		}
+	}
+	
 	public function actionRestaurant ()
 	{
 		$connection = Yii::app()->db;
@@ -66,6 +90,7 @@ class ForkController extends Controller
 		$restaurantList = $command->queryAll();
 		$this->render('restaurant',array('restaurantList'=>$restaurantList));
 	}
+	
 	public function actionAddRestaurant()
 	{
 		$success = 0;
@@ -114,6 +139,29 @@ class ForkController extends Controller
 			$data = $restaurantList[0];
 		}
 		$this->render('addRestaurant',array('id'=>$id,'data'=>$data));
+	}
+	
+	public function actionDeleteRestaurant ()
+	{
+		if(isset($_GET['id']))
+		{
+			$connection = Yii::app()->db;
+			$id = $_GET['id'];
+			$command = $connection->createCommand("UPDATE restaurant SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE restaurant_id='$id'");
+			$success = $command->execute();
+			if($success==1)
+			{
+				$this->redirect("index.php?r=fork/restaurant",array('success'=>3));
+			}
+			else
+			{
+				$this->redirect("index.php?r=fork/restaurant",array('success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('index.php?r=fork/restaurant');
+		}
 	}
 	
 	public function actionFoodCategory ()
@@ -173,6 +221,29 @@ class ForkController extends Controller
 			$data = $foodCategoryList[0];
 		}
 		$this->render('addFoodCategory',array('id'=>$id,'data'=>$data));
+	}
+	
+	public function actionDeleteFoodCategory ()
+	{
+		if(isset($_GET['id']))
+		{
+			$connection = Yii::app()->db;
+			$id = $_GET['id'];
+			$command = $connection->createCommand("UPDATE foodcategory SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE food_category_id='$id'");
+			$success = $command->execute();
+			if($success==1)
+			{
+				$this->redirect("index.php?r=fork/foodCategory",array('success'=>3));
+			}
+			else
+			{
+				$this->redirect("index.php?r=fork/foodCategory",array('success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('index.php?r=fork/foodCategory');
+		}
 	}
 	
 	public function actionFood ()
@@ -240,6 +311,29 @@ class ForkController extends Controller
 		$command = $connection->createCommand("SELECT food_category_id, food_category_name FROM foodcategory WHERE stsrc='a'");
 		$foodCatList = $command->queryAll();
 		$this->render('addFood',array('id'=>$id,'data'=>$data,'restaurantList'=>$restaurantList,'foodCatList'=>$foodCatList));
+	}
+	
+	public function actionDeleteFood ()
+	{
+		if(isset($_GET['id']))
+		{
+			$connection = Yii::app()->db;
+			$id = $_GET['id'];
+			$command = $connection->createCommand("UPDATE restaurantfood SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE restaurant_food_id='$id'");
+			$success = $command->execute();
+			if($success==1)
+			{
+				$this->redirect("index.php?r=fork/food",array('success'=>3));
+			}
+			else
+			{
+				$this->redirect("index.php?r=fork/food",array('success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('index.php?r=fork/food');
+		}
 	}
 	
 	public function actionRestaurantReview()
@@ -321,6 +415,30 @@ class ForkController extends Controller
 		$locationList = $command->queryAll();
 		$this->render('addRestaurantLocation',array('id'=>$id,'data'=>$data,'restaurantList'=>$restaurantList,'locationList'=>$locationList));
 	}
+	
+	public function actionDeleteRestaurantLocation ()
+	{
+		if(isset($_GET['id']))
+		{
+			$connection = Yii::app()->db;
+			$id = $_GET['id'];
+			$command = $connection->createCommand("UPDATE restaurantlocation SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE restaurant_location_id='$id'");
+			$success = $command->execute();
+			if($success==1)
+			{
+				$this->redirect("index.php?r=fork/restaurantLocation",array('success'=>3));
+			}
+			else
+			{
+				$this->redirect("index.php?r=fork/restaurantLocation",array('success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('index.php?r=fork/restaurantLocation');
+		}
+	}
+	
 	public function actionProvider ()
 	{
 		$connection = Yii::app()->db;
@@ -378,6 +496,30 @@ class ForkController extends Controller
 		}
 		$this->render('addProvider',array('id'=>$id,'data'=>$data));
 	}
+	
+	public function actionDeleteProvider ()
+	{
+		if(isset($_GET['id']))
+		{
+			$connection = Yii::app()->db;
+			$id = $_GET['id'];
+			$command = $connection->createCommand("UPDATE provider SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE provider_id='$id'");
+			$success = $command->execute();
+			if($success==1)
+			{
+				$this->redirect("index.php?r=fork/provider",array('success'=>3));
+			}
+			else
+			{
+				$this->redirect("index.php?r=fork/provider",array('success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('index.php?r=fork/provider');
+		}
+	}
+	
 	public function actionRestaurantPromo()
 	{
 		$this->render('restaurantPromo');

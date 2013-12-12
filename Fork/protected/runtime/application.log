@@ -1781,3 +1781,47 @@ REQUEST_URI=/Fork/Fork/index.php?r=site/groupPop&id=1
 in D:\xampp\htdocs\Fork\Fork\protected\views\site\groupPop.php (25)
 in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (142)
 in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/12 16:29:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deleteUser".' in D:\xampp\htdocs\Fork\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(270): CController->missingAction('deleteUser')
+#1 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('deleteUser')
+#2 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/deleteUser')
+#3 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/deleteUser&id=2
+HTTP_REFERER=http://localhost/Fork/Fork/index.php?r=site/users
+---
+2013/12/12 17:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deleteFood".' in D:\xampp\htdocs\Fork\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(270): CController->missingAction('deleteFood')
+#1 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('deleteFood')
+#2 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/deleteFood')
+#3 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/deleteFood&id=1
+HTTP_REFERER=http://localhost/Fork/Fork/index.php?r=fork/food
+---
+2013/12/12 17:23:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deleteLocation".' in D:\xampp\htdocs\Fork\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(270): CController->missingAction('deleteLocation')
+#1 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('deleteLocation')
+#2 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/deleteLoca...')
+#3 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=fork/deleteLocation&id=1
+HTTP_REFERER=http://localhost/Fork/Fork/index.php?r=fork/locations
+---
+2013/12/12 17:25:10 [error] [php] Undefined variable: success (D:\xampp\htdocs\Fork\Fork\protected\controllers\ForkController.php:506)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(286): ForkController->runAction()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#2 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#3 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/deleteProvider&id=1
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\ForkController.php (506)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)

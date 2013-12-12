@@ -68,7 +68,7 @@ should you have any questions.</p>
 								<td><?=$application['copyright']?></td>
 								<td>
 									<a href="?r=site/addApplication&id=<?=$application['application_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
+									<button name2="<?=$application['application_id']?>" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button>
 								</td>
 							</tr>
 							<?php
@@ -81,3 +81,16 @@ should you have any questions.</p>
 		</div>
 	</div>
 </div>
+
+<script>
+$('.delete-button').live ('click', function (e) {
+	$id = $(this).attr('name2');
+	e.preventDefault ();
+	$.alert ({ 
+		type: 'confirm'
+		, title: 'Delete Application?'
+		, text: '<p>Are you sure you want to delete this application?</p>'
+		, callback: function () { window.location.replace('index.php?r=site/deleteApplication&id='+$id); }	
+	});		
+});
+</script>
