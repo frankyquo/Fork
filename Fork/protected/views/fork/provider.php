@@ -23,7 +23,20 @@ should you have any questions.</p>
 <div id="contentHeader">
 	<h1><?php echo Yii::app()->name; ?> - Forks</h1>
 </div>
-
+<?php
+	if(isset($success)&&($success==1||$success==2))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$success=='1'?'Insert Success':'Update Success'?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
+	}
+?>
 <div class="container">
 	<div class="row">
 		<div class="grid-24">				
@@ -44,98 +57,21 @@ should you have any questions.</p>
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+								foreach($providerList as $provider)
+								{
+							?>
 							<tr class="gradeA">
-								<td>Provider1</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
+								<td><?=$provider['provider_name']?></td>
+								<td><img src="<?=$provider['provider_image']?>" alt="<?=$provider['provider_name']?>" width="200px" height="200px" /></td>
 								<td>
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
+									<a href="?r=fork/addProvider&id=<?=$provider['provider_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
 									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
 								</td>
 							</tr>
-							<tr class="gradeA">
-								<td>Provider2</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider3</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider4</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider5</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider6</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider7</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider8</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider9</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider10</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider11</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider12</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider13</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider14</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Provider15</td>
-								<td><img src="images/gallery/rain_small.jpg"/></td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
+							<?php
+								}
+							?>
 						</tbody>
 					</table>
 				</div>
@@ -143,23 +79,3 @@ should you have any questions.</p>
 		</div>
 	</div>
 </div>
-
-<script>
-$(function () {
-	$('#addProvider').live ('click', function (e) {
-		e.preventDefault ();
-		window.location('<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=fork/addProvider');
-		/*
-		$.ajax({
-			url: '<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=fork/locationsPop',
-			type:'get',
-			success: function(data){
-				$.modal({
-					title: 'Add Locations'
-					, html: data
-				});
-			}
-		});*/
-	});
-});
-</script>

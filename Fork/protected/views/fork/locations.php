@@ -23,14 +23,29 @@ should you have any questions.</p>
 <div id="contentHeader">
 	<h1><?php echo Yii::app()->name; ?> - Forks</h1>
 </div>
-
+<?php
+	if(isset($success)&&($success==1||$success==2))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$success=='1'?'Insert Success':'Update Success'?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
+	}
+?>
 <div class="container">
 	<div class="row">
 		<div class="grid-24">				
 			<div class="widget widget-table">
 				<div class="widget-header">
 					<h3>Locations</h3>
-					<button id="locationsModal" class="btn btn-primary btn-header"><span class="icon-plus-alt"></span>Add</button>
+					<a href="index.php?r=fork/addLocations">
+						<button type="submit" class="btn btn-primary btn-header"><span class="icon-plus-alt"></span>Add</button>
+					</a>
 				</div>
 				<div class="widget-content">
 					<table class="table table-bordered table-striped data-table">
@@ -41,208 +56,20 @@ should you have any questions.</p>
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+								foreach($locationList as $location)
+								{
+							?>
 							<tr class="gradeA">
-								<td>Surabaya</td>
+								<td><?=$location['location_name']?></td>
 								<td>
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
+									<a href="?r=fork/addLocations&id=<?=$location['location_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
 									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
 								</td>
 							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>	
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>	
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Surabaya</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Jakarta</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>															
+							<?php
+								}
+							?>
 						</tbody>
 					</table>
 				</div>
@@ -250,22 +77,3 @@ should you have any questions.</p>
 		</div>
 	</div>
 </div>
-
-<script>
-$(function () {
-	$('#locationsModal').live ('click', function (e) {
-		e.preventDefault ();
-		
-		$.ajax({
-			url: '<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=fork/locationsPop',
-			type:'get',
-			success: function(data){
-				$.modal({
-					title: 'Add Locations'
-					, html: data
-				});
-			}
-		});
-	});
-});
-</script>
