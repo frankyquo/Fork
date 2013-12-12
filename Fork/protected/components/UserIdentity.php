@@ -18,12 +18,13 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$connection = Yii::app()->db;
-		$command = $connection->createCommand("SELECT username, email, password, hash FROM users WHERE stsrc=1");
+		$command = $connection->createCommand("SELECT username, email, password, hash FROM users WHERE stsrc='a'");
 		$users = $command->queryAll();
 		$data = null;
 		foreach($users as $temp) {
 			if(strcasecmp($this->username,$temp['username'])==0 || strcasecmp($this->username,$temp['email'])==0) {
 				$data = $temp;
+				$this->username = $temp['username'];
 				break;
 			}
 		}
