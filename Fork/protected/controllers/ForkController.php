@@ -288,12 +288,12 @@ class ForkController extends Controller
 				if($_POST['action']==='add')
 				{
 					//insert submit
-					RestaurantFoodCategory::insert($_POST['res_id'], $_POST['category']);
+					RestaurantFoodCategory::insert($_POST['category'], $_POST['res_id']);
 				}
 				else if($_POST['action']==='delete')
 				{
 					//delete submit
-					RestaurantFoodCategory::delete($_POST['res_id'], $_POST['cat_id']);
+					RestaurantFoodCategory::delete($_POST['category'], $_POST['res_id']);
 				}
 			}
 			$id = $_GET['id'];

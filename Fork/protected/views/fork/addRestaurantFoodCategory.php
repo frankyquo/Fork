@@ -35,7 +35,7 @@ should you have any questions.</p>
 					<div class="field-group">
 						<label for="res_name">Restaurant Name:</label>
 						<div class="field">
-							<input type="text" name="res_name" id="res_name" size="20" class="validate[required]" disabled="disabled" value="<?=$restaurant->restaurant_name?>" />	
+							<input type="text" name="res_name" id="res_name" size="20" disabled="disabled" value="<?=$restaurant->restaurant_name?>" />	
 						</div>
 					</div>
 					<div class="field-group">
@@ -84,13 +84,12 @@ should you have any questions.</p>
 					<form method="post">
 						<input type="hidden" name="action" id="action" value="delete" />
 						<input type="hidden" name="res_id" id="res_id" value="<?=$restaurant->restaurant_id?>" />
-						<input type="hidden" name="cat_id" id="cat_id" value="<?=$foodCategory['food_category_id']?>" />
+						<input type="hidden" name="category" id="category" value="<?=$foodCategory['food_category_id']?>" />
 						<tr>
 							<td><?=$foodCategory['food_category_name']?></td>
-							<td><button type="submit" class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
+							<td><button type="button" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button></td>
 						</tr>
 					</form>
-						<option value="<?=$foodCategory['food_category_id']?>"><?=$foodCategory['food_category_name']?></option>
 					<?php
 						}
 					?>
@@ -103,13 +102,13 @@ should you have any questions.</p>
 
 <script>
 $('.delete-button').live ('click', function (e) {
-	$form = $(this).parents('form:first');
+	$form = $(this.form);
 	e.preventDefault ();
 	$.alert ({ 
 		type: 'confirm'
 		, title: 'Delete Restaurant Food Category?'
 		, text: '<p>Are you sure you want to delete this Food Category from the current Restaurant?</p>'
-		, callback: function () { alert($form);/*$form.submit();*/ }	
+		, callback: function () { ($form).submit(); }	
 	});		
 });
 </script>
