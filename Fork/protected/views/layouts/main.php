@@ -43,44 +43,46 @@
 	
 	<div id="sidebar">		
 		
-		<ul id="mainNav">			
-			<li id="navIndex" class="nav active"> <!-- active -->
-				<span class="icon-home"></span><!-- icon -->
-				<a href="index.php?r=site/index">Index</a>	
-			</li>
-						
-			<li id="navMenu" class="nav">
-				<span class="icon-document-alt-stroke"></span><!-- icon -->
-				<a href="index.php?r=site/menu">Menu Management</a>
-			</li>	
-			
-			<li id="navUser" class="nav">
-				<span class="icon-article"></span>
-				<a href="javascript:;">User Management</a>
-				<ul class="subNav">
-					<li><a href="index.php?r=site/application">Application</a></li>
-					<li><a href="index.php?r=site/users">Users</a></li>
-					<li><a href="index.php?r=site/groups">Groups</a></li>
-					<li><a href="index.php?r=site/menu">Menu</a></li>
-					<li><a href="index.php?r=site/groupUsers">Group Users</a></li>
-					<li><a href="index.php?r=site/access">Menu Group Access</a></li>
-				</ul>
-			</li>
-			<li id="navUser" class="nav">
-				<span class="icon-article"></span>
-				<a href="javascript:;">Forks</a>
-				<ul class="subNav">
-					<li><a href="index.php?r=fork/locations">Location</a></li>
-					<li><a href="index.php?r=fork/food">Food</a></li>
-					<li><a href="index.php?r=fork/provider">Provider</a></li>
-					<li><a href="index.php?r=fork/restaurant">Restaurant</a></li>
-					<li><a href="index.php?r=fork/restaurantPromo">Restaurant Promo</a></li>
-					<li><a href="index.php?r=fork/restaurantReview">Restaurant Review</a></li>
-					<li><a href="index.php?r=fork/restaurantLocation">Restaurant Location</a></li>
-					<li><a href="index.php?r=fork/foodCategory">FoodCategory</a></li>
-				</ul>
-			</li>
-		</ul>
+		<?php
+			$this->widget(
+				'NavigationMenu',
+				array(
+					'id'=>'mainNav',
+					'items'=>array(
+						array(
+							'id'=>'navUser',
+							'label'=>'User Management', 'url'=>array('/site/'),
+							'items'=>array(
+								array('label'=>'Application', 'url'=>array('/site/application')),
+								array('label'=>'Users', 'url'=>array('/site/users')),
+								array('label'=>'Groups', 'url'=>array('/site/groups')),
+								array('label'=>'Menu', 'url'=>array('/site/menu')),
+								array('label'=>'Group Users', 'url'=>array('/site/groupUsers')),
+								array('label'=>'Menu Group Access', 'url'=>array('/site/access')),
+							),
+							'submenuOptions'=>array('class'=>'subNav dropdown'),
+							'itemOptions'=>array('class'=>'nav')
+						),
+						array(
+							'id'=>'navFork',
+							'label'=>'Fork', 'url'=>array('/fork/'),
+							'items'=>array(
+								array('label'=>'Location','url'=>array('/fork/locations')),
+								array('label'=>'Food','url'=>array('/fork/food')),
+								array('label'=>'Provider','url'=>array('/fork/provider')),
+								array('label'=>'Restaurant','url'=>array('/fork/restaurant')),
+								array('label'=>'Restaurant Promo','url'=>array('/fork/restaurantPromo')),
+								array('label'=>'Restaurant Review','url'=>array('/fork/restaurantReview')),
+								array('label'=>'Restaurant Location','url'=>array('/fork/restaurantLocation')),
+								array('label'=>'Food Category','url'=>array('/fork/foodCategory'))
+							),
+							'submenuOptions'=>array('class'=>'subNav dropdown'),
+							'itemOptions'=>array('class'=>'nav')
+						)
+					)
+				)
+			);
+		?>
 				
 	</div> <!-- #sidebar -->
 	
