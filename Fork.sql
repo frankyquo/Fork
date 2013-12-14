@@ -105,11 +105,11 @@ CREATE TABLE IF NOT EXISTS `restaurantfood` (
 
 CREATE TABLE IF NOT EXISTS `restaurantfoodcategory` (
   `food_category_id` int(11) NOT NULL,
-  `restaurant_location_id` int(11) NOT NULL,
+  `restaurant_id` int(11) NOT NULL,
   `stsrc` char(11) NOT NULL,
   `userchange` int(11) NOT NULL,
   `datechange` int(11) NOT NULL,
-  PRIMARY KEY (`food_category_id`,`restaurant_location_id`)
+  PRIMARY KEY (`food_category_id`,`restaurant_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `restaurantlocation` (
