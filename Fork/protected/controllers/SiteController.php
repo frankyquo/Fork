@@ -94,7 +94,7 @@ class SiteController extends Controller
 				}
 				else {
 					$this->layout = false;
-					$this->render('login',array('error'=>$user->errorCode));
+					$this->redirect(array('site/login','error'=>$user->errorCode));
 				}
 			}
 			else {
@@ -106,59 +106,47 @@ class SiteController extends Controller
 	
 	public function actionApplication ()
 	{
-		$connection = Yii::app()->db;
-		$command = $connection->createCommand("SELECT application_id, application_name, application_link, copyright FROM application WHERE stsrc='a'");
-		$applicationList = $command->queryAll();
-		$this->render('application',array('applicationList'=>$applicationList));
+		$this->render('application',array('applicationList'=>UserApplication::getAll()));
 	}
 	
 	public function actionAddApplication ()
 	{
-		$success = 0;
-		$success2 = 0;
-		if(isset($_POST['app_name']) && isset($_POST['app_link']) && isset($_POST['app_copy'])) {
+		if(isset($_POST['app_name']) && isset($_POST['app_link']) && isset($_POST['app_copy']))
+		{
 			//insert or update submit
-			$name = $_POST['app_name'];
-			$link = $_POST['app_link'];
-			$copy = $_POST['app_copy'];
 			if(isset($_POST['app_id']))
 			{
 				//update submit
-				$id = $_POST['app_id'];
-				$connection = Yii::app()->db;
-				$command = $connection->createCommand("UPDATE application SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE application_id='$id'");
-				$success = $command->execute();
-				if($success==1)
+				$newApplication = UserApplication::get($_POST['app_id']);
+				if($newApplication->update($_POST['app_name'],$_POST['app_link'],$_POST['app_copy'])==1)
 				{
-					$command = $connection->createCommand("INSERT INTO application(application_name, application_link, copyright, stsrc, userchange, datechange) VALUES('$name','$link','$copy','a','".Yii::app()->user->name."',NOW())");
-					$success2 = $command->execute();
+					$this->redirect(array("site/application",'success'=>2));
 				}
-				if($success==1 && $success2==1)
+				else
 				{
-					$this->redirect("index.php?r=site/application",array('success'=>2));
+					$this->redirect(array("site/application",'success'=>-2));
 				}
 			}
 			else
 			{
 				//insert submit
-				$connection = Yii::app()->db;
-				$command = $connection->createCommand("INSERT INTO application(application_name, application_link, copyright, stsrc, userchange, datechange) VALUES('$name','$link','$copy','a','".Yii::app()->user->name."',NOW())");
-				$success = $command->execute();
-				if($success==1)
+				$newApplication = new UserApplication(0,$_POST['app_name'],$_POST['app_link'],$_POST['app_copy']);
+				if($newApplication->insert()==1)
 				{
-					$this->redirect("index.php?r=site/application",array('success'=>1));
+					$this->redirect(array("site/application",'success'=>1));
+				}
+				else
+				{
+					$this->redirect(array("site/application",'success'=>-1));
 				}
 			}
 		}
 		$id = 0;
 		$data = null;
 		if(isset($_GET['id'])) {
-			//update
+			//update page
 			$id = $_GET['id'];
-			$connection = Yii::app()->db;
-			$command = $connection->createCommand("SELECT application_id, application_name, application_link, copyright FROM application WHERE stsrc='a' AND application_id='$id'");
-			$applicationList = $command->queryAll();
-			$data = $applicationList[0];
+			$data = UserApplication::get($_GET['id']);
 		}
 		$this->render('addApplication',array('id'=>$id,'data'=>$data));
 	}
@@ -167,123 +155,90 @@ class SiteController extends Controller
 	{
 		if(isset($_GET['id']))
 		{
-			$connection = Yii::app()->db;
+			//delete
 			$id = $_GET['id'];
-			$command = $connection->createCommand("UPDATE application SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE application_id='$id'");
-			$success = $command->execute();
-			if($success==1)
+			$newApplication = UserApplication::get($id);
+			if($newApplication->delete()==1)
 			{
-				$this->redirect("index.php?r=site/application",array('success'=>3));
+				$this->redirect(array("site/application",'success'=>3));
 			}
 			else
 			{
-				$this->redirect("index.php?r=site/application",array('success'=>-3));
+				$this->redirect(array("site/application",'success'=>-3));
 			}
 		}
 		else
 		{
-			$this->redirect('index.php?r=site/application');
+			$this->redirect('site/application');
 		}
 	}
 	
 	public function actionUsers ()
 	{
-	
-		$connection = Yii::app()->db;
-		$command = $connection->createCommand("SELECT user_id, username, email, gender, age, location_name FROM users u JOIN location l ON u.location_id = l.location_id WHERE u.stsrc='a' AND l.stsrc='a'");
-		$userList = $command->queryAll();
-		$this->render('users',array('userList'=>$userList));
+		$this->render('users',array('userList'=>UserData::getAll()));
 	}
 	
 	public function actionAddUser ()
 	{
-		$success = 0;
-		$success2 = 0;
 		if(isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['password1']) && isset($_POST['gender']) && isset($_POST['age']) && isset($_POST['location'])) {
 			//insert or update submit
-			$uname = $_POST['uname'];
-			$email = $_POST['email'];
-			$password1 = $_POST['password1'];
-			$gender = $_POST['gender'];
-			$age = $_POST['age'];
-			$location = $_POST['location'];
-			
-			$randomHash = "";
-			for($i = 0;$i<5;$i++) {
-				$temp = rand()%62;
-				if($temp<10)
-					$randomHash .= $temp;
-				else if($temp<36)
-					$randomHash .= chr(($temp-10)+97);
-				else
-					$randomHash .= chr(($temp-36)+65);
-			}
-			$password = md5($randomHash.md5($password1).$randomHash);
 			
 			if(isset($_POST['user_id']))
 			{
 				//update submit
-				$id = $_POST['user_id'];
-				$connection = Yii::app()->db;
-				$command = $connection->createCommand("UPDATE users SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE user_id='$id'");
-				$success = $command->execute();
-				if($success==1)
+				$newUser = UserData::get($_POST['user_id']);
+				if($newUser->update($_POST['uname'],$_POST['email'],$_POST['password1'],$_POST['gender'],$_POST['age'],$_POST['location'])==1)
 				{
-					$command = $connection->createCommand("INSERT INTO users(username, email, password, hash, gender, age, location_id, stsrc, userchange, datechange) VALUES('$uname','$email','$password','$randomHash','$gender','$age','$location','a','".Yii::app()->user->name."',NOW())");
-					$success2 = $command->execute();
+					$this->redirect(array("site/users",'success'=>2));
 				}
-				if($success==1 && $success2==1)
+				else
 				{
-					$this->redirect("index.php?r=site/users",array('success'=>2));
+					$this->redirect(array("site/users",'success'=>-2));
 				}
 			}
 			else
 			{
 				//insert submit
-				$connection = Yii::app()->db;
-				$command = $connection->createCommand("INSERT INTO users(username, email, password, hash, gender, age, location_id, stsrc, userchange, datechange) VALUES('$uname','$email','$password','$randomHash','$gender','$age','$location','a','".Yii::app()->user->name."',NOW())");
-				$success = $command->execute();
-				if($success==1)
+				$newUser = new UserData(0,$_POST['uname'],$_POST['email'],$_POST['password1'],0,$_POST['gender'],$_POST['age'],$_POST['location']);
+				if($newUser->insert()==1)
 				{
-					$this->redirect("index.php?r=site/users",array('success'=>1));
+					$this->redirect(array("site/users",'success'=>1));
+				}
+				else
+				{
+					$this->redirect(array("site/users",'success'=>-1));
 				}
 			}
 		}
 		$id = 0;
 		$data = null;
-		$connection = Yii::app()->db;
 		if(isset($_GET['id'])) {
-			//update
+			//update page
 			$id = $_GET['id'];
-			$command = $connection->createCommand("SELECT user_id, username, email, gender, age, location_name FROM users u JOIN location l ON u.location_id = l.location_id WHERE u.stsrc='a' AND l.stsrc='a' AND user_id='$id'");
-			$userList = $command->queryAll();
-			$data = $userList[0];
+			$data = UserData::get($_GET['id']);
 		}
-		$command = $connection->createCommand("SELECT location_id, location_name FROM location WHERE stsrc='a'");
-		$locationList = $command->queryAll();
-		$this->render('addUser',array('id'=>$id,'data'=>$data,'locationList'=>$locationList));
+		$this->render('addUser',array('id'=>$id,'data'=>$data,'locationList'=>Location::getAll()));
 	}
 	
 	public function actionDeleteUser ()
 	{
 		if(isset($_GET['id']))
 		{
-			$connection = Yii::app()->db;
+			//delete
 			$id = $_GET['id'];
-			$command = $connection->createCommand("UPDATE users SET stsrc='d', userchange='".Yii::app()->user->name."', datechange=NOW() WHERE user_id='$id'");
-			$success = $command->execute();
-			if($success==1)
+			$newUser = UserData::get($id);
+			if($newUser->delete()==1)
 			{
-				$this->redirect("index.php?r=site/users",array('success'=>3));
+				$this->redirect(array("site/users",'success'=>3));
 			}
 			else
 			{
-				$this->redirect("index.php?r=site/users",array('success'=>-3));
+				$this->redirect(array("site/users",'success'=>-3));
 			}
 		}
 		else
 		{
-			$this->redirect('index.php?r=site/users');
+			$this->redirect('site/users');
 		}
 	}
 	
