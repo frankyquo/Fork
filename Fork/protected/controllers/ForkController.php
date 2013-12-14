@@ -6,6 +6,7 @@ class ForkController extends Controller
 	{
 		$this->render('locations',array('locationList'=>Location::getAll()));
 	}
+	
 	public function actionAddLocations()
 	{
 		if(isset($_POST['loc_name'])) {
@@ -144,6 +145,7 @@ class ForkController extends Controller
 	{
 		$this->render('provider',array('providerList'=>Provider::getAll()));
 	}
+	
 	public function actionAddProvider()
 	{
 		if(isset($_POST['provider_name']) && isset($_POST['provider_img'])) {
@@ -276,6 +278,34 @@ class ForkController extends Controller
 			$this->redirect('fork/restaurant');
 		}
 	}
+	
+	public function actionAddRestaurantFoodCategory ()
+	{
+		if(isset($_GET['id']))
+		{
+			if(isset($_POST['action']))
+			{
+				if($_POST['action']==='add')
+				{
+					//insert submit
+					RestaurantFoodCategory::insert($_POST['res_id'], $_POST['category']);
+				}
+				else if($_POST['action']==='delete')
+				{
+					//delete submit
+					RestaurantFoodCategory::delete($_POST['res_id'], $_POST['cat_id']);
+				}
+			}
+			$id = $_GET['id'];
+			$this->render('addRestaurantFoodCategory',array('restaurant'=>Restaurant::get($id),'foodCategoryNotIn'=>RestaurantFoodCategory::getNotIn($id),'foodCategoryIn'=>RestaurantFoodCategory::getIn($id)));
+		}
+		else
+		{
+			$this->redirect('fork/restaurant');
+		}
+		
+	}
+	
 	public function actionRestaurantLocation()
 	{
 		$this->render('restaurantLocation',array('restaurantLocationList'=>RestaurantLocation::getAll()));
@@ -342,11 +372,6 @@ class ForkController extends Controller
 		{
 			$this->redirect('fork/restaurantLocation');
 		}
-	}
-	
-	public function actionAddRestaurantFoodCategory ()
-	{
-		$this->render('addRestaurantFoodCategory');
 	}
 	
 	public function actionFoodCategory ()
@@ -426,6 +451,7 @@ class ForkController extends Controller
 	{
 		$this->render('restaurantReview');
 	}
+	
 	public function actionRestaurantReviewPop()
 	{
 		// renders the view file 'protected/views/site/index.php'
@@ -438,6 +464,7 @@ class ForkController extends Controller
 	{
 		$this->render('restaurantPromo');
 	}
+	
 	public function actionAddPromo()
 	{
 		$this->render('addPromo');

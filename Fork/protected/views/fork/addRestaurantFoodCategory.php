@@ -29,12 +29,27 @@ should you have any questions.</p>
 		<div class="widget">
 			<div class="widget-header">Add Food Category</div>
 			<div class="widget-content">
-					<div class="field-group">
 				<form method="post" class="form uniformForm validateForm">
-						<label for="cat_name">Food Category Name:</label>
+					<input type="hidden" name="action" id="action" value="add" />
+					<input type="hidden" name="res_id" id="res_id" value="<?=$restaurant->restaurant_id?>" />
+					<div class="field-group">
+						<label for="res_name">Restaurant Name:</label>
 						<div class="field">
-							<select name="location" id="location">	
-								<option>test</option>
+							<input type="text" name="res_name" id="res_name" size="20" class="validate[required]" disabled="disabled" value="<?=$restaurant->restaurant_name?>" />	
+						</div>
+					</div>
+					<div class="field-group">
+						<label for="category">Food Category Name:</label>
+						<div class="field">
+							<select name="category" id="category">
+							<?php
+								foreach($foodCategoryNotIn as $foodCategory)
+								{
+							?>
+								<option value="<?=$foodCategory['food_category_id']?>"><?=$foodCategory['food_category_name']?></option>
+							<?php
+								}
+							?>
 							</select>
 						</div>
 					</div>
@@ -62,17 +77,39 @@ should you have any questions.</p>
 						</tr>
 					</thead>
 					<tbody>
+					<?php
+						foreach($foodCategoryIn as $foodCategory)
+						{
+					?>
+					<form method="post">
+						<input type="hidden" name="action" id="action" value="delete" />
+						<input type="hidden" name="res_id" id="res_id" value="<?=$restaurant->restaurant_id?>" />
+						<input type="hidden" name="cat_id" id="cat_id" value="<?=$foodCategory['food_category_id']?>" />
 						<tr>
-							<td>aa</td>
-							<td><button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
+							<td><?=$foodCategory['food_category_name']?></td>
+							<td><button type="submit" class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
 						</tr>
-						<tr>
-							<td>aa</td>
-							<td><button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-						</tr>
+					</form>
+						<option value="<?=$foodCategory['food_category_id']?>"><?=$foodCategory['food_category_name']?></option>
+					<?php
+						}
+					?>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+$('.delete-button').live ('click', function (e) {
+	$form = $(this).parents('form:first');
+	e.preventDefault ();
+	$.alert ({ 
+		type: 'confirm'
+		, title: 'Delete Restaurant Food Category?'
+		, text: '<p>Are you sure you want to delete this Food Category from the current Restaurant?</p>'
+		, callback: function () { alert($form);/*$form.submit();*/ }	
+	});		
+});
+</script>
