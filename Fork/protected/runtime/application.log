@@ -1825,3 +1825,514 @@ Stack trace:
 REQUEST_URI=/Fork/Fork/index.php?r=fork/deleteProvider&id=1
 in D:\xampp\htdocs\Fork\Fork\protected\controllers\ForkController.php (506)
 in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/14 04:16:21 [error] [php] Non-static method UserApplication::getAll() should not be called statically, assuming $this from incompatible context (D:\Fork\Fork\protected\controllers\SiteController.php:109)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/application
+in D:\Fork\Fork\protected\controllers\SiteController.php (109)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 04:24:10 [error] [php] Undefined index: id (D:\Fork\Fork\protected\controllers\SiteController.php:155)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addApplication
+in D:\Fork\Fork\protected\controllers\SiteController.php (155)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 04:37:22 [error] [php] Undefined index: id (D:\Fork\Fork\protected\controllers\SiteController.php:153)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addApplication
+in D:\Fork\Fork\protected\controllers\SiteController.php (153)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 04:38:04 [error] [php] Undefined index: id (D:\Fork\Fork\protected\controllers\SiteController.php:155)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addApplication
+in D:\Fork\Fork\protected\controllers\SiteController.php (155)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 06:18:47 [error] [php] Undefined variable: application_name (D:\Fork\Fork\protected\components\UserApplication.php:30)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addApplication
+in D:\Fork\Fork\protected\components\UserApplication.php (30)
+in D:\Fork\Fork\protected\controllers\SiteController.php (142)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 06:19:39 [error] [php] Undefined variable: application_link (D:\Fork\Fork\protected\components\UserApplication.php:30)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addApplication
+in D:\Fork\Fork\protected\components\UserApplication.php (30)
+in D:\Fork\Fork\protected\controllers\SiteController.php (142)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 06:20:01 [error] [php] Undefined variable: applicationList (D:\Fork\Fork\protected\views\site\application.php:62)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(144): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddApplication()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addApplication
+in D:\Fork\Fork\protected\views\site\application.php (62)
+in D:\Fork\Fork\protected\controllers\SiteController.php (144)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 07:48:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id='2'' at line 1. The SQL statement executed was: SELECT user_id, username, email, password, hash, gender, age, location_id FROM users WHERE stsrc='a' user_id='2'.
+in D:\Fork\Fork\protected\components\UserData.php (48)
+in D:\Fork\Fork\protected\controllers\SiteController.php (240)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 07:48:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id='2'' at line 1. The SQL statement executed was: SELECT user_id, username, email, password, hash, gender, age, location_id FROM users WHERE stsrc='a' user_id='2'' in D:\Fork\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\Fork\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\Fork\Fork\protected\components\UserData.php(48): CDbCommand->queryAll()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(240): UserData::get('2')
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddUser()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addUser')
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addUser')
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser&id=2
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/users
+---
+2013/12/14 07:50:34 [error] [exception.CException] exception 'CException' with message 'Property "UserData.location_name" is not defined.' in D:\Fork\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Fork\Fork\protected\views\site\addUser.php(100): CComponent->__get('location_name')
+#1 D:\Fork\framework\web\CBaseController.php(126): require('D:\Fork\Fork\pr...')
+#2 D:\Fork\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\Fork\Fork\pr...', Array, true)
+#3 D:\Fork\framework\web\CController.php(869): CBaseController->renderFile('D:\Fork\Fork\pr...', Array, true)
+#4 D:\Fork\framework\web\CController.php(782): CController->renderPartial('addUser', Array, true)
+#5 D:\Fork\Fork\protected\controllers\SiteController.php(242): CController->render('addUser', Array)
+#6 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddUser()
+#7 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addUser')
+#11 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addUser')
+#12 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\Fork\Fork\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser&id=2
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/users
+---
+2013/12/14 07:58:04 [error] [php] Missing argument 8 for UserData::__construct(), called in D:\Fork\Fork\protected\controllers\SiteController.php on line 202 and defined (D:\Fork\Fork\protected\components\UserData.php:28)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser
+in D:\Fork\Fork\protected\components\UserData.php (28)
+in D:\Fork\Fork\protected\controllers\SiteController.php (202)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 08:01:35 [error] [php] Undefined variable: hash (D:\Fork\Fork\protected\components\UserData.php:34)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser
+in D:\Fork\Fork\protected\components\UserData.php (34)
+in D:\Fork\Fork\protected\controllers\SiteController.php (202)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 08:03:03 [error] [php] Missing argument 7 for UserData::update(), called in D:\Fork\Fork\protected\controllers\SiteController.php on line 190 and defined (D:\Fork\Fork\protected\components\UserData.php:77)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser&id=2
+in D:\Fork\Fork\protected\components\UserData.php (77)
+in D:\Fork\Fork\protected\controllers\SiteController.php (190)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 08:09:24 [error] [php] Missing argument 8 for UserData::__construct(), called in D:\Fork\Fork\protected\controllers\SiteController.php on line 202 and defined (D:\Fork\Fork\protected\components\UserData.php:28)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser
+in D:\Fork\Fork\protected\components\UserData.php (28)
+in D:\Fork\Fork\protected\controllers\SiteController.php (202)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 08:30:26 [error] [php] Undefined offset: 0 (D:\Fork\Fork\protected\components\UserData.php:40)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser
+in D:\Fork\Fork\protected\components\UserData.php (40)
+in D:\Fork\Fork\protected\controllers\SiteController.php (202)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 08:37:11 [error] [exception.CException] exception 'CException' with message 'UserData and its behaviors do not have a method or closure named "redirect".' in D:\Fork\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fork\Fork\protected\components\UserData.php(99): CComponent->__call('redirect', Array)
+#1 D:\Fork\Fork\protected\components\UserData.php(99): UserData->redirect('asd.php?#DMVcV')
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(190): UserData->update('asdasd', 'asd@dsa.com', 'asdasd', '1', '18', '1')
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddUser()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addUser')
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addUser')
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser&id=2
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/addUser&id=2
+---
+2013/12/14 08:37:29 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "redirect".' in D:\Fork\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fork\Fork\protected\components\UserData.php(99): CComponent->__call('redirect', Array)
+#1 D:\Fork\Fork\protected\components\UserData.php(99): CWebApplication->redirect('asd.php?#DMVcV')
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(190): UserData->update('asdasd', 'asd@dsa.com', 'asdasd', '1', '18', '1')
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddUser()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addUser')
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addUser')
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser&id=2
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/addUser&id=2
+---
+2013/12/14 08:39:26 [error] [exception.CException] exception 'CException' with message 'Property "UserData.owner" is not defined.' in D:\Fork\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Fork\Fork\protected\components\UserData.php(99): CComponent->__get('owner')
+#1 D:\Fork\Fork\protected\controllers\SiteController.php(190): UserData->update('asdasd', 'asd@dsa.com', 'asdasd', '1', '18', '1')
+#2 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddUser()
+#3 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addUser')
+#7 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addUser')
+#8 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser&id=2
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/addUser&id=2
+---
+2013/12/14 08:43:01 [error] [exception.CException] exception 'CException' with message 'UserData and its behaviors do not have a method or closure named "renderPartial".' in D:\Fork\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\Fork\Fork\protected\components\UserData.php(102): CComponent->__call('renderPartial', Array)
+#1 D:\Fork\Fork\protected\components\UserData.php(102): UserData->renderPartial('ext.toastMessag...', Array, false, true)
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(190): UserData->update('asdasd', 'asd@dsa.com', 'asdasd', '1', '18', '1')
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddUser()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addUser')
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addUser')
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser&id=2
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/addUser&id=2
+---
+2013/12/14 08:54:36 [error] [php] Undefined index: result (D:\Fork\Fork\protected\views\site\users.php:45)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(178): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionUsers()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/users&success=-2
+in D:\Fork\Fork\protected\views\site\users.php (45)
+in D:\Fork\Fork\protected\controllers\SiteController.php (178)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 09:01:51 [error] [php] Undefined index: result (D:\Fork\Fork\protected\views\site\users.php:45)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(178): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionUsers()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/users&success=-2
+in D:\Fork\Fork\protected\views\site\users.php (45)
+in D:\Fork\Fork\protected\controllers\SiteController.php (178)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 09:28:21 [error] [php] Missing argument 3 for UserApplication::__construct(), called in D:\Fork\Fork\protected\components\Location.php on line 25 and defined (D:\Fork\Fork\protected\components\UserApplication.php:9)
+Stack trace:
+#0 D:\Fork\framework\web\actions\CInlineAction.php(49): ForkController->actionAddLocations()
+#1 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#3 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#4 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#5 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addLocations&id=2
+in D:\Fork\Fork\protected\components\UserApplication.php (9)
+in D:\Fork\Fork\protected\components\Location.php (25)
+in D:\Fork\Fork\protected\controllers\ForkController.php (46)
+2013/12/14 09:28:36 [error] [php] Missing argument 3 for UserApplication::__construct(), called in D:\Fork\Fork\protected\components\Location.php on line 25 and defined (D:\Fork\Fork\protected\components\UserApplication.php:9)
+Stack trace:
+#0 D:\Fork\framework\web\actions\CInlineAction.php(49): ForkController->actionAddLocations()
+#1 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#3 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#4 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#5 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addLocations&id=2
+in D:\Fork\Fork\protected\components\UserApplication.php (9)
+in D:\Fork\Fork\protected\components\Location.php (25)
+in D:\Fork\Fork\protected\controllers\ForkController.php (46)
+2013/12/14 09:31:58 [error] [php] Undefined property: Location::$application_id (D:\Fork\Fork\protected\components\Location.php:38)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addLocations&id=2
+in D:\Fork\Fork\protected\components\Location.php (38)
+in D:\Fork\Fork\protected\controllers\ForkController.php (18)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 09:32:36 [error] [php] Undefined variable: newUser (D:\Fork\Fork\protected\controllers\ForkController.php:58)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#1 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#2 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#3 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/deleteLocations&id=3
+in D:\Fork\Fork\protected\controllers\ForkController.php (58)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 09:32:57 [error] [php] Undefined property: Location::$application_id (D:\Fork\Fork\protected\components\Location.php:46)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/deleteLocations&id=3
+in D:\Fork\Fork\protected\components\Location.php (46)
+in D:\Fork\Fork\protected\controllers\ForkController.php (58)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 09:58:02 [error] [exception.CException] exception 'CException' with message 'ForkController cannot find the requested view "login".' in D:\Fork\framework\web\CController.php:878
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#1 D:\Fork\Fork\protected\components\Controller.php(30): CController->render('login', Array)
+#2 D:\Fork\framework\web\CController.php(780): Controller->beforeRender('restaurantRevie...')
+#3 D:\Fork\Fork\protected\controllers\ForkController.php(323): CController->render('restaurantRevie...')
+#4 D:\Fork\framework\web\actions\CInlineAction.php(49): ForkController->actionRestaurantReview()
+#5 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Fork\framework\web\CWebApplication.php(282): CController->run('restaurantRevie...')
+#9 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/restaurant...')
+#10 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\Fork\Fork\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=fork/restaurantReview
+---
+2013/12/14 10:03:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "group".' in D:\Fork\framework\web\CController.php:483
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(270): CController->missingAction('group')
+#1 D:\Fork\framework\web\CWebApplication.php(282): CController->run('group')
+#2 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/group')
+#3 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Fork\Fork\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/group
+---
+2013/12/14 10:25:38 [error] [php] Undefined property: Location::$restaurant_id (D:\Fork\Fork\protected\views\fork\addFood.php:56)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): ForkController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): ForkController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\ForkController.php(286): ForkController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): ForkController->actionAddFood()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addFood&id=2
+in D:\Fork\Fork\protected\views\fork\addFood.php (56)
+in D:\Fork\Fork\protected\controllers\ForkController.php (286)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 10:26:33 [error] [php] Undefined property: Location::$restaurant_id (D:\Fork\Fork\protected\views\fork\addFood.php:56)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): ForkController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): ForkController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\ForkController.php(286): ForkController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): ForkController->actionAddFood()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addFood&id=2
+in D:\Fork\Fork\protected\views\fork\addFood.php (56)
+in D:\Fork\Fork\protected\controllers\ForkController.php (286)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 10:41:41 [error] [php] Undefined offset: 0 (D:\Fork\Fork\protected\components\Location.php:24)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addProvider&id=2
+in D:\Fork\Fork\protected\components\Location.php (24)
+in D:\Fork\Fork\protected\controllers\ForkController.php (455)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 10:42:21 [error] [php] Undefined offset: 0 (D:\Fork\Fork\protected\components\Location.php:24)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addProvider&id=2
+in D:\Fork\Fork\protected\components\Location.php (24)
+in D:\Fork\Fork\protected\controllers\ForkController.php (455)
+in D:\Fork\Fork\index.php (13)
+2013/12/14 11:58:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'prk'@'localhost' (using password: YES)' in D:\xampp\htdocs\Fork\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\xampp\htdocs\Fork\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\Fork\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\xampp\htdocs\Fork\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\xampp\htdocs\Fork\Fork\protected\components\UserApplication.php(18): CModule->__get('db')
+#5 D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php(109): UserApplication::getAll()
+#6 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionApplication()
+#7 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\xampp\htdocs\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('application')
+#11 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/applicatio...')
+#12 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/application
+HTTP_REFERER=http://localhost/Fork/Fork/
+---
+2013/12/14 12:04:32 [error] [php] Undefined index: restaurant_name (D:\xampp\htdocs\Fork\Fork\protected\controllers\ForkController.php:237)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(286): ForkController->runAction()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#2 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#3 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addRestaurant
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\ForkController.php (237)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/14 12:30:59 [error] [php] Undefined property: RestaurantLocation::$restaurant_name (D:\xampp\htdocs\Fork\Fork\protected\views\fork\addRestaurantLocation.php:56)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(869): ForkController->renderFile()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(782): ForkController->renderPartial()
+#2 D:\xampp\htdocs\Fork\Fork\protected\controllers\ForkController.php(322): ForkController->render()
+#3 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): ForkController->actionAddRestaurantLocation()
+#4 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\Fork\framework\web\CController.php(286): ForkController->runAction()
+#6 D:\xampp\htdocs\Fork\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#7 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): ForkController->run()
+#8 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=fork/addRestaurantLocation&id=2
+in D:\xampp\htdocs\Fork\Fork\protected\views\fork\addRestaurantLocation.php (56)
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\ForkController.php (322)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/14 12:42:09 [error] [php] Undefined property: Location::$username (D:\xampp\htdocs\Fork\Fork\protected\views\site\addUser.php:51)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php(220): SiteController->render()
+#3 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddUser()
+#4 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\xampp\htdocs\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addUser&id=1
+in D:\xampp\htdocs\Fork\Fork\protected\views\site\addUser.php (51)
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (220)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
