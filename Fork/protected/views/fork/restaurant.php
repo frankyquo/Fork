@@ -24,13 +24,37 @@ should you have any questions.</p>
 	<h1><?php echo Yii::app()->name; ?> - Forks</h1>
 </div>
 <?php
-	if(isset($success)&&($success==1||$success==2))
+	if(isset($_GET['success'])&&($_GET['success']==1||$_GET['success']==-1))
 	{
 ?>
 <script>
 	$.alert ({ 
 		type: 'ok'
-		, title: '<?=$success=='1'?'Insert Success':'Update Success'?>'
+		, title: '<?=$_GET['success']=='1'?'Insert Success':'Insert Failed'?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
+	}
+	else if(isset($_GET['success'])&&($_GET['success']==2||$_GET['success']==-2))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$_GET['success']=='2'?'Update Success':'Update Failed' ?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
+	}
+	else if(isset($_GET['success'])&&($_GET['success']==3||$_GET['success']==-3))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$_GET['success']=='3'?'Delete Success':'Delete Failed'?>'
 		, callback: function () { }	
 	});	
 </script>
@@ -63,6 +87,7 @@ should you have any questions.</p>
 							<tr class="gradeA">
 								<td><?=$restaurant['restaurant_name']?></td>
 								<td>
+									<a href="?r=fork/addRestaurantFoodCategory&id=<?=$restaurant['restaurant_id']?>"><button class="btn btn-green"><span class="icon-plus"></span></button></a>
 									<a href="?r=fork/addRestaurant&id=<?=$restaurant['restaurant_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
 									<button name2="<?=$restaurant['restaurant_id']?>" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button>
 								</td>

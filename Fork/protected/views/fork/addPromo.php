@@ -66,7 +66,9 @@ should you have any questions.</p>
 						</div>
 						<div class="actions">						
 							<button type="submit" class="btn btn-primary">Submit</button>
-							<button type="reset" class="btn btn-error">Reset</button>
+						<a href="index.php?r=fork/promo">
+							<button type="button" class="btn btn-error">Back</button>
+						</a>
 						</div>
 					</form>
 				</div>

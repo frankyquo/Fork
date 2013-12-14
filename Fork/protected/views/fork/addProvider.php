@@ -48,18 +48,20 @@ should you have any questions.</p>
 					<div class="field-group">
 						<label for="provider_name">Provider Name:</label>
 						<div class="field">
-							<input type="text" name="provider_name" id="provider_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data['provider_name']; ?>" />	
+							<input type="text" name="provider_name" id="provider_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data->provider_name; ?>" />	
 						</div>
 					</div>
 					<div class="field-group inlineField">	
 						<label for="provider_img">Provider Image:</label>
 						<div class="field">
-							<input type="file" name="provider_img" id="provider_img" value="<?php if($data!=null) echo $data['provider_image']; ?>" />
+							<input type="file" name="provider_img" id="provider_img" value="<?php if($data!=null) echo $data->provider_image; ?>" />
 						</div>	
 					</div>
 					<div class="actions">						
 						<button type="submit" class="btn btn-primary">Submit</button>
-						<button type="reset" class="btn btn-error">Reset</button>
+						<a href="index.php?r=fork/provider">
+							<button type="button" class="btn btn-error">Back</button>
+						</a>
 					</div>
 				</form>
 			</div>

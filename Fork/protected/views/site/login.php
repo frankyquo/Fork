@@ -49,10 +49,10 @@ $this->breadcrumbs=array(
 					<input type="password" name="password" value="" id="password" tabindex="2" placeholder="password" class="validate[required,minSize[3]]" />			
 				</div>
 				<?php
-					if(isset($error)) {
+					if(isset($_GET['error'])) {
 					?>
 				<div class="field">
-					<span class="ticket ticket-important"><?php echo UserIdentity::getErrorMessage($error); ?></span>
+					<span class="ticket ticket-important"><?php echo UserIdentity::getErrorMessage($_GET['error']); ?></span>
 				</div>
 				<?php
 					}

@@ -48,12 +48,14 @@ should you have any questions.</p>
 					<div class="field-group">
 						<label for="cat_name">Food Category Name:</label>
 						<div class="field">
-							<input type="text" name="cat_name" id="cat_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data['food_category_name']; ?>" />	
+							<input type="text" name="cat_name" id="cat_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data->food_category_name; ?>" />	
 						</div>
 					</div>
 					<div class="actions">						
 						<button type="submit" class="btn btn-primary">Submit</button>
-						<button type="reset" class="btn btn-error">Reset</button>
+						<a href="index.php?r=fork/foodCategory">
+							<button type="button" class="btn btn-error">Back</button>
+						</a>
 					</div>
 				</form>
 			</div>

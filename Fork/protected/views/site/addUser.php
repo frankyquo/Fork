@@ -48,13 +48,13 @@ should you have any questions.</p>
 					<div class="field-group">
 						<label for="uname">Username:</label>
 						<div class="field">
-							<input type="text" name="uname" id="uname" size="20" class="validate[required,minSize[5]]" value="<?php if($data!=null) echo $data['username']; ?>" />	
+							<input type="text" name="uname" id="uname" size="20" class="validate[required,minSize[5]]" value="<?php if($data!=null) echo $data->username; ?>" />	
 						</div>
 					</div>
 					<div class="field-group">
 						<label for="email">Email:</label>
 						<div class="field">
-							<input type="text" name="email" id="email" size="20" class="validate[required,minSize[5],custom[email]]" value="<?php if($data!=null) echo $data['email']; ?>" />	
+							<input type="text" name="email" id="email" size="20" class="validate[required,minSize[5],custom[email]]" value="<?php if($data!=null) echo $data->email; ?>" />	
 						</div>
 					</div>
 					<div class="field-group">
@@ -74,19 +74,19 @@ should you have any questions.</p>
 						<label>Gender:</label>	
 		
 						<div class="field">
-							<div class="radio" id="uniform-radio1"><span><input type="radio" name="gender" id="radio1" value="1" class="validate[required]" style="opacity: 0;" <?php if($data!=null && $data['gender']==1) {?>checked="checked"<?php } ?> /></span></div>
+							<div class="radio" id="uniform-radio1"><span><input type="radio" name="gender" id="radio1" value="1" class="validate[required]" style="opacity: 0;" <?php if($data!=null && $data->gender==='1') {?>checked="checked"<?php } ?> /></span></div>
 							<label for="radio1">Male</label>
 						</div>
 		
 						<div class="field">
-							<div class="radio" id="uniform-radio2"><span><input type="radio" name="gender" id="radio2" value="2" class="validate[required]" style="opacity: 0;" <?php if($data!=null && $data['gender']==2) {?>checked="checked"<?php } ?> /></span></div>
+							<div class="radio" id="uniform-radio2"><span><input type="radio" name="gender" id="radio2" value="2" class="validate[required]" style="opacity: 0;" <?php if($data!=null && $data->gender==='2') {?>checked="checked"<?php } ?> /></span></div>
 							<label for="radio2">Female</label>
 						</div>
 					</div>
 					<div class="field-group inlineField">
 						<label for="age">Age:</label>
 						<div class="field">
-							<input type="text" name="age" id="age" size="8" class="validate[required,min[16],max[100]]" value="<?php if($data!=null) echo $data['age']; ?>" />
+							<input type="text" name="age" id="age" size="8" class="validate[required,min[16],max[100]]" value="<?php if($data!=null) echo $data->age; ?>" />
 						</div>
 					</div>
 					<div class="field-group">
@@ -97,7 +97,7 @@ should you have any questions.</p>
 									foreach($locationList as $location)
 									{
 								?>
-								<option value="<?=$location['location_id']?>" <?php if($data!=null && $data['location_name']==$location['location_name']) echo "selected=\"selected\""; ?> ><?=$location['location_name']?></option>
+								<option value="<?=$location['location_id']?>" <?php if($data!=null && $data->location_id===$location['location_id']) echo "selected=\"selected\""; ?> ><?=$location['location_name']?></option>
 								<?php
 									}
 								?>
@@ -115,7 +115,9 @@ should you have any questions.</p>
 					?>
 					<div class="actions">						
 						<button type="submit" class="btn btn-primary">Submit</button>
-						<button type="reset" class="btn btn-error">Reset</button>
+						<a href="index.php?r=site/users">
+							<button type="button" class="btn btn-error">Back</button>
+						</a>
 					</div>
 				</form>
 			</div>

@@ -25,40 +25,54 @@ should you have any questions.</p>
 </div>
 
 <div class="container">
-	<div class="grid-24">				
+	<div class="grid-12">				
 		<div class="widget">
-			<div class="widget-header">
-				<h3><?php
-				if($id<1)
-					echo "Add Location";
-				else
-					echo "Edit Location";
-				?></h3>
-			</div>
+			<div class="widget-header">Add Food Category</div>
 			<div class="widget-content">
-				<form method="post" class="form uniformForm validateForm">
-					<?php
-					if($id>=1)
-					{
-					?>
-					<input type="hidden" name="loc_id" id="loc_id" value="<?=$id?>" />
-					<?php
-					}
-					?>
 					<div class="field-group">
-						<label for="loc_name">Location Name:</label>
+				<form method="post" class="form uniformForm validateForm">
+						<label for="cat_name">Food Category Name:</label>
 						<div class="field">
-							<input type="text" name="loc_name" id="loc_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data->location_name; ?>" />	
+							<select name="location" id="location">	
+								<option>test</option>
+							</select>
 						</div>
 					</div>
 					<div class="actions">						
 						<button type="submit" class="btn btn-primary">Submit</button>
-						<a href="index.php?r=fork/locations">
+						<a href="index.php?r=fork/restaurant">
 							<button type="button" class="btn btn-error">Back</button>
 						</a>
 					</div>
 				</form>
 			</div>
 		</div>					
+	</div>
+	<div class="grid-12">
+		<div class="widget">
+			<div class="widget-header">
+				Manage Restaurant Food Category
+			</div>
+			<div class="widget-content">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Restaurant Food Category Name</th>
+							<th>Modify</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>aa</td>
+							<td><button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
+						</tr>
+						<tr>
+							<td>aa</td>
+							<td><button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 </div>

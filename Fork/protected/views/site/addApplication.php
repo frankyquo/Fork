@@ -48,24 +48,26 @@ should you have any questions.</p>
 					<div class="field-group">
 						<label for="app_name">Application Name:</label>
 						<div class="field">
-							<input type="text" name="app_name" id="app_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data['application_name']; ?>" />	
+							<input type="text" name="app_name" id="app_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data->application_name; ?>" />	
 						</div>
 					</div>
 					<div class="field-group">
 						<label for="app_link">Application Link:</label>
 						<div class="field">
-							<input type="text" name="app_link" id="app_link" size="20" class="validate[required]" value="<?php if($data!=null) echo $data['application_link']; ?>" />	
+							<input type="text" name="app_link" id="app_link" size="20" class="validate[required]" value="<?php if($data!=null) echo $data->application_link; ?>" />	
 						</div>
 					</div>
 					<div class="field-group">
 						<label for="app_copy">Copyright:</label>
 						<div class="field">
-							<input type="text" name="app_copy" id="app_copy" size="20" class="validate[required]" value="<?php if($data!=null) echo $data['copyright']; ?>" />	
+							<input type="text" name="app_copy" id="app_copy" size="20" class="validate[required]" value="<?php if($data!=null) echo $data->copyright; ?>" />	
 						</div>
 					</div>
 					<div class="actions">						
 						<button type="submit" class="btn btn-primary">Submit</button>
-						<button type="reset" class="btn btn-error">Reset</button>
+						<a href="index.php?r=site/application">
+							<button type="button" class="btn btn-error">Back</button>
+						</a>
 					</div>
 				</form>
 			</div>

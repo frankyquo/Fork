@@ -53,7 +53,7 @@ should you have any questions.</p>
 									foreach($restaurantList as $restaurant)
 									{
 								?>
-								<option value="<?=$restaurant['restaurant_id']?>" <?php if($data!=null && $data['restaurant_name']==$restaurant['restaurant_name']) echo "selected=\"selected\""; ?> ><?=$restaurant['restaurant_name']?></option>
+								<option value="<?=$restaurant['restaurant_id']?>" <?php if($data!=null && $data->restaurant_id===$restaurant['restaurant_id']) echo "selected=\"selected\""; ?> ><?=$restaurant['restaurant_name']?></option>
 								<?php
 									}
 								?>
@@ -68,7 +68,7 @@ should you have any questions.</p>
 									foreach($foodCatList as $foodCat)
 									{
 								?>
-								<option value="<?=$foodCat['food_category_id']?>" <?php if($data!=null && $data['food_category_name']==$foodCat['food_category_name']) echo "selected=\"selected\""; ?> ><?=$foodCat['food_category_name']?></option>
+								<option value="<?=$foodCat['food_category_id']?>" <?php if($data!=null && $data->food_category_id===$foodCat['food_category_id']) echo "selected=\"selected\""; ?> ><?=$foodCat['food_category_name']?></option>
 								<?php
 									}
 								?>
@@ -78,30 +78,32 @@ should you have any questions.</p>
 					<div class="field-group">
 						<label for="food_name">Food Name:</label>
 						<div class="field">
-							<input type="text" name="food_name" id="food_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data['food_name']; ?>" />	
+							<input type="text" name="food_name" id="food_name" size="20" class="validate[required]" value="<?php if($data!=null) echo $data->food_name; ?>" />	
 						</div>
 					</div>
 					<div class="field-group">
 						<label for="description">Food Description:</label>
 						<div class="field">
-							<textarea name="description" id="description" rows="5" cols="50"><?php if($data!=null) echo $data['description']; ?></textarea>
+							<textarea name="description" id="description" rows="5" cols="50"><?php if($data!=null) echo $data->description; ?></textarea>
 						</div>	
 					</div>
 					<div class="field-group inlineField">	
 						<label for="food_img">Food Image:</label>
 						<div class="field">
-							<input type="file" name="food_img" id="food_img" value="<?php if($data!=null) echo $data['image']; ?>" />
+							<input type="file" name="food_img" id="food_img" value="<?php if($data!=null) echo $data->image; ?>" />
 						</div>	
 					</div>
 					<div class="field-group inlineField">
 						<label for="price">Price:</label>
 						<div class="field">
-							<input type="text" name="price" id="price" size="8" class="validate[required,min[1000],max[1000000]]" value="<?php if($data!=null) echo $data['price']; ?>" />
+							<input type="text" name="price" id="price" size="8" class="validate[required,min[1000],max[1000000]]" value="<?php if($data!=null) echo $data->price; ?>" />
 						</div>
 					</div>
 					<div class="actions">						
 						<button type="submit" class="btn btn-primary">Submit</button>
-						<button type="reset" class="btn btn-error">Reset</button>
+						<a href="index.php?r=fork/food">
+							<button type="button" class="btn btn-error">Back</button>
+						</a>
 					</div>
 				</form>
 			</div>

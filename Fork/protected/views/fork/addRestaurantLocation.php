@@ -53,7 +53,7 @@ should you have any questions.</p>
 									foreach($restaurantList as $restaurant)
 									{
 								?>
-								<option value="<?=$restaurant['restaurant_id']?>" <?php if($data!=null && $data['restaurant_name']==$restaurant['restaurant_name']) echo "selected=\"selected\""; ?> ><?=$restaurant['restaurant_name']?></option>
+								<option value="<?=$restaurant['restaurant_id']?>" <?php if($data!=null && $data->restaurant_id==$restaurant['restaurant_id']) echo "selected=\"selected\""; ?> ><?=$restaurant['restaurant_name']?></option>
 								<?php
 									}
 								?>
@@ -68,7 +68,7 @@ should you have any questions.</p>
 									foreach($locationList as $location)
 									{
 								?>
-								<option value="<?=$location['location_id']?>" <?php if($data!=null && $data['location_name']==$location['location_name']) echo "selected=\"selected\""; ?> ><?=$location['location_name']?></option>
+								<option value="<?=$location['location_id']?>" <?php if($data!=null && $data->location_id==$location['location_id']) echo "selected=\"selected\""; ?> ><?=$location['location_name']?></option>
 								<?php
 									}
 								?>
@@ -78,48 +78,50 @@ should you have any questions.</p>
 					<div class="field-group">
 						<label for="branch">Branch Name:</label>
 						<div class="field">
-							<input type="text" name="branch" id="branch" size="20" class="validate[required]" value="<?php if($data!=null) echo $data['branch']; ?>" />	
+							<input type="text" name="branch" id="branch" size="20" class="validate[required]" value="<?php if($data!=null) echo $data->branch; ?>" />	
 						</div>
 					</div>
 					<div class="field-group">
 						<label for="address">Address:</label>
 						<div class="field">
-							<textarea name="address" id="address" rows="5" cols="50"><?php if($data!=null) echo $data['address']; ?></textarea>
+							<textarea name="address" id="address" rows="5" cols="50"><?php if($data!=null) echo $data->address; ?></textarea>
 						</div>	
 					</div>
 					<div class="field-group inlineField">
 						<label for="longitude">Longitude:</label>
 						<div class="field">
-							<input type="text" name="longitude" id="longitude" size="8" class="validate[required,min[-180],max[180]]" value="<?php if($data!=null) echo $data['longitude']; ?>" />
+							<input type="text" name="longitude" id="longitude" size="8" class="validate[required,min[-180],max[180]]" value="<?php if($data!=null) echo $data->longitude; ?>" />
 						</div>
 					</div>
 					<div class="field-group inlineField">
 						<label for="latitude">Latitude:</label>
 						<div class="field">
-							<input type="text" name="latitude" id="latitude" size="8" class="validate[required,min[-180],max[180]]" value="<?php if($data!=null) echo $data['latitude']; ?>" />
+							<input type="text" name="latitude" id="latitude" size="8" class="validate[required,min[-180],max[180]]" value="<?php if($data!=null) echo $data->latitude; ?>" />
 						</div>
 					</div>
 					<div class="field-group inlineField">
 						<label for="phones">Phones:</label>
 						<div class="field">
-							<input type="text" name="phones" id="phones" size="20" class="validate[required,minSize[5],maxSize[20]]" value="<?php if($data!=null) echo $data['phones']; ?>" />
+							<input type="text" name="phones" id="phones" size="20" class="validate[required,minSize[5],maxSize[20]]" value="<?php if($data!=null) echo $data->phones; ?>" />
 						</div>
 					</div>
 					<div class="field-group inlineField">
 						<label for="minPrice">Min Price:</label>
 						<div class="field">
-							<input type="text" name="minPrice" id="minPrice" size="8" class="validate[required,min[1000],max[1000000]]" value="<?php if($data!=null) echo $data['minprice']; ?>" />
+							<input type="text" name="minPrice" id="minPrice" size="8" class="validate[required,min[1000],max[1000000]]" value="<?php if($data!=null) echo $data->minprice; ?>" />
 						</div>
 					</div>
 					<div class="field-group inlineField">
 						<label for="maxPrice">Max Price:</label>
 						<div class="field">
-							<input type="text" name="maxPrice" id="maxPrice" size="8" class="validate[required,min[1000],max[1000000]]" value="<?php if($data!=null) echo $data['maxprice']; ?>" />
+							<input type="text" name="maxPrice" id="maxPrice" size="8" class="validate[required,min[1000],max[1000000]]" value="<?php if($data!=null) echo $data->maxprice; ?>" />
 						</div>
 					</div>
 					<div class="actions">						
 						<button type="submit" class="btn btn-primary">Submit</button>
-						<button type="reset" class="btn btn-error">Reset</button>
+						<a href="index.php?r=fork/restaurantLocation">
+							<button type="button" class="btn btn-error">Back</button>
+						</a>
 					</div>
 				</form>
 			</div>

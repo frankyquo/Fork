@@ -24,13 +24,37 @@ should you have any questions.</p>
 	<h1><?php echo Yii::app()->name; ?> - Forks</h1>
 </div>
 <?php
-	if(isset($success)&&($success==1||$success==2))
+	if(isset($_GET['success'])&&($_GET['success']==1||$_GET['success']==-1))
 	{
 ?>
 <script>
 	$.alert ({ 
 		type: 'ok'
-		, title: '<?=$success=='1'?'Insert Success':'Update Success'?>'
+		, title: '<?=$_GET['success']=='1'?'Insert Success':'Insert Failed'?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
+	}
+	else if(isset($_GET['success'])&&($_GET['success']==2||$_GET['success']==-2))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$_GET['success']=='2'?'Update Success':'Update Failed' ?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
+	}
+	else if(isset($_GET['success'])&&($_GET['success']==3||$_GET['success']==-3))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$_GET['success']=='3'?'Delete Success':'Delete Failed'?>'
 		, callback: function () { }	
 	});	
 </script>
@@ -55,11 +79,11 @@ should you have any questions.</p>
 								<th>Restaurant Location Name</th>
 								<th>Branch</th>
 								<th>Address</th>
-								<th>Longitude</th>
-								<th>Latitude</th>
+								<!--th>Longitude</th>
+								<th>Latitude</th-->
 								<th>Restaurant Phone</th>
-								<th>Min Price</th>
-								<th>Max Price</th>
+								<!--th>Min Price</th>
+								<th>Max Price</th-->
 								<th>Modify</th>
 							</tr>
 						</thead>
@@ -73,11 +97,11 @@ should you have any questions.</p>
 								<td><?=$restaurantLocation['location_name']?></td>
 								<td><?=$restaurantLocation['branch']?></td>
 								<td><?=$restaurantLocation['address']?></td>
-								<td><?=$restaurantLocation['longitude']?></td>
-								<td><?=$restaurantLocation['latitude']?></td>
+								<!--td><?=$restaurantLocation['longitude']?></td>
+								<td><?=$restaurantLocation['latitude']?></td-->
 								<td><?=$restaurantLocation['phones']?></td>
-								<td><?=$restaurantLocation['minprice']?></td>
-								<td><?=$restaurantLocation['maxprice']?></td>
+								<!--td><?=$restaurantLocation['minprice']?></td>
+								<td><?=$restaurantLocation['maxprice']?></td-->
 								<td>
 									<a href="?r=fork/addRestaurantLocation&id=<?=$restaurantLocation['restaurant_location_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
 									<button name2="<?=$restaurantLocation['restaurant_location_id']?>" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button>

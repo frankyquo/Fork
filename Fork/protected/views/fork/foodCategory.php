@@ -24,13 +24,25 @@ should you have any questions.</p>
 	<h1><?php echo Yii::app()->name; ?> - Forks</h1>
 </div>
 <?php
-	if(isset($success)&&($success==1||$success==2))
+	if(isset($_GET['success'])&&($_GET['success']==1||$_GET['success']==2))
 	{
 ?>
 <script>
 	$.alert ({ 
 		type: 'ok'
-		, title: '<?=$success=='1'?'Insert Success':'Update Success'?>'
+		, title: '<?=$_GET['success']=='1'?'Insert Success':'Update Success'?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
+	}
+	else if(isset($_GET['success'])&&($_GET['success']==-1||$_GET['success']==-2))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$_GET['success']=='-1'?'Insert Failed':'Update Failed'?>'
 		, callback: function () { }	
 	});	
 </script>
