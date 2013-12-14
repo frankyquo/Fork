@@ -40,6 +40,8 @@ class UserIdentity extends CUserIdentity
 	}
 	public static function getErrorMessage($errorCode) {
 		switch($errorCode) {
+			case 100:
+			return "Not Logged In!";
 			case self::ERROR_USERNAME_INVALID:
 			return "Username or Email Invalid!";
 			case self::ERROR_PASSWORD_INVALID:
