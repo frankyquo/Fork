@@ -53,12 +53,12 @@
 							'id'=>'navUser',
 							'label'=>'User Management', 'url'=>array('/site/'),
 							'items'=>array(
-								array('label'=>'Application', 'url'=>array('/site/application')),
-								array('label'=>'Users', 'url'=>array('/site/users')),
-								array('label'=>'Groups', 'url'=>array('/site/groups')),
-								array('label'=>'Menu', 'url'=>array('/site/menu')),
-								array('label'=>'Group Users', 'url'=>array('/site/groupUsers')),
-								array('label'=>'Menu Group Access', 'url'=>array('/site/access')),
+								array('label'=>'Application', 'url'=>array('/site/application'),'items'=>array(array('url'=>array('/site/addApplication'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Users', 'url'=>array('/site/users'),'items'=>array(array('url'=>array('/site/addUser'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Groups', 'url'=>array('/site/groups'),'items'=>array(array('url'=>array('/site/addGroup'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Menu', 'url'=>array('/site/menu'),'items'=>array(array('url'=>array('/site/addMenu'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Group Users', 'url'=>array('/site/groupUsers'),'items'=>array(array('url'=>array('/site/addGroupUser'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Menu Group Access', 'url'=>array('/site/access'),'items'=>array(array('url'=>array('/site/addGroupMenuAccess'))),'submenuOptions'=>array('style'=>'display:none;'))
 							),
 							'submenuOptions'=>array('class'=>'subNav dropdown'),
 							'itemOptions'=>array('class'=>'nav')
@@ -67,14 +67,14 @@
 							'id'=>'navFork',
 							'label'=>'Fork', 'url'=>array('/fork/'),
 							'items'=>array(
-								array('label'=>'Location','url'=>array('/fork/locations')),
-								array('label'=>'Food','url'=>array('/fork/food')),
-								array('label'=>'Provider','url'=>array('/fork/provider')),
-								array('label'=>'Restaurant','url'=>array('/fork/restaurant')),
-								array('label'=>'Restaurant Promo','url'=>array('/fork/restaurantPromo')),
-								array('label'=>'Restaurant Review','url'=>array('/fork/restaurantReview')),
-								array('label'=>'Restaurant Location','url'=>array('/fork/restaurantLocation')),
-								array('label'=>'Food Category','url'=>array('/fork/foodCategory'))
+								array('label'=>'Location','url'=>array('/fork/locations'),'items'=>array(array('url'=>array('/fork/addLocations'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Food','url'=>array('/fork/food'),'items'=>array(array('url'=>array('/fork/addFood'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Provider','url'=>array('/fork/provider'),'items'=>array(array('url'=>array('/fork/addProvider'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Restaurant','url'=>array('/fork/restaurant'),'items'=>array(array('url'=>array('/fork/addRestaurant')),array('url'=>array('/fork/addRestaurantFoodCategory'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Restaurant Promo','url'=>array('/fork/restaurantPromo'),'items'=>array(array('url'=>array('/fork/addPromo'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Restaurant Review','url'=>array('/fork/restaurantReview'),'items'=>array(array('url'=>array('/fork/addRestaurantReview'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Restaurant Location','url'=>array('/fork/restaurantLocation'),'items'=>array(array('url'=>array('/fork/addRestaurantLocation'))),'submenuOptions'=>array('style'=>'display:none;')),
+								array('label'=>'Food Category','url'=>array('/fork/foodCategory'),'items'=>array(array('url'=>array('/fork/addFoodCategory'))),'submenuOptions'=>array('style'=>'display:none;'))
 							),
 							'submenuOptions'=>array('class'=>'subNav dropdown'),
 							'itemOptions'=>array('class'=>'nav')
