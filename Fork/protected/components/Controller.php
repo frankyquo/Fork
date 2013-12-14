@@ -22,12 +22,17 @@ class Controller extends CController
 	public $breadcrumbs=array();
 	
 	public function beforeRender($view) {
-		if(Yii::app()->user->isGuest && strcmp($view,'login')!=0 && strcmp($view,'forgotPassword')!=0) {
+		if(Yii::app()->user->isGuest && strcmp($view,'login')!=0 && strcmp($view,'forgotPassword')!=0)
+		{
 			$this->layout = false;
-			$data = array();
 			if(strcmp($view,'login')!=0 && strcmp($view,'index')!=0)
-				$data['error'] = 'Not Logged In!';
-			$this->render('login',$data);
+			{
+				$this->redirect(array('site/login','error'=>100));
+			}
+			else
+			{
+				$this->redirect(array('site/login'));
+			}
 			return false;
 		}
 		return true;
