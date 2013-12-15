@@ -20,98 +20,99 @@ Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
 -->
 
-
 <div id="contentHeader">
-	<h1><?php echo Yii::app()->name; ?> - Groups</h1>
+	<h1><?php echo Yii::app()->name; ?> - Forks</h1>
 </div>
 <?php
-	if($success==1||$success==2) {
-		?>
-		<script>
-			$.alert ({ 
-				type: 'ok'
-				, title: '<?=$success=='1'?'Insert Success':'Update Success'?>'
-				, callback: function () { }	
-			});	
-		</script>
-		<?php
+	if(isset($_GET['success'])&&($_GET['success']==1||$_GET['success']==-1))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$_GET['success']=='1'?'Insert Success':'Insert Failed'?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
 	}
-	else if($success==-1||$success==-2) {
-		?>
-		<script>
-			$.alert ({ 
-				type: 'ok'
-				, title: '<?=$success=='-1'?'Insert Failed':'Update Failed'?>'
-				, callback: function () { }	
-			});	
-		</script>
-		<?php
+	else if(isset($_GET['success'])&&($_GET['success']==2||$_GET['success']==-2))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$_GET['success']=='2'?'Update Success':'Update Failed' ?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
+	}
+	else if(isset($_GET['success'])&&($_GET['success']==3||$_GET['success']==-3))
+	{
+?>
+<script>
+	$.alert ({ 
+		type: 'ok'
+		, title: '<?=$_GET['success']=='3'?'Delete Success':'Delete Failed'?>'
+		, callback: function () { }	
+	});	
+</script>
+<?php
 	}
 ?>
-
 <div class="container">
-	<div class="grid-24">
-		<div class="widget widget-table">
-					
-			<div class="widget-header">
-				<h3 class="icon chart">Group Data</h3>
-				<button name2="0" class="btn btn-primary btn-header addGroup">
-					<span class="icon-plus-alt"></span>Add
-				</button>				
-			</div>
-		
-			<div class="widget-content">
-				<table class="table table-bordered table-striped data-table">
-					<thead>
-						<tr>
-							<th>Application Name</th>
-							<th>Group Name</th>
-							<th>Modify</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-							foreach($groupList as $group)
-							{
-						?>
-						<tr class="gradeA">
-							<td><?=$group['group_name']?></td>
-							<td><?=$group['application_name']?></td>
-							<td>
-								<button name2="<?=$group['group_id']?>" class="btn btn-gray addGroup"><span class="icon-pen"></span></button>
-								<button name2="<?=$group['group_id']?>" class="btn btn-red"><span class="icon-trash-fill"></span></button>
-							</td>
-						</tr>
-						<?php
-							}
-						?>											
-					</tbody>
-				</table>
-			</div> <!-- .widget-content -->
-			
-		</div> <!-- .widget -->
+	<div class="row">
+		<div class="grid-24">				
+			<div class="widget widget-table">
+				<div class="widget-header">
+					<h3>Group Data</h3>
+					<a href="index.php?r=site/addGroup">
+						<button type="submit" class="btn btn-primary btn-header"><span class="icon-plus-alt"></span>Add</button>
+					</a>
+				</div>
+				<div class="widget-content">
+					<table class="table table-bordered table-striped data-table">
+						<thead>
+							<tr>
+								<th>Application Name</th>
+								<th>Group Name</th>
+								<th>Modify</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+								foreach($groupList as $group)
+								{
+							?>
+							<tr class="gradeA">
+								<td><?=$group['application_name']?></td>
+								<td><?=$group['group_name']?></td>
+								<td>
+									<a href="?r=site/addGroup&id=<?=$group['group_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
+									<button name2="<?=$group['group_id']?>" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button>
+								</td>
+							</tr>
+							<?php
+								}
+							?>
+						</tbody>
+					</table>
+				</div>
+			</div>					
+		</div>
 	</div>
 </div>
 
 <script>
-$(function () {
-	
-	$('.addGroup').live ('click', function (e) {
-		$id = $(this).attr('name2');
-		$url = '<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/groupPop';
-		$id=='0' ? $url+='' : $url+='&id='+$id;
-		e.preventDefault ();
-		$.ajax({
-			url:$url,
-			type:'get',
-			success: function(data) {
-				$.modal({
-					title: $id=='0'?'Add Group':'Edit Group',
-					html:data
-				});
-			}
-		});
-	});
+$('.delete-button').live ('click', function (e) {
+	$id = $(this).attr('name2');
+	e.preventDefault ();
+	$.alert ({ 
+		type: 'confirm'
+		, title: 'Delete Group?'
+		, text: '<p>Are you sure you want to delete this group?</p>'
+		, callback: function () { window.location.replace('index.php?r=site/deleteGroup&id='+$id); }	
+	});		
 });
-
 </script>

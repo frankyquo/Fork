@@ -30,23 +30,30 @@ should you have any questions.</p>
 			<div class="widget">
 				<div class="widget-header">
 					<h3>Menu</h3>
-					<button id="addMenu" class="btn btn-primary btn-header-right">
-						<span class="icon-plus-alt"></span>Add
-					</button>
+					<a href="index.php?r=site/addMenu">
+						<button type="submit" class="btn btn-primary btn-header-right"><span class="icon-plus-alt"></span>Add</button>
+					</a>
 				</div>
 				<div class="widget-content">
-					<form class="form uniformForm">
+					<form method="post" class="form uniformForm">
 						<p>
 							<div class="field-group">
 								<label>Application:</label>
 								<div class="field">
-									<select name="cardtype" id="cardtype">
-										<option>Fork</option>
+									<select name="application_id" id="application_id">
+										<?php
+											foreach($applicationList as $application)
+											{
+										?>
+										<option value="<?=$application['application_id']?>" <?php if(count($menuList)!=0 && $menuList[0]['application_id']===$application['application_id']) echo "selected=\"selected\""; ?> ><?=$application['application_name']?></option>
+										<?php
+											}
+										?>
 									</select>
 								</div>
 							</div>
 							<div class="actions">						
-								<button type="button" class="btn btn-primary"><span class="icon-users"></span>Search</button>
+								<button type="submit" class="btn btn-primary"><span class="icon-users"></span>Search</button>
 							</div>						
 						</p>
 					</form>
@@ -59,70 +66,37 @@ should you have any questions.</p>
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+								foreach($menuList as $menu)
+								{
+									if($menu['menu_link']==='this')
+									{
+							?>
 							<tr class="odd gradeX">
-								<td class="menu-parent">User Management</td>
-								<td class="menu-parent">this</td>
+								<td class="menu-parent"><?=$menu['menu_name']?></td>
+								<td class="menu-parent"><?=$menu['menu_link']?></td>
 								<td class="menu-parent">
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
+									<a href="?r=site/addMenu&id=<?=$menu['menu_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
+									<button name2="<?=$menu['menu_id']?>" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button>
 								</td>
 							</tr>
+							<?php
+									}
+									else
+									{
+							?>
 							<tr class="even gradeC">
-								<td class="menu-child">User</td>
-								<td class="menu-child">site/user</td>
+								<td class="menu-child"><?=$menu['menu_name']?></td>
+								<td class="menu-child"><?=$menu['menu_link']?></td>
 								<td class="menu-child">
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
+									<a href="?r=site/addMenu&id=<?=$menu['menu_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
+									<button name2="<?=$menu['menu_id']?>" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button>
 								</td>
 							</tr>
-							<tr class="odd gradeA">
-								<td class="menu-child">Group</td>
-								<td class="menu-child">site/group</td>
-								<td class="menu-child">
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
-								</td>
-							</tr>
-							<tr class="even gradeA">
-								<td class="menu-child">Group User</td>
-								<td class="menu-child">site/groupUser</td>
-								<td class="menu-child">
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
-								</td>
-							</tr>
-							<tr class="odd gradeX">
-								<td class="menu-parent">Management Content</td>
-								<td class="menu-parent">this</td>
-								<td class="menu-parent">
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
-								</td>
-							</tr>
-							<tr class="even gradeC">
-								<td class="menu-child">Location</td>
-								<td class="menu-child">management/location</td>
-								<td class="menu-child">
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
-								</td>
-							</tr>
-							<tr class="odd gradeA">
-								<td class="menu-child">Restaurant</td>
-								<td class="menu-child">management/restaurant</td>
-								<td class="menu-child">
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
-								</td>
-							</tr>
-							<tr class="even gradeA">
-								<td class="menu-child">Restaurant Review</td>
-								<td class="menu-child">management/restaurantReview</td>
-								<td class="menu-child">
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
-								</td>
-							</tr>
+							<?php
+									}
+								}
+							?>
 						</tbody>
 					</table>
 				</div>
@@ -132,21 +106,14 @@ should you have any questions.</p>
 </div>
 
 <script>
-$(function () {
-	
-	$('#addMenu').live ('click', function (e) {
-		e.preventDefault ();
-		$.ajax({
-			url:'<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/menuPop',
-			type:'get',
-			success: function(data) {
-				$.modal({
-					title:'Add Menu',
-					html:data
-				});
-			}
-		});
-	});
+$('.delete-button').live ('click', function (e) {
+	$id = $(this).attr('name2');
+	e.preventDefault ();
+	$.alert ({ 
+		type: 'confirm'
+		, title: 'Delete Menu?'
+		, text: '<p>Are you sure you want to delete this menu?</p>'
+		, callback: function () { window.location.replace('index.php?r=site/deleteMenu&id='+$id); }	
+	});		
 });
-
 </script>
