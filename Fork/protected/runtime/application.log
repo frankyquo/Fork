@@ -2922,3 +2922,27 @@ Stack trace:
 REQUEST_URI=/Fork/Fork/index.php?r=site/users
 HTTP_REFERER=http://localhost/Fork/Fork/
 ---
+2013/12/15 17:29:30 [error] [php] Undefined property: MenuData::$group_id (D:\xampp\htdocs\Fork\Fork\protected\components\MenuData.php:70)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addMenu&id=2
+in D:\xampp\htdocs\Fork\Fork\protected\components\MenuData.php (70)
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (330)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/15 17:31:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deleteMenu".' in D:\xampp\htdocs\Fork\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(270): CController->missingAction('deleteMenu')
+#1 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('deleteMenu')
+#2 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/deleteMenu')
+#3 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/deleteMenu&id=4
+HTTP_REFERER=http://localhost/Fork/Fork/index.php?r=site/menu&success=2
+---

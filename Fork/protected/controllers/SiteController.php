@@ -310,6 +310,7 @@ class SiteController extends Controller
 			$this->redirect('site/groups');
 		}
 	}
+	
 	public function actionMenu()
 	{
 		$application_id = 1;
@@ -326,7 +327,7 @@ class SiteController extends Controller
 			if(isset($_POST['menu_id']))
 			{
 				//update submit
-				$newMenu = Groups::get($_POST['menu_id']);
+				$newMenu = MenuData::get($_POST['menu_id']);
 				if($newMenu->update($_POST['application'], $_POST['menu_name'], $_POST['menu_link'], $_POST['parent'])==1)
 				{
 					$this->redirect(array("site/menu",'success'=>2));
@@ -339,8 +340,8 @@ class SiteController extends Controller
 			else
 			{
 				//insert submit
-				$newGroup = new Groups(0, $_POST['application'], $_POST['menu_name'], $_POST['menu_link'], $_POST['parent'],0);
-				if($newGroup->insert()==1)
+				$newMenu = new MenuData(0, $_POST['application'], $_POST['menu_name'], $_POST['menu_link'], $_POST['parent'],0);
+				if($newMenu->insert()==1)
 				{
 					$this->redirect(array("site/menu",'success'=>1));
 				}
@@ -358,6 +359,28 @@ class SiteController extends Controller
 			$data = MenuData::get($_GET['id']);
 		}
 		$this->render('addMenu',array('id'=>$id,'data'=>$data,'applicationList'=>UserApplication::getAll(),'parentList'=>MenuData::getParent()));
+	}
+	
+	public function actionDeleteMenu ()
+	{
+		if(isset($_GET['id']))
+		{
+			//delete
+			$id = $_GET['id'];
+			$newMenu = MenuData::get($id);
+			if($newMenu->delete()==1)
+			{
+				$this->redirect(array("site/menu",'success'=>3));
+			}
+			else
+			{
+				$this->redirect(array("site/menu",'success'=>-3));
+			}
+		}
+		else
+		{
+			$this->redirect('site/menu');
+		}
 	}
 
 	/**
