@@ -181,6 +181,11 @@ INSERT INTO `foodcategory` (`food_category_id`, `food_category_name`, `stsrc`, `
 INSERT INTO `groups` (`group_id`, `group_name`, `application_id`, `stsrc`, `userchange`, `datechange`) VALUES
 (1, 'Admin', 1, 'a', 'hackedhacker', '2013-12-11 23:38:48');
 
+INSERT INTO `groupuser` (`user_id`, `group_id`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 1, 'a', 'hackedhacker', '2013-12-15 22:49:54'),
+(2, 1, 'a', 'hackedhacker', '2013-12-15 22:49:54'),
+(3, 1, 'a', 'hackedhacker', '2013-12-15 22:50:09');
+
 INSERT INTO `location` (`location_id`, `location_name`, `stsrc`, `userchange`, `datechange`) VALUES
 (1, 'Jakarta', 'a', 'hackedhacker', '2013-12-11 21:37:13');
 
@@ -191,7 +196,9 @@ INSERT INTO `restaurantfood` (`restaurant_food_id`, `restaurant_id`, `food_categ
 (1, 1, 1, 'Daging Abuba', 'Daging Panggang Special Dengan Saos Racikan Special dari Abuba', 'images/food/abuba/1.jpg', 50000, 'a', 'hackedhacker', '2013-12-12 15:01:48');
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `hash`, `gender`, `age`, `location_id`, `stsrc`, `userchange`, `datechange`) VALUES
-(1, 'hackedhacker', 'hacked@hacker.com', '463487fd707ac502d5ee2451435c856c', 'sl834', 1, 99, 1, 'a', 'hackedhacker', '2013-12-08 17:40:51');
+(1, 'hackedhacker', 'hacked@hacker.com', '463487fd707ac502d5ee2451435c856c', 'sl834', 1, 99, 1, 'a', 'hackedhacker', '2013-12-08 17:40:51'),
+(2, 'frankyquo', 'frankyquo@gmail.com', 'c2706a93f0afedb7e1722848c63f8cb9', 'pCjQb', 1, 20, 1, 'a', 'hackedhacker', '2013-12-15 22:48:07'),
+(3, 'jacky lim', 'jacky.lim@gmail.com', '9aeadd8345e532f539486f2b4c92c182', 'Ylw3K', 1, 18, 1, 'a', 'hackedhacker', '2013-12-15 22:48:40');
 
 INSERT INTO `provider` (`provider_id`, `provider_name`, `provider_image`, `stsrc`, `userchange`, `datechange`) VALUES (1, 'Bank Central Asia', 'images/provider/bca.jpg', 'a', 'hackedhacker', NOW());
 
