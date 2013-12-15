@@ -2628,3 +2628,297 @@ REQUEST_URI=/Fork/Fork/index.php?r=site/application
 in D:\xampp\htdocs\Fork\Fork\protected\views\layouts\main.php (84)
 in D:\xampp\htdocs\Fork\Fork\protected\views\layouts\column1.php (6)
 in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (109)
+2013/12/15 02:34:15 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "addGroup".' in D:\Fork\framework\web\CController.php:878
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(782): CController->renderPartial('addGroup', Array, true)
+#1 D:\Fork\Fork\protected\controllers\SiteController.php(289): CController->render('addGroup', Array)
+#2 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddGroup()
+#3 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addGroup')
+#7 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addGroup')
+#8 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addGroup
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/groups
+---
+2013/12/15 02:34:19 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "addGroup".' in D:\Fork\framework\web\CController.php:878
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(782): CController->renderPartial('addGroup', Array, true)
+#1 D:\Fork\Fork\protected\controllers\SiteController.php(289): CController->render('addGroup', Array)
+#2 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddGroup()
+#3 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addGroup')
+#7 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addGroup')
+#8 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addGroup&id=1
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/groups
+---
+2013/12/15 02:34:22 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "addGroup".' in D:\Fork\framework\web\CController.php:878
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(782): CController->renderPartial('addGroup', Array, true)
+#1 D:\Fork\Fork\protected\controllers\SiteController.php(289): CController->render('addGroup', Array)
+#2 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddGroup()
+#3 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addGroup')
+#7 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addGroup')
+#8 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addGroup&id=1
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/groups
+---
+2013/12/15 02:45:31 [error] [php] include(Application.php): failed to open stream: No such file or directory (D:\Fork\framework\YiiBase.php:427)
+Stack trace:
+#0 D:\Fork\Fork\protected\controllers\SiteController.php(289): spl_autoload_call()
+#1 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddGroup()
+#2 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#4 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#6 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addGroup
+in D:\Fork\Fork\protected\controllers\SiteController.php (289)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 02:46:11 [error] [php] Undefined property: Groups::$application_link (D:\Fork\Fork\protected\views\site\addGroup.php:66)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(289): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddGroup()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addGroup&id=2
+in D:\Fork\Fork\protected\views\site\addGroup.php (66)
+in D:\Fork\Fork\protected\controllers\SiteController.php (289)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 02:46:40 [error] [php] Undefined offset: 0 (D:\Fork\Fork\protected\components\UserApplication.php:28)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/deleteApplication&id=2
+in D:\Fork\Fork\protected\components\UserApplication.php (28)
+in D:\Fork\Fork\protected\controllers\SiteController.php (160)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 02:47:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deleteGroup".' in D:\Fork\framework\web\CController.php:483
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(270): CController->missingAction('deleteGroup')
+#1 D:\Fork\framework\web\CWebApplication.php(282): CController->run('deleteGroup')
+#2 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/deleteGrou...')
+#3 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Fork\Fork\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/deleteGroup&id=2
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/groups&success=1
+---
+2013/12/15 03:01:16 [error] [php] Undefined variable: application_id (D:\Fork\Fork\protected\controllers\SiteController.php:318)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/menu
+in D:\Fork\Fork\protected\controllers\SiteController.php (318)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 04:05:23 [error] [php] Undefined variable: data (D:\Fork\Fork\protected\views\site\menu.php:48)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(318): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionMenu()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/menu
+in D:\Fork\Fork\protected\views\site\menu.php (48)
+in D:\Fork\Fork\protected\controllers\SiteController.php (318)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 04:06:47 [error] [php] Undefined variable: data (D:\Fork\Fork\protected\views\site\menu.php:48)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(318): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionMenu()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/menu
+in D:\Fork\Fork\protected\views\site\menu.php (48)
+in D:\Fork\Fork\protected\controllers\SiteController.php (318)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 04:06:48 [error] [php] Undefined variable: data (D:\Fork\Fork\protected\views\site\menu.php:48)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(318): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionMenu()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/menu
+in D:\Fork\Fork\protected\views\site\menu.php (48)
+in D:\Fork\Fork\protected\controllers\SiteController.php (318)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 04:07:16 [error] [php] Undefined index: application_id (D:\Fork\Fork\protected\views\site\menu.php:48)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(318): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionMenu()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/menu
+in D:\Fork\Fork\protected\views\site\menu.php (48)
+in D:\Fork\Fork\protected\controllers\SiteController.php (318)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 04:09:28 [error] [php] Undefined offset: 0 (D:\Fork\Fork\protected\views\site\menu.php:48)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(318): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionMenu()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/menu
+in D:\Fork\Fork\protected\views\site\menu.php (48)
+in D:\Fork\Fork\protected\controllers\SiteController.php (318)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 04:12:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addMenu".' in D:\Fork\framework\web\CController.php:483
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(270): CController->missingAction('addMenu')
+#1 D:\Fork\framework\web\CWebApplication.php(282): CController->run('addMenu')
+#2 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addMenu')
+#3 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Fork\Fork\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/addMenu
+HTTP_REFERER=http://localhost:8088/Fork/Fork/index.php?r=site/menu
+---
+2013/12/15 05:01:51 [error] [php] Undefined variable: data (D:\Fork\Fork\protected\views\site\menu.php:48)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(318): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionMenu()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/menu
+in D:\Fork\Fork\protected\views\site\menu.php (48)
+in D:\Fork\Fork\protected\controllers\SiteController.php (318)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 05:11:19 [error] [php] Undefined variable: id (D:\Fork\Fork\protected\components\MenuData.php:30)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addMenu
+in D:\Fork\Fork\protected\components\MenuData.php (30)
+in D:\Fork\Fork\protected\controllers\SiteController.php (360)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 05:11:34 [error] [php] Use of undefined constant data - assumed 'data' (D:\Fork\Fork\protected\views\site\addMenu.php:52)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(360): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddMenu()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addMenu
+in D:\Fork\Fork\protected\views\site\addMenu.php (52)
+in D:\Fork\Fork\protected\controllers\SiteController.php (360)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 05:11:47 [error] [php] Use of undefined constant data - assumed 'data' (D:\Fork\Fork\protected\views\site\addMenu.php:80)
+Stack trace:
+#0 D:\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\Fork\protected\controllers\SiteController.php(360): SiteController->render()
+#3 D:\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAddMenu()
+#4 D:\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addMenu
+in D:\Fork\Fork\protected\views\site\addMenu.php (80)
+in D:\Fork\Fork\protected\controllers\SiteController.php (360)
+in D:\Fork\Fork\index.php (13)
+2013/12/15 16:47:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'prk'@'localhost' (using password: YES)' in D:\xampp\htdocs\Fork\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\xampp\htdocs\Fork\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\Fork\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\xampp\htdocs\Fork\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\xampp\htdocs\Fork\Fork\protected\components\UserData.php(77): CModule->__get('db')
+#5 D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php(178): UserData::getAll()
+#6 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionUsers()
+#7 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\xampp\htdocs\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('users')
+#11 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#12 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/users
+HTTP_REFERER=http://localhost/Fork/Fork/
+---
