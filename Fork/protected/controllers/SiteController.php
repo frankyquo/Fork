@@ -244,56 +244,120 @@ class SiteController extends Controller
 	
 	public function actionGroups()
 	{
-		if(isset($_POST['group_id']) && isset($_POST['name'])) {
-			$id = $_POST['group_id'];
-			$name = $_POST['name'];
-			$connection = Yii::app()->db;
-			$query = "SELECT group_id, group_name FROM groups WHERE stsrc=1 AND group_id=$id";
-			$command = $connection->createCommand($query);
-			$result = $command->execute();
-			if($result['group_name']!==$name) {
-				$query = "UPDATE groups SET stsrc=0, userchange='".Yii::app()->user->name."', datechange=NOW() WHERE group_id=$id AND stsrc=1";
-				$command = $connection->createCommand($query);
-				$result = $command->execute();
-				$name = $_POST['name'];
-				$query = "INSERT INTO groups(group_name, application_id, stsrc, userchange, datechange) VALUES ('$name',1,1,'".Yii::app()->user->name."', NOW())";
-				$command = $connection->createCommand($query);
-				$result = $command->execute();
-				$actionSuccess = 1;
+		$this->render('groups',array('groupList'=>Groups::getAll()));
+	}
+	
+	public function actionAddGroup()
+	{
+		if(isset($_POST['application']) && isset($_POST['group_name'])) {
+			//insert or update submit
+			
+			if(isset($_POST['group_id']))
+			{
+				//update submit
+				$newGroup = Groups::get($_POST['group_id']);
+				if($newGroup->update($_POST['group_name'],$_POST['application'])==1)
+				{
+					$this->redirect(array("site/groups",'success'=>2));
+				}
+				else
+				{
+					$this->redirect(array("site/groups",'success'=>-2));
+				}
+			}
+			else
+			{
+				//insert submit
+				$newGroup = new Groups(0,$_POST['group_name'],$_POST['application']);
+				if($newGroup->insert()==1)
+				{
+					$this->redirect(array("site/groups",'success'=>1));
+				}
+				else
+				{
+					$this->redirect(array("site/groups",'success'=>-1));
+				}
 			}
 		}
-		else if(isset($_POST['name'])) {
-			$name = $_POST['name'];
-			$connection = Yii::app()->db;
-			$query = "INSERT INTO groups(group_name, application_id, stsrc, userchange, datechange) VALUES ('$name',1,1,'".Yii::app()->user->name."', NOW())";
-			$command = $connection->createCommand($query);
-			$result = $command->execute();
-			$actionSuccess = 2;
-		}
-		$connection = Yii::app()->db;
-		$command = $connection->createCommand("SELECT group_id, group_name, application_name FROM groups g JOIN application a ON g.application_id = a.application_id AND g.stsrc=1 AND a.stsrc=1");
-		$groupList = $command->queryAll();
-		$result = 0;
-		if(isset($_GET['success'])) {
-			$result = 1;
-		}
-		$this->render('groups',array('groupList'=>$groupList,'success'=>$result));
-		//$this->render('groups');
-	}
-	public function actionGroupPop ()
-	{
+		$id = 0;
+		$data = null;
 		if(isset($_GET['id'])) {
+			//update page
 			$id = $_GET['id'];
-			$connection = Yii::app()->db;
-			$command = $connection->createCommand("SELECT group_id, group_name FROM groups WHERE group_id='$id' AND stsrc=1");
-			$result = $command->queryAll();
-			$this->layout = false;
-			$this->render('groupPop',array('groupData'=>$result));
+			$data = Groups::get($_GET['id']);
 		}
-		else {
-			$this->layout = false;
-			$this->render('groupPop');
+		$this->render('addGroup',array('id'=>$id,'data'=>$data,'applicationList'=>UserApplication::getAll()));
+	}
+	
+	public function actionDeleteGroup ()
+	{
+		if(isset($_GET['id']))
+		{
+			//delete
+			$id = $_GET['id'];
+			$newGroup = Groups::get($id);
+			if($newGroup->delete()==1)
+			{
+				$this->redirect(array("site/groups",'success'=>3));
+			}
+			else
+			{
+				$this->redirect(array("site/groups",'success'=>-3));
+			}
 		}
+		else
+		{
+			$this->redirect('site/groups');
+		}
+	}
+	public function actionMenu()
+	{
+		$application_id = 1;
+		if(isset($_POST['application_id']))
+			$application_id = $_POST['application_id'];
+		$this->render('menu',array('application_id'=>$application_id,'menuList'=>MenuData::getAll($application_id),'applicationList'=>UserApplication::getAll()));
+	}
+	
+	public function actionAddMenu()
+	{
+		if(isset($_POST['application']) && isset($_POST['menu_name']) && isset($_POST['menu_link']) && isset($_POST['parent'])) {
+			//insert or update submit
+			
+			if(isset($_POST['menu_id']))
+			{
+				//update submit
+				$newMenu = Groups::get($_POST['menu_id']);
+				if($newMenu->update($_POST['application'], $_POST['menu_name'], $_POST['menu_link'], $_POST['parent'])==1)
+				{
+					$this->redirect(array("site/menu",'success'=>2));
+				}
+				else
+				{
+					$this->redirect(array("site/menu",'success'=>-2));
+				}
+			}
+			else
+			{
+				//insert submit
+				$newGroup = new Groups(0, $_POST['application'], $_POST['menu_name'], $_POST['menu_link'], $_POST['parent'],0);
+				if($newGroup->insert()==1)
+				{
+					$this->redirect(array("site/menu",'success'=>1));
+				}
+				else
+				{
+					$this->redirect(array("site/menu",'success'=>-1));
+				}
+			}
+		}
+		$id = 0;
+		$data = null;
+		if(isset($_GET['id'])) {
+			//update page
+			$id = $_GET['id'];
+			$data = MenuData::get($_GET['id']);
+		}
+		$this->render('addMenu',array('id'=>$id,'data'=>$data,'applicationList'=>UserApplication::getAll(),'parentList'=>MenuData::getParent()));
 	}
 
 	/**
@@ -308,15 +372,6 @@ class SiteController extends Controller
 	public function actionGroupUsers()
 	{
 		$this->render('groupUsers');
-	}
-	public function actionMenu()
-	{
-		$this->render('menu');
-	}
-	public function actionMenuPop()
-	{
-		$this->layout=false;
-		$this->render('menuPop');
 	}
 	public function actionAccess ()
 	{
