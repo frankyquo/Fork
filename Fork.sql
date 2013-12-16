@@ -172,11 +172,28 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `username` (`username`,`email`,`hash`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
-INSERT INTO `application` (`application_id`, `application_name`, `application_link`, `copyright`, `stsrc`, `userchange`, `datechange`) VALUES
-(1, 'Fork', 'localhost/Fork/Fork', 'Copyright &copy; 2013 by Franky Jacky', 'a', 'hackedhacker', '2013-12-11 09:58:46');
+INSERT INTO `provider` (`provider_id`, `provider_name`, `provider_image`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 'Bank Central Asia', 'images/provider/bca.jpg', 'a', 'hackedhacker', NOW());
+
+INSERT INTO `location` (`location_id`, `location_name`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 'Jakarta', 'a', 'hackedhacker', '2013-12-11 21:37:13');
 
 INSERT INTO `foodcategory` (`food_category_id`, `food_category_name`, `stsrc`, `userchange`, `datechange`) VALUES
 (1, 'Makanan', 'a', 'hackedhacker', '2013-12-12 15:02:14');
+
+INSERT INTO `restaurant` (`restaurant_id`, `restaurant_name`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 'Abuba', 'a', 'hackedhacker', '2013-12-12 15:02:30');
+
+INSERT INTO `restaurantfood` (`restaurant_food_id`, `restaurant_id`, `food_category_id`, `food_name`, `description`, `image`, `price`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 1, 1, 'Daging Abuba', 'Daging Panggang Special Dengan Saos Racikan Special dari Abuba', 'images/food/abuba/1.jpg', 50000, 'a', 'hackedhacker', '2013-12-12 15:01:48');
+
+INSERT INTO `restaurantlocation` (`restaurant_location_id`, `restaurant_id`, `location_id`, `branch`, `address`, `longitude`, `latitude`, `phones`, `minprice`, `maxprice`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, '1', '1', 'Abuba Jakarta', 'Green Ville Blok Z no 999', '102.10202', '102.10303', '02122123456', '50000', '300000', 'a', 'hackedhacker', NOW());
+
+INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `hash`, `gender`, `age`, `location_id`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 'hackedhacker', 'hacked@hacker.com', '463487fd707ac502d5ee2451435c856c', 'sl834', 1, 99, 1, 'a', 'hackedhacker', '2013-12-08 17:40:51'),
+(2, 'frankyquo', 'frankyquo@gmail.com', 'c2706a93f0afedb7e1722848c63f8cb9', 'pCjQb', 1, 20, 1, 'a', 'hackedhacker', '2013-12-15 22:48:07'),
+(3, 'jacky lim', 'jacky.lim@gmail.com', '9aeadd8345e532f539486f2b4c92c182', 'Ylw3K', 1, 18, 1, 'a', 'hackedhacker', '2013-12-15 22:48:40');
 
 INSERT INTO `groups` (`group_id`, `group_name`, `application_id`, `stsrc`, `userchange`, `datechange`) VALUES
 (1, 'Admin', 1, 'a', 'hackedhacker', '2013-12-11 23:38:48');
@@ -186,22 +203,41 @@ INSERT INTO `groupuser` (`user_id`, `group_id`, `stsrc`, `userchange`, `datechan
 (2, 1, 'a', 'hackedhacker', '2013-12-15 22:49:54'),
 (3, 1, 'a', 'hackedhacker', '2013-12-15 22:50:09');
 
-INSERT INTO `location` (`location_id`, `location_name`, `stsrc`, `userchange`, `datechange`) VALUES
-(1, 'Jakarta', 'a', 'hackedhacker', '2013-12-11 21:37:13');
+INSERT INTO `application` (`application_id`, `application_name`, `application_link`, `copyright`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 'Fork', 'localhost/Fork/Fork', 'Copyright &copy; 2013 by Franky Jacky', 'a', 'hackedhacker', '2013-12-11 09:58:46');
 
-INSERT INTO `restaurant` (`restaurant_id`, `restaurant_name`, `stsrc`, `userchange`, `datechange`) VALUES
-(1, 'Abuba', 'a', 'hackedhacker', '2013-12-12 15:02:30');
+INSERT INTO `menu` (`menu_id`, `application_id`, `menu_name`, `menu_link`, `menu_parent_id`, `priority`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 1, 'User Management', 'this', 0, 1, 'a', 'hackedhacker', '2013-12-16 22:18:53'),
+(2, 1, 'Application', '/site/application', 1, 2, 'a', 'hackedhacker', '2013-12-16 20:30:58'),
+(3, 1, 'Users', '/site/users', 1, 3, 'a', 'hackedhacker', '2013-12-16 22:19:39'),
+(4, 1, 'Groups', '/site/groups', 1, 4, 'a', 'hackedhacker', '2013-12-16 22:19:55'),
+(5, 1, 'Menu', '/site/menu', 1, 5, 'a', 'hackedhacker', '2013-12-16 22:20:25'),
+(6, 1, 'Group Users', '/site/groupUsers', 1, 6, 'a', 'hackedhacker', '2013-12-16 22:20:45'),
+(7, 1, 'Menu Group Access', '/site/menuGroupAccess', 1, 7, 'a', 'hackedhacker', '2013-12-16 22:21:05'),
+(8, 1, 'Fork', 'this', 0, 10, 'a', 'hackedhacker', '2013-12-16 22:41:37'),
+(9, 1, 'Location', '/fork/locations', 8, 11, 'a', 'hackedhacker', '2013-12-16 22:41:37'),
+(10, 1, 'Food', '/fork/food', 8, 12, 'a', 'hackedhacker', '2013-12-16 22:41:37'),
+(11, 1, 'Provider', '/fork/provider', 8, 13, 'a', 'hackedhacker', '2013-12-16 22:41:37'),
+(12, 1, 'Restaurant', '/fork/restaurant', 8, 14, 'a', 'hackedhacker', '2013-12-16 22:41:37'),
+(13, 1, 'Restaurant Promo', '/fork/restaurantPromo', 8, 15, 'a', 'hackedhacker', '2013-12-16 22:41:37'),
+(14, 1, 'Restaurant Review', '/fork/restaurantReview', 8, 16, 'a', 'hackedhacker', '2013-12-16 22:41:37'),
+(15, 1, 'Restaurant Location', '/fork/restaurantLocation', 8, 17, 'a', 'hackedhacker', '2013-12-16 22:41:37'),
+(16, 1, 'Food Category', '/fork/foodCategory', 8, 18, 'a', 'hackedhacker', '2013-12-16 22:41:37');
 
-INSERT INTO `restaurantfood` (`restaurant_food_id`, `restaurant_id`, `food_category_id`, `food_name`, `description`, `image`, `price`, `stsrc`, `userchange`, `datechange`) VALUES
-(1, 1, 1, 'Daging Abuba', 'Daging Panggang Special Dengan Saos Racikan Special dari Abuba', 'images/food/abuba/1.jpg', 50000, 'a', 'hackedhacker', '2013-12-12 15:01:48');
-
-INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `hash`, `gender`, `age`, `location_id`, `stsrc`, `userchange`, `datechange`) VALUES
-(1, 'hackedhacker', 'hacked@hacker.com', '463487fd707ac502d5ee2451435c856c', 'sl834', 1, 99, 1, 'a', 'hackedhacker', '2013-12-08 17:40:51'),
-(2, 'frankyquo', 'frankyquo@gmail.com', 'c2706a93f0afedb7e1722848c63f8cb9', 'pCjQb', 1, 20, 1, 'a', 'hackedhacker', '2013-12-15 22:48:07'),
-(3, 'jacky lim', 'jacky.lim@gmail.com', '9aeadd8345e532f539486f2b4c92c182', 'Ylw3K', 1, 18, 1, 'a', 'hackedhacker', '2013-12-15 22:48:40');
-
-INSERT INTO `provider` (`provider_id`, `provider_name`, `provider_image`, `stsrc`, `userchange`, `datechange`) VALUES (1, 'Bank Central Asia', 'images/provider/bca.jpg', 'a', 'hackedhacker', NOW());
-
-INSERT INTO `restaurantlocation` (`restaurant_location_id`, `restaurant_id`, `location_id`, `branch`, `address`, `longitude`, `latitude`, `phones`, `minprice`, `maxprice`, `stsrc`, `userchange`, `datechange`) VALUES (1, '1', '1', 'Abuba Jakarta', 'Green Ville Blok Z no 999', '102.10202', '102.10303', '02122123456', '50000', '300000', 'a', 'hackedhacker', NOW());
-
-INSERT INTO `menu` (`menu_id`, `application_id`, `menu_name`, `menu_link`, `menu_parent_id`, `priority`, `stsrc`, `userchange`, `datechange`) VALUES (NULL, '1', 'User Management', '/site/index', '0', '1', 'a', 'hackedhacker', NOW()), (NULL, '1', 'Application', '/site/application', '1', '2', 'a', 'hackedhacker', NOW());
+INSERT INTO `menugroupaccess` (`group_id`, `menu_id`, `application_id`, `status`, `stsrc`, `userchange`, `datechange`) VALUES
+(1, 1, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:16'),
+(1, 2, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 3, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 4, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 5, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 6, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 7, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 8, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 9, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 10, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 11, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 12, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 13, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 14, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 15, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43'),
+(1, 16, 1, 1, 'a', 'hackedhacker', '2013-12-16 20:32:43');
