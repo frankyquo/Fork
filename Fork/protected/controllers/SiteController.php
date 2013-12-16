@@ -339,15 +339,22 @@ class SiteController extends Controller
 			}
 			else
 			{
-				//insert submit
-				$newMenu = new MenuData(0, $_POST['application'], $_POST['menu_name'], $_POST['menu_link'], $_POST['parent'],0);
-				if($newMenu->insert()==1)
+				if($_POST['application']==0)
 				{
-					$this->redirect(array("site/menu",'success'=>1));
+					$this->redirect(array("site/menu",'success'=>-1));
 				}
 				else
 				{
-					$this->redirect(array("site/menu",'success'=>-1));
+					//insert submit
+					$newMenu = new MenuData(0, $_POST['application'], $_POST['menu_name'], $_POST['menu_link'], $_POST['parent'],0);
+					if($newMenu->insert()==1)
+					{
+						$this->redirect(array("site/menu",'success'=>1));
+					}
+					else
+					{
+						$this->redirect(array("site/menu",'success'=>-1));
+					}
 				}
 			}
 		}
@@ -382,6 +389,86 @@ class SiteController extends Controller
 			$this->redirect('site/menu');
 		}
 	}
+	
+	public function actionAddGroupUsers ()
+	{
+		if(isset($_POST['action']) && ($_POST['action']==='remove' || $_POST['action']==='add') && isset($_POST['group_id_new']) && $_POST['group_id_new']!=='0')
+		{
+			if($_POST['action']==='add' && isset($_POST['notActive']))
+			{
+				foreach($_POST['notActive'] as $user)
+				{
+					GroupUsers::addGroupUser($user,$_POST['group_id_new']);
+				}
+			}
+			else if(isset($_POST['active']))
+			{
+				foreach($_POST['active'] as $user)
+				{
+					GroupUsers::removeGroupUser($user,$_POST['group_id_new']);
+				}
+			}
+		}
+	}
+	
+	public function actionGroupUsers()
+	{
+		if(isset($_POST['action']) && ($_POST['action']==='remove' || $_POST['action']==='add') && isset($_POST['group_id_new']) && $_POST['group_id_new']!=='0')
+		{
+			if($_POST['action']==='add' && isset($_POST['notActive']))
+			{
+				foreach($_POST['notActive'] as $user)
+				{
+					GroupUsers::addGroupUser($user,$_POST['group_id_new']);
+				}
+			}
+			else if(isset($_POST['active']))
+			{
+				foreach($_POST['active'] as $user)
+				{
+					GroupUsers::removeGroupUser($user,$_POST['group_id_new']);
+				}
+			}
+		}
+		$application_id = 0;
+		$group_id = 0;
+		$groupList = 0;
+		$userIn = 0;
+		$userOut = 0;
+		if(isset($_POST['application_id']))
+		{
+			$application_id = $_POST['application_id'];
+			$groupList = Groups::getByApplication($_POST['application_id']);
+		}
+		if(isset($_POST['group_id']))
+			$group_id = $_POST['group_id'];
+		if(isset($_POST['application_id']) && isset($_POST['group_id']))
+		{
+			$userIn = GroupUsers::getAllIn($_POST['application_id'], $_POST['group_id']);
+			$userOut = GroupUsers::getAllOut($_POST['application_id'], $_POST['group_id']);
+		}
+		$this->render('groupUsers',array('application_id'=>$application_id, 'group_id'=>$group_id, 'applicationList'=>UserApplication::getAll(), 'groupList'=>$groupList, 'userIn'=>$userIn, 'userOut'=>$userOut));
+	}
+	
+	public function actionGroupList()
+	{
+		$this->layout = false;
+		if(isset($_GET['action']) && isset($_GET['app']) && isset($_GET['group']))
+		{
+			if($_GET['action']==='in')
+			{
+				$this->render('groupList',array('userList'=>GroupUsers::getAllIn($_GET['app'], $_GET['group'])));
+			}
+			else if($_GET['action']==='out')
+			{
+				$this->render('groupList',array('userList'=>GroupUsers::getAllOut($_GET['app'], $_GET['group'])));
+			}
+		}
+		else
+		{
+			$this->render('groupList',array('groupList'=>Groups::getByApplication($_GET['id'])));
+		}
+	}
 
 	/**
 	 * Logs out the current user and redirect to homepage.
@@ -391,14 +478,15 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
-	
-	public function actionGroupUsers()
-	{
-		$this->render('groupUsers');
-	}
 	public function actionAccess ()
 	{
-		$this->render('menuGroupAccess');
+		$application_id = 0;
+		$group_id = 0;
+		if(isset($_POST['application_id']))
+			$application_id = $_POST['application_id'];
+		if(isset($_POST['group_id']))
+			$group_id = $_POST['group_id'];
+		$this->render('menuGroupAccess', array('application_id'=>$application_id, 'group_id'=>$group_id, 'applicationList'=>UserApplication::getAll()));
 	}
 	public function actionForgotPass ()
 	{

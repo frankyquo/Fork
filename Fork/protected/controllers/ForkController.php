@@ -78,15 +78,18 @@ class ForkController extends Controller
 	
 	public function actionAddFood ()
 	{
-		if(isset($_POST['restaurant']) && isset($_POST['food_cat']) && isset($_POST['food_name']) && isset($_POST['description']) && isset($_POST['food_img']) && isset($_POST['price']))
+		if(isset($_POST['restaurant']) && isset($_POST['food_cat']) && isset($_POST['food_name']) && isset($_POST['description']) && isset($_FILES['food_img']) && isset($_POST['price']))
 		{
 			//insert or update submit
 			
 			if(isset($_POST['food_id']))
 			{
 				//update submit
+				
+				$file = new CUploadedFile($_FILES['food_img']['name'], $_FILES['food_img']['tmp_name'], $_FILES['food_img']['type'], $_FILES['food_img']['size'], $_FILES['food_img']['error']);
+				
 				$newFood = Food::get($_POST['food_id']);
-				if($newFood->update($_POST['restaurant'], $_POST['food_cat'], $_POST['food_name'], $_POST['description'], $_POST['food_img'], $_POST['price'])==1)
+				if($newFood->update($_POST['restaurant'], $_POST['food_cat'], $_POST['food_name'], $_POST['description'], $file, $_POST['price'])==1)
 				{
 					$this->redirect(array("fork/food",'success'=>2));
 				}
@@ -98,7 +101,10 @@ class ForkController extends Controller
 			else
 			{
 				//insert submit
-				$newFood = new Food(0, $_POST['restaurant'], $_POST['food_cat'], $_POST['food_name'], $_POST['description'], $_POST['food_img'], $_POST['price']);
+				
+				$file = new CUploadedFile($_FILES['food_img']['name'], $_FILES['food_img']['tmp_name'], $_FILES['food_img']['type'], $_FILES['food_img']['size'], $_FILES['food_img']['error']);
+				
+				$newFood = new Food(0, $_POST['restaurant'], $_POST['food_cat'], $_POST['food_name'], $_POST['description'], $file, $_POST['price']);
 				if($newFood->insert()==1)
 				{
 					$this->redirect(array("fork/food",'success'=>1));
@@ -148,14 +154,16 @@ class ForkController extends Controller
 	
 	public function actionAddProvider()
 	{
-		if(isset($_POST['provider_name']) && isset($_POST['provider_img'])) {
+		if(isset($_POST['provider_name']) && isset($_FILES['provider_img'])) {
 			//insert or update submit
 			
 			if(isset($_POST['provider_id']))
 			{
 				//update submit
+				$file = new CUploadedFile($_FILES['provider_img']['name'], $_FILES['provider_img']['tmp_name'], $_FILES['provider_img']['type'], $_FILES['provider_img']['size'], $_FILES['provider_img']['error']);
+				
 				$newProvider = Provider::get($_POST['provider_id']);
-				if($newProvider->update($_POST['provider_name'], $_POST['provider_img'])==1)
+				if($newProvider->update($_POST['provider_name'],$file)==1)
 				{
 					$this->redirect(array("fork/provider",'success'=>2));
 				}
@@ -167,7 +175,10 @@ class ForkController extends Controller
 			else
 			{
 				//insert submit
-				$newProvider = new Provider(0,$_POST['provider_name'],$_POST['provider_img']);
+				
+				$file = new CUploadedFile($_FILES['provider_img']['name'], $_FILES['provider_img']['tmp_name'], $_FILES['provider_img']['type'], $_FILES['provider_img']['size'], $_FILES['provider_img']['error']);
+				
+				$newProvider = new Provider(0,$_POST['provider_name'],$file);
 				if($newProvider->insert()==1)
 				{
 					$this->redirect(array("fork/provider",'success'=>1));
