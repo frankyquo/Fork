@@ -480,13 +480,69 @@ class SiteController extends Controller
 	}
 	public function actionAccess ()
 	{
+		if(isset($_POST['action']) && ($_POST['action']==='remove' || $_POST['action']==='add') && isset($_POST['group_id_new']) && $_POST['group_id_new']!=='0')
+		{
+			if($_POST['action']==='add' && isset($_POST['notActive']))
+			{
+				foreach($_POST['notActive'] as $user)
+				{
+					GroupUsers::addGroupUser($user,$_POST['group_id_new']);
+				}
+			}
+			else if(isset($_POST['active']))
+			{
+				foreach($_POST['active'] as $user)
+				{
+					GroupUsers::removeGroupUser($user,$_POST['group_id_new']);
+				}
+			}
+		}
 		$application_id = 0;
 		$group_id = 0;
+		$groupList = 0;
+		$menuList = 0;
 		if(isset($_POST['application_id']))
+		{
 			$application_id = $_POST['application_id'];
+			$groupList = Groups::getByApplication($_POST['application_id']);
+		}
 		if(isset($_POST['group_id']))
 			$group_id = $_POST['group_id'];
-		$this->render('menuGroupAccess', array('application_id'=>$application_id, 'group_id'=>$group_id, 'applicationList'=>UserApplication::getAll()));
+		if(isset($_POST['application_id']) && isset($_POST['group_id']))
+		{
+			$menuList = MenuGroupAccess::getAll($_POST['application_id'], $_POST['group_id']);
+		}
+		$this->render('menuGroupAccess', array('application_id'=>$application_id, 'group_id'=>$group_id, 'applicationList'=>UserApplication::getAll(), 'groupList'=>$groupList, 'menuList'=>$menuList));
+	}
+	public function actionMenuGroupAccessList()
+	{
+		$this->layout = false;
+		if(isset($_GET['app']) && isset($_GET['group']))
+		{
+			$menuList = MenuGroupAccess::getAll($_GET['app'], $_GET['group']);
+			$this->render('menuGroupAccessList', array('menuList'=>$menuList));
+		}
+	}
+	public function actionChangeGroupAccess()
+	{
+		if(isset($_POST['application_id']) && isset($_POST['group_id']) && isset($_POST['menu_id']) && isset($_POST['checked']))
+		{
+			$connection = Yii::app()->db;
+			$command = 0;
+			
+			if($_POST['checked']!=='checked')
+			{
+				$command = $connection->createCommand("INSERT INTO asd(asd) VALUES ('nilai checked = ".$_POST['checked']."')");
+				$command->execute();
+				$command = $connection->createCommand("UPDATE menugroupaccess SET status=0, userchange='".Yii::app()->user->name."', datechange=NOW() WHERE group_id='".$_POST['group_id']."' AND menu_id='".$_POST['menu_id']."' AND application_id='".$_POST['application_id']."'");
+			}
+			else
+			{
+				$command = $connection->createCommand("UPDATE menugroupaccess SET status=1, userchange='".Yii::app()->user->name."', datechange=NOW() WHERE group_id='".$_POST['group_id']."' AND menu_id='".$_POST['menu_id']."' AND application_id='".$_POST['application_id']."'");
+			}
+			$result = $command->execute();
+		}
+		//'application_id='+$('#application_id_new').val()+'&group_id='+$('#group_id_new').val()+'&menu_id='+$(this).val()
 	}
 	public function actionForgotPass ()
 	{
