@@ -36,7 +36,7 @@ should you have any questions.</p>
 				?></h3>
 			</div>
 			<div class="widget-content">
-				<form method="post" class="form uniformForm validateForm">
+				<form method="post" class="form uniformForm validateForm" enctype="multipart/form-data">
 					<?php
 					if($id>=1)
 					{
