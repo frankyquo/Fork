@@ -2946,3 +2946,1089 @@ Stack trace:
 REQUEST_URI=/Fork/Fork/index.php?r=site/deleteMenu&id=4
 HTTP_REFERER=http://localhost/Fork/Fork/index.php?r=site/menu&success=2
 ---
+2013/12/16 02:34:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: UPDATE menu SET priority=priority+1, userchange='hackedhacker', datechange=NOW() WHERE priority > .
+in D:\Fork\protected\components\MenuData.php (59)
+in D:\Fork\protected\controllers\SiteController.php (350)
+in D:\Fork\index.php (13)
+2013/12/16 02:34:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: UPDATE menu SET priority=priority+1, userchange='hackedhacker', datechange=NOW() WHERE priority > ' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\MenuData.php(59): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(350): MenuData->insert()
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionAddMenu()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('addMenu')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addMenu')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/addMenu
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/addMenu
+---
+2013/12/16 02:34:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: UPDATE menu SET priority=priority+1, userchange='hackedhacker', datechange=NOW() WHERE priority > .
+in D:\Fork\protected\components\MenuData.php (59)
+in D:\Fork\protected\controllers\SiteController.php (350)
+in D:\Fork\index.php (13)
+2013/12/16 02:34:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: UPDATE menu SET priority=priority+1, userchange='hackedhacker', datechange=NOW() WHERE priority > ' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\MenuData.php(59): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(350): MenuData->insert()
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionAddMenu()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('addMenu')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/addMenu')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/addMenu
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/addMenu
+---
+2013/12/16 03:02:14 [error] [php] Undefined variable: applicationList (D:\Fork\protected\views\site\groupUsers.php:43)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(395): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupUsers()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\views\site\groupUsers.php (43)
+in D:\Fork\protected\controllers\SiteController.php (395)
+in D:\Fork\index.php (13)
+2013/12/16 03:04:02 [error] [php] Undefined variable: menuList (D:\Fork\protected\views\site\menu.php:85)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(401): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupUsers()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\views\site\menu.php (85)
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 03:04:35 [error] [php] Undefined variable: data (D:\Fork\protected\views\site\groupUsers.php:41)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(401): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupUsers()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\views\site\groupUsers.php (41)
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 06:40:27 [error] [php] end() expects parameter 1 to be array, integer given (D:\Fork\protected\controllers\ForkController.php:174)
+Stack trace:
+#0 D:\framework\web\actions\CInlineAction.php(49): ForkController->actionAddProvider()
+#1 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\framework\web\CController.php(286): ForkController->runAction()
+#3 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#4 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#5 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider
+in D:\Fork\protected\controllers\ForkController.php (174)
+in D:\Fork\protected\controllers\ForkController.php (223)
+in D:\Fork\index.php (13)
+2013/12/16 06:41:33 [error] [php] move_uploaded_file(images/provider/tIjWZSJMtwLi9c1.jpg): failed to open stream: No such file or directory (D:\Fork\protected\controllers\ForkController.php:188)
+Stack trace:
+#0 D:\framework\web\actions\CInlineAction.php(49): ForkController->actionAddProvider()
+#1 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\framework\web\CController.php(286): ForkController->runAction()
+#3 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#4 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#5 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider
+in D:\Fork\protected\controllers\ForkController.php (188)
+in D:\Fork\protected\controllers\ForkController.php (223)
+in D:\Fork\index.php (13)
+2013/12/16 08:03:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'prk.users' doesn't exist. The SQL statement executed was: SELECT username, email, password, hash FROM users WHERE stsrc='a'.
+in D:\Fork\protected\components\UserIdentity.php (22)
+in D:\Fork\protected\controllers\SiteController.php (87)
+in D:\Fork\index.php (13)
+2013/12/16 08:03:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'prk.users' doesn't exist. The SQL statement executed was: SELECT username, email, password, hash FROM users WHERE stsrc='a'' in D:\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\Fork\protected\components\UserIdentity.php(22): CDbCommand->queryAll()
+#2 D:\Fork\protected\controllers\SiteController.php(87): UserIdentity->authenticate()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\framework\web\CWebApplication.php(282): CController->run('login')
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Fork/index.php?r=site/login
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/login
+---
+2013/12/16 08:05:12 [error] [php] move_uploaded_file(images/provider/23e9KNctejSpwda.jpg): failed to open stream: No such file or directory (D:\Fork\protected\controllers\ForkController.php:188)
+Stack trace:
+#0 D:\framework\web\actions\CInlineAction.php(49): ForkController->actionAddProvider()
+#1 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\framework\web\CController.php(286): ForkController->runAction()
+#3 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#4 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#5 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider
+in D:\Fork\protected\controllers\ForkController.php (188)
+in D:\Fork\protected\controllers\ForkController.php (223)
+in D:\Fork\index.php (13)
+2013/12/16 08:14:27 [error] [php] strlen() expects parameter 1 to be string, array given (D:\framework\web\CUploadedFile.php:104)
+Stack trace:
+#0 D:\Fork\protected\controllers\ForkController.php(226): ForkController->uploadFile()
+#1 D:\framework\web\actions\CInlineAction.php(49): ForkController->actionAddProvider()
+#2 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\framework\web\CController.php(286): ForkController->runAction()
+#4 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#5 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#6 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider
+in D:\Fork\protected\controllers\ForkController.php (188)
+in D:\Fork\protected\controllers\ForkController.php (226)
+in D:\Fork\index.php (13)
+2013/12/16 09:27:05 [error] [php] Illegal string offset 'name' (D:\Fork\protected\components\Provider.php:51)
+Stack trace:
+#0 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider&id=1
+in D:\Fork\protected\components\Provider.php (51)
+in D:\Fork\protected\controllers\ForkController.php (161)
+in D:\Fork\index.php (13)
+2013/12/16 09:28:05 [error] [php] Only variables should be passed by reference (D:\Fork\protected\components\Provider.php:53)
+Stack trace:
+#0 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider&id=1
+in D:\Fork\protected\components\Provider.php (53)
+in D:\Fork\protected\controllers\ForkController.php (161)
+in D:\Fork\index.php (13)
+2013/12/16 09:29:49 [error] [exception.CException] exception 'CException' with message 'Property "CUploadedFile.image" is not defined.' in D:\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\Fork\protected\components\Provider.php(56): CComponent->__get('image')
+#1 D:\Fork\protected\controllers\ForkController.php(161): Provider->update('Bank Central As...', Object(CUploadedFile))
+#2 D:\framework\web\actions\CInlineAction.php(49): ForkController->actionAddProvider()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('addProvider')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/addProvide...')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=fork/addProvider&id=1
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=fork/addProvider&id=1
+---
+2013/12/16 09:35:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uHoTQTGf81K5K5U.jpg' in 'field list'. The SQL statement executed was: INSERT INTO asd(asd) VALUES (uHoTQTGf81K5K5U.jpg), (banana.jpg).
+in D:\Fork\protected\components\Provider.php (55)
+in D:\Fork\protected\controllers\ForkController.php (161)
+in D:\Fork\index.php (13)
+2013/12/16 09:35:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'uHoTQTGf81K5K5U.jpg' in 'field list'. The SQL statement executed was: INSERT INTO asd(asd) VALUES (uHoTQTGf81K5K5U.jpg), (banana.jpg)' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\Provider.php(55): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\ForkController.php(161): Provider->update('Bank Central As...', Object(CUploadedFile))
+#2 D:\framework\web\actions\CInlineAction.php(49): ForkController->actionAddProvider()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('addProvider')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/addProvide...')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=fork/addProvider&id=1
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=fork/addProvider&id=1
+---
+2013/12/16 09:38:38 [error] [php] Undefined variable: newFileName (D:\Fork\protected\components\Provider.php:55)
+Stack trace:
+#0 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider&id=1
+in D:\Fork\protected\components\Provider.php (55)
+in D:\Fork\protected\controllers\ForkController.php (161)
+in D:\Fork\index.php (13)
+2013/12/16 09:41:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0'), ('1')' at line 1. The SQL statement executed was: 0'), ('1').
+in D:\Fork\protected\components\Provider.php (62)
+in D:\Fork\protected\controllers\ForkController.php (161)
+in D:\Fork\index.php (13)
+2013/12/16 09:41:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0'), ('1')' at line 1. The SQL statement executed was: 0'), ('1')' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\Provider.php(62): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\ForkController.php(161): Provider->update('Bank Central As...', Object(CUploadedFile))
+#2 D:\framework\web\actions\CInlineAction.php(49): ForkController->actionAddProvider()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('addProvider')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/addProvide...')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=fork/addProvider&id=1
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=fork/addProvider&id=1
+---
+2013/12/16 09:42:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0'), ('1')' at line 1. The SQL statement executed was: 0'), ('1').
+in D:\Fork\protected\components\Provider.php (62)
+in D:\Fork\protected\controllers\ForkController.php (161)
+in D:\Fork\index.php (13)
+2013/12/16 09:42:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0'), ('1')' at line 1. The SQL statement executed was: 0'), ('1')' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\Provider.php(62): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\ForkController.php(161): Provider->update('Bank Central As...', Object(CUploadedFile))
+#2 D:\framework\web\actions\CInlineAction.php(49): ForkController->actionAddProvider()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('addProvider')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('fork/addProvide...')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=fork/addProvider&id=1
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=fork/addProvider&id=1
+---
+2013/12/16 09:55:38 [error] [php] Undefined variable: provider_image (D:\Fork\protected\components\Provider.php:45)
+Stack trace:
+#0 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider
+in D:\Fork\protected\components\Provider.php (45)
+in D:\Fork\protected\controllers\ForkController.php (176)
+in D:\Fork\index.php (13)
+2013/12/16 09:56:14 [error] [php] Undefined variable: provider_image (D:\Fork\protected\components\Provider.php:49)
+Stack trace:
+#0 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider
+in D:\Fork\protected\components\Provider.php (49)
+in D:\Fork\protected\controllers\ForkController.php (176)
+in D:\Fork\index.php (13)
+2013/12/16 09:56:22 [error] [php] Undefined variable: provider_image (D:\Fork\protected\components\Provider.php:52)
+Stack trace:
+#0 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\framework\web\CController.php(286): ForkController->runAction()
+#2 D:\framework\web\CController.php(265): ForkController->runActionWithFilters()
+#3 D:\framework\web\CWebApplication.php(282): ForkController->run()
+#4 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=fork/addProvider
+in D:\Fork\protected\components\Provider.php (52)
+in D:\Fork\protected\controllers\ForkController.php (176)
+in D:\Fork\index.php (13)
+2013/12/16 11:12:12 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:12:23 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:14:51 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:14:59 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=0
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:15:01 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:15:03 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=0
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:15:05 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:20:43 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:20:44 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=0
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:20:45 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:20:46 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=0
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:20:46 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:20:53 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=0
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:20:54 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:21:11 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:21:13 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=0
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:21:14 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:21:14 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=0
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:21:51 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:21:52 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&id=0
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:22:30 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/GroupList
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:22:38 [error] [php] Undefined variable: id (D:\Fork\protected\controllers\SiteController.php:407)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/GroupList&id=1
+in D:\Fork\protected\controllers\SiteController.php (407)
+in D:\Fork\index.php (13)
+2013/12/16 11:39:17 [error] [php] Undefined variable: GET (D:\Fork\protected\controllers\SiteController.php:411)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=in&app=1&group=1
+in D:\Fork\protected\controllers\SiteController.php (411)
+in D:\Fork\index.php (13)
+2013/12/16 11:39:17 [error] [php] Undefined variable: GET (D:\Fork\protected\controllers\SiteController.php:415)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:42:36 [error] [php] Undefined variable: GET (D:\Fork\protected\controllers\SiteController.php:411)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=in&app=1&group=1
+in D:\Fork\protected\controllers\SiteController.php (411)
+in D:\Fork\index.php (13)
+2013/12/16 11:42:36 [error] [php] Undefined variable: GET (D:\Fork\protected\controllers\SiteController.php:415)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:42:49 [error] [php] Undefined variable: GET (D:\Fork\protected\controllers\SiteController.php:415)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:43:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_idFROM groupuser JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'.
+in D:\Fork\protected\components\GroupUsers.php (59)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:43:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_idFROM groupuser JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(59): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(415): GroupUsers::getAllOut('1', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupList')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupList')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/groupUsers
+---
+2013/12/16 11:43:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id IN (SELECT user_idFROM groupuser JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'.
+in D:\Fork\protected\components\GroupUsers.php (53)
+in D:\Fork\protected\controllers\SiteController.php (411)
+in D:\Fork\index.php (13)
+2013/12/16 11:43:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id IN (SELECT user_idFROM groupuser JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(53): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(411): GroupUsers::getAllIn('1', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupList')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupList')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=in&app=1&group=1
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/groupUsers
+---
+2013/12/16 11:43:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_idFROM groupuser JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'.
+in D:\Fork\protected\components\GroupUsers.php (59)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:43:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_idFROM groupuser JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(59): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(415): GroupUsers::getAllOut('1', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupList')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupList')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+---
+2013/12/16 11:43:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_id FROM groupuser JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'.
+in D:\Fork\protected\components\GroupUsers.php (59)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:43:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_id FROM groupuser JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(59): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(415): GroupUsers::getAllOut('1', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupList')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupList')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+---
+2013/12/16 11:44:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_id FROM groupuser gu JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'.
+in D:\Fork\protected\components\GroupUsers.php (59)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:44:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_id FROM groupuser gu JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(59): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(415): GroupUsers::getAllOut('1', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupList')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupList')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+---
+2013/12/16 11:44:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_id FROM groupuser gu JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'.
+in D:\Fork\protected\components\GroupUsers.php (59)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:44:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT user_id, username FROM users WHERE stsrc='a' AND user_id NOT IN (SELECT user_id FROM groupuser gu JOIN groups g ON gu.group_id = g.group_id WHERE g.stsrc='a' AND gu.stsrc='a' AND g.group_id='1' AND g.application_id='1'' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(59): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(415): GroupUsers::getAllOut('1', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupList')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupList')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+---
+2013/12/16 11:44:35 [error] [php] Undefined variable: groupList (D:\Fork\protected\views\site\groupList.php:2)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(415): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+in D:\Fork\protected\views\site\groupList.php (2)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:46:31 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\views\site\groupList.php:25)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(415): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+in D:\Fork\protected\views\site\groupList.php (25)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:47:21 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\views\site\groupList.php:27)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(415): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+in D:\Fork\protected\views\site\groupList.php (27)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:47:50 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\views\site\groupList.php:27)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(415): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+in D:\Fork\protected\views\site\groupList.php (27)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 11:47:50 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\views\site\groupList.php:27)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(411): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=in&app=1&group=1
+in D:\Fork\protected\views\site\groupList.php (27)
+in D:\Fork\protected\controllers\SiteController.php (411)
+in D:\Fork\index.php (13)
+2013/12/16 11:47:58 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\views\site\groupList.php:27)
+Stack trace:
+#0 D:\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\Fork\protected\controllers\SiteController.php(415): SiteController->render()
+#3 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupList()
+#4 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupList&action=out&app=1&group=1
+in D:\Fork\protected\views\site\groupList.php (27)
+in D:\Fork\protected\controllers\SiteController.php (415)
+in D:\Fork\index.php (13)
+2013/12/16 12:07:31 [error] [php] Undefined index: active (D:\Fork\protected\controllers\SiteController.php:401)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 12:08:25 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\controllers\SiteController.php:401)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 12:09:20 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\controllers\SiteController.php:401)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 12:12:07 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\controllers\SiteController.php:401)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 12:12:25 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\controllers\SiteController.php:401)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 12:12:39 [error] [php] Invalid argument supplied for foreach() (D:\Fork\protected\controllers\SiteController.php:401)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 12:13:54 [error] [php] Array to string conversion (D:\Fork\protected\controllers\SiteController.php:400)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (400)
+in D:\Fork\index.php (13)
+2013/12/16 12:37:18 [error] [php] Undefined index: id (D:\Fork\protected\controllers\SiteController.php:420)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (420)
+in D:\Fork\index.php (13)
+2013/12/16 12:37:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1. The SQL statement executed was: INSERT INTO groupuser(user_id, group_id, stsrc, userchange, datechange) VALUES('1', '1', 'a').
+in D:\Fork\protected\components\GroupUsers.php (79)
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 12:37:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1. The SQL statement executed was: INSERT INTO groupuser(user_id, group_id, stsrc, userchange, datechange) VALUES('1', '1', 'a')' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(79): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(401): GroupUsers::addGroupUser('1', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupUsers()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupUsers')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupUsers')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/groupUsers
+---
+2013/12/16 12:38:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO groupuser(user_id, group_id, stsrc, userchange, datechange) VALUES('1', '1', 'a','hackedhacker',NOW()).
+in D:\Fork\protected\components\GroupUsers.php (79)
+in D:\Fork\protected\controllers\SiteController.php (401)
+in D:\Fork\index.php (13)
+2013/12/16 12:38:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO groupuser(user_id, group_id, stsrc, userchange, datechange) VALUES('1', '1', 'a','hackedhacker',NOW())' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(79): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(401): GroupUsers::addGroupUser('1', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupUsers()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupUsers')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupUsers')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/groupUsers
+---
+2013/12/16 12:42:37 [error] [php] include(GroupUser.php): failed to open stream: No such file or directory (D:\framework\YiiBase.php:427)
+Stack trace:
+#0 D:\Fork\protected\controllers\SiteController.php(408): spl_autoload_call()
+#1 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupUsers()
+#2 D:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\framework\web\CController.php(286): SiteController->runAction()
+#4 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#6 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (408)
+in D:\Fork\index.php (13)
+2013/12/16 12:42:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE user_id='3' AND '1'' at line 1. The SQL statement executed was: DELETE groupuser WHERE user_id='3' AND '1'.
+in D:\Fork\protected\components\GroupUsers.php (79)
+in D:\Fork\protected\controllers\SiteController.php (408)
+in D:\Fork\index.php (13)
+2013/12/16 12:42:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE user_id='3' AND '1'' at line 1. The SQL statement executed was: DELETE groupuser WHERE user_id='3' AND '1'' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(79): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(408): GroupUsers::removeGroupUser('3', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupUsers()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupUsers')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupUsers')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/groupUsers
+---
+2013/12/16 12:43:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE user_id='3' AND group_id='1'' at line 1. The SQL statement executed was: DELETE groupuser WHERE user_id='3' AND group_id='1'.
+in D:\Fork\protected\components\GroupUsers.php (79)
+in D:\Fork\protected\controllers\SiteController.php (408)
+in D:\Fork\index.php (13)
+2013/12/16 12:43:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE user_id='3' AND group_id='1'' at line 1. The SQL statement executed was: DELETE groupuser WHERE user_id='3' AND group_id='1'' in D:\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\Fork\protected\components\GroupUsers.php(79): CDbCommand->execute()
+#1 D:\Fork\protected\controllers\SiteController.php(408): GroupUsers::removeGroupUser('3', '1')
+#2 D:\framework\web\actions\CInlineAction.php(49): SiteController->actionGroupUsers()
+#3 D:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\framework\web\CWebApplication.php(282): CController->run('groupUsers')
+#7 D:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/groupUsers')
+#8 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\Fork\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+HTTP_REFERER=http://localhost:8088/Fork/index.php?r=site/groupUsers
+---
+2013/12/16 12:45:42 [error] [php] Undefined index: active (D:\Fork\protected\controllers\SiteController.php:399)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (399)
+in D:\Fork\index.php (13)
+2013/12/16 12:46:04 [error] [php] Undefined index: active (D:\Fork\protected\controllers\SiteController.php:399)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (399)
+in D:\Fork\index.php (13)
+2013/12/16 12:46:17 [error] [php] Undefined index: active (D:\Fork\protected\controllers\SiteController.php:399)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (399)
+in D:\Fork\index.php (13)
+2013/12/16 12:46:46 [error] [php] Undefined index: active (D:\Fork\protected\controllers\SiteController.php:399)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (399)
+in D:\Fork\index.php (13)
+2013/12/16 12:47:18 [error] [php] Undefined index: active (D:\Fork\protected\controllers\SiteController.php:399)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (399)
+in D:\Fork\index.php (13)
+2013/12/16 12:48:23 [error] [php] Undefined index: active (D:\Fork\protected\controllers\SiteController.php:406)
+Stack trace:
+#0 D:\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/index.php?r=site/groupUsers
+in D:\Fork\protected\controllers\SiteController.php (406)
+in D:\Fork\index.php (13)
