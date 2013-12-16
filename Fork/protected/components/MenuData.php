@@ -44,21 +44,30 @@ class MenuData
 		$connection = Yii::app()->db;
 		$this->priority = 0;
 		$resultMove = 1;
-		if($this->menu_parent_id==='0')
+		if($this->menu_parent_id==0)
 		{
 			$command = $connection->createCommand("SELECT max(priority) as priority	FROM menu");
 			$result = $command->queryAll();
 			$this->priority = $result[0]['priority'];
-			$command = $connection->createCommand("UPDATE menu SET priority=priority+1, userchange='".Yii::app()->user->name."', datechange=NOW() WHERE priority >= ".$this->priority);
-			$resultMove = $command->execute();
 		}
 		else
 		{
 			$command = $connection->createCommand("SELECT max(priority) as priority FROM menu WHERE menu_parent_id='".$this->menu_parent_id."'");
 			$result = $command->queryAll();
-			$this->priority = $result[0]['priority'];
+			if($result[0]['priority']!=NULL)
+			{
+				$this->priority = $result[0]['priority'];
+			}
+			else
+			{
+				$command = $connection->createCommand("SELECT priority FROM menu WHERE menu_id='".$this->menu_parent_id."'");
+				$result = $command->queryAll();
+				$this->priority = $result[0]['priority'];
+			}
+			$command = $connection->createCommand("UPDATE menu SET priority=priority+1, userchange='".Yii::app()->user->name."', datechange=NOW() WHERE priority > ".$this->priority);
+			$resultMove = $command->execute();
 		}
-		$this->priority = ((int)$this->priority)+1;
+		$this->priority = $this->priority+1;
 		$command = $connection->createCommand("INSERT INTO menu(application_id, menu_name, menu_link, menu_parent_id, priority, stsrc, userchange, datechange) VALUES ('".$this->application_id."', '".$this->menu_name."', '".$this->menu_link."', '".$this->menu_parent_id."', '".$this->priority."', 'a', '".Yii::app()->user->name."', NOW())");
 		return $command->execute();;
 	}
