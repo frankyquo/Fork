@@ -37,7 +37,15 @@ class Groups
 	{
 		$connection = Yii::app()->db;
 		$command = $connection->createCommand("INSERT INTO groups(group_name, application_id, stsrc, userchange, datechange) VALUES('".$this->group_name."','".$this->application_id."','a','".Yii::app()->user->name."',NOW())");
-		return $command->execute();
+		$resultGroup = $command->execute();
+		$group_id = $connection->createCommand("SELECT group_id FROM groups WHERE stsrc='a' AND group_name='".$this->group_name."' AND application_id='".$this->application_id."'")->queryAll()[0]['group_id'];
+		foreach($connection->createCommand("SELECT menu_id FROM menu")->queryAll() as $menu)
+		{
+			$menu_id = $menu['menu_id'];
+			$command = $connection->createCommand("INSERT INTO menugroupaccess(group_id, menu_id, application_id, status, stsrc, userchange, datechange) VALUES ('".$group_id."', '".$menu_id."', '".$this->application_id."', '1', 'a', '".Yii::app()->user->name."', NOW())");
+			$command->execute();
+		}
+		return $resultGroup;
 	}
 	public function update($group_name, $application_id)
 	{

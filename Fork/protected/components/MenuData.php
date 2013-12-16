@@ -69,7 +69,15 @@ class MenuData
 		}
 		$this->priority = $this->priority+1;
 		$command = $connection->createCommand("INSERT INTO menu(application_id, menu_name, menu_link, menu_parent_id, priority, stsrc, userchange, datechange) VALUES ('".$this->application_id."', '".$this->menu_name."', '".$this->menu_link."', '".$this->menu_parent_id."', '".$this->priority."', 'a', '".Yii::app()->user->name."', NOW())");
-		return $command->execute();;
+		$resultMenu = $command->execute();
+		$menu_id = $connection->createCommand("SELECT menu_id FROM menu WHERE stsrc='a' AND priority='".$this->priority."'")->queryAll()[0]['menu_id'];
+		foreach($connection->createCommand("SELECT group_id FROM groups")->queryAll() as $group)
+		{
+			$group_id = $group['group_id'];
+			$command = $connection->createCommand("INSERT INTO menugroupaccess(group_id, menu_id, application_id, status, stsrc, userchange, datechange) VALUES ('".$group_id."', '".$menu_id."', '".$this->application_id."', '1', 'a', '".Yii::app()->user->name."', NOW())");
+			$command->execute();
+		}
+		return $resultMenu;
 	}
 	public function update($application_id, $menu_name, $menu_link, $menu_parent_id)
 	{
