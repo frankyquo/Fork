@@ -36,7 +36,7 @@ should you have any questions.</p>
 				?></h3>
 			</div>
 			<div class="widget-content">
-				<form method="post" class="form uniformForm validateForm">
+				<form id="addRestoLocation" method="post" class="form uniformForm validateForm">
 					<?php
 					if($id>=1)
 					{
@@ -90,13 +90,13 @@ should you have any questions.</p>
 					<div class="field-group inlineField">
 						<label for="longitude">Longitude:</label>
 						<div class="field">
-							<input type="text" name="longitude" id="longitude" size="8" class="validate[required,min[-180],max[180]]" value="<?php if($data!=null) echo $data->longitude; ?>" />
+							<input type="text" name="longitude" id="longitude" size="20" class="validate[required,custom[number],min[-180],max[180]]" value="<?php if($data!=null) echo $data->longitude; ?>" />
 						</div>
 					</div>
 					<div class="field-group inlineField">
 						<label for="latitude">Latitude:</label>
 						<div class="field">
-							<input type="text" name="latitude" id="latitude" size="8" class="validate[required,min[-180],max[180]]" value="<?php if($data!=null) echo $data->latitude; ?>" />
+							<input type="text" name="latitude" id="latitude" size="20" class="validate[required,custom[number],min[-180],max[180]]" value="<?php if($data!=null) echo $data->latitude; ?>" />
 						</div>
 					</div>
 					<div class="field-group inlineField">
@@ -108,13 +108,13 @@ should you have any questions.</p>
 					<div class="field-group inlineField">
 						<label for="minPrice">Min Price:</label>
 						<div class="field">
-							<input type="text" name="minPrice" id="minPrice" size="8" class="validate[required,min[1000],max[1000000]]" value="<?php if($data!=null) echo $data->minprice; ?>" />
+							<input type="text" name="minPrice" id="minPrice" size="8" class="validate[required,custom[number],min[1000],max[1000000]]" value="<?php if($data!=null) echo $data->minprice; ?>" />
 						</div>
 					</div>
 					<div class="field-group inlineField">
 						<label for="maxPrice">Max Price:</label>
 						<div class="field">
-							<input type="text" name="maxPrice" id="maxPrice" size="8" class="validate[required,min[1000],max[1000000]]" value="<?php if($data!=null) echo $data->maxprice; ?>" />
+							<input type="text" name="maxPrice" id="maxPrice" size="8" class="validate[required,custom[number],min[1000],max[1000000]]" value="<?php if($data!=null) echo $data->maxprice; ?>" />
 						</div>
 					</div>
 					<div class="actions">						
