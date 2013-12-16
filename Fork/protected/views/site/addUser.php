@@ -70,18 +70,19 @@ should you have any questions.</p>
 							<input type="password" name="password2" id="password2" size="25" class="validate[required,equals[password1]]" value="">	
 						</div>
 					</div>
+								
 					<div class="field-group control-group inline">	
 						<label>Gender:</label>	
 		
 						<div class="field">
-							<div class="radio" id="uniform-radio1"><span><input type="radio" name="gender" id="radio1" value="1" class="validate[required]" style="opacity: 0;" <?php if($data!=null && $data->gender==='1') {?>checked="checked"<?php } ?> /></span></div>
+							<input type="radio" name="gender" id="radio1" value="1" class="validate[required]" <?php if($data!=null && $data->gender==='1') {?>checked="checked"<?php } ?> />
 							<label for="radio1">Male</label>
 						</div>
 		
 						<div class="field">
-							<div class="radio" id="uniform-radio2"><span><input type="radio" name="gender" id="radio2" value="2" class="validate[required]" style="opacity: 0;" <?php if($data!=null && $data->gender==='2') {?>checked="checked"<?php } ?> /></span></div>
+							<input type="radio" name="gender" id="radio2" value="2" class="validate[required]"  <?php if($data!=null && $data->gender==='2') {?>checked="checked"<?php } ?> />
 							<label for="radio2">Female</label>
-						</div>
+						</div>	
 					</div>
 					<div class="field-group inlineField">
 						<label for="age">Age:</label>
