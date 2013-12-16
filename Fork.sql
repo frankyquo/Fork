@@ -118,8 +118,8 @@ CREATE TABLE IF NOT EXISTS `restaurantlocation` (
   `location_id` int(11) NOT NULL,
   `branch` varchar(50) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `longitude` int(11) NOT NULL,
-  `latitude` int(11) NOT NULL,
+  `longitude` double(14,10) NOT NULL,
+  `latitude` double(14,10) NOT NULL,
   `phones` varchar(20) NOT NULL,
   `minprice` int(11) NOT NULL,
   `maxprice` int(11) NOT NULL,
@@ -203,3 +203,5 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `hash`, `gender
 INSERT INTO `provider` (`provider_id`, `provider_name`, `provider_image`, `stsrc`, `userchange`, `datechange`) VALUES (1, 'Bank Central Asia', 'images/provider/bca.jpg', 'a', 'hackedhacker', NOW());
 
 INSERT INTO `restaurantlocation` (`restaurant_location_id`, `restaurant_id`, `location_id`, `branch`, `address`, `longitude`, `latitude`, `phones`, `minprice`, `maxprice`, `stsrc`, `userchange`, `datechange`) VALUES (1, '1', '1', 'Abuba Jakarta', 'Green Ville Blok Z no 999', '102.10202', '102.10303', '02122123456', '50000', '300000', 'a', 'hackedhacker', NOW());
+
+INSERT INTO `menu` (`menu_id`, `application_id`, `menu_name`, `menu_link`, `menu_parent_id`, `priority`, `stsrc`, `userchange`, `datechange`) VALUES (NULL, '1', 'User Management', '/site/index', '0', '1', 'a', 'hackedhacker', NOW()), (NULL, '1', 'Application', '/site/application', '1', '2', 'a', 'hackedhacker', NOW());
