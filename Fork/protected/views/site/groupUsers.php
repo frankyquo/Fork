@@ -80,7 +80,8 @@ should you have any questions.</p>
 						</p>
 					</form>
 					<form method="post" >
-						<input type="hidden" name="group_id_new" id="group_id_new" value=""/>
+						<input type="hidden" name="application_id_new" id="application_id_new" value="<?php if($application_id!==0) echo $application_id;?>"/>
+						<input type="hidden" name="group_id_new" id="group_id_new" value="<?php if($group_id!==0) echo $group_id;?>"/>
 						<input type="hidden" name="action" id="action" value="" />
 						<div class="grid-10">
 							<div style="text-align:center;margin:5px auto 5px auto">
@@ -133,7 +134,6 @@ should you have any questions.</p>
 
 <script>
 $('#remove').live ('click', function (e) {
-	$('#group_id_new').val($('#group_id').val());
 	$('#action').val('remove');
 	$.ajax({
 		url:'<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/addGroupUsers',
@@ -156,10 +156,8 @@ $('#remove').live ('click', function (e) {
 			});
 		}
 	});
-	//$(this.form).submit();
 });
 $('#add').live ('click', function (e) {
-	$('#group_id_new').val($('#group_id').val());
 	$('#action').val('add');
 	$.ajax({
 		url:'<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/addGroupUsers',
@@ -182,7 +180,6 @@ $('#add').live ('click', function (e) {
 			});
 		}
 	});
-	//$(this.form).submit();
 });
 $('#application_id').change(function(){
 	$.ajax({
