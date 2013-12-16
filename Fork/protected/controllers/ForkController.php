@@ -460,7 +460,7 @@ class ForkController extends Controller
 	
 	public function actionRestaurantReview()
 	{
-		$this->render('restaurantReview');
+		$this->render('restaurantReview',array('restaurantReviewList'=>RestaurantReview::getAll()));
 	}
 	
 	public function actionRestaurantReviewPop()

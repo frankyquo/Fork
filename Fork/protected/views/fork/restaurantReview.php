@@ -30,7 +30,7 @@ should you have any questions.</p>
 			<div class="widget widget-table">
 				<div class="widget-header">
 					<h3>Locations</h3>
-					<button id="restaurantReviewModal" class="btn btn-primary btn-header"><span class="icon-plus-alt"></span>Add</button>
+					<!--button id="restaurantReviewModal" class="btn btn-primary btn-header"><span class="icon-plus-alt"></span>Add</button-->
 				</div>
 				<div class="widget-content">
 					<table class="table table-bordered table-striped data-table">
@@ -38,230 +38,28 @@ should you have any questions.</p>
 							<tr>
 								<th>Restaurant Name</th>
 								<th>Restaurant Location Name</th>
+								<th>Branch</th>
+								<th>UserName</th>
 								<th>Score</th>
 								<th>Review</th>
-								<th>Modify</th>
 							</tr>
 						</thead>
 						<tbody>
+							<?php
+								foreach($restaurantReviewList as $restaurantReview)
+								{
+							?>
 							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td>
-									<button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button>
-								</td>
+								<td><?=$restaurantReview['restaurant_name']?></td>
+								<td><?=$restaurantReview['location_name']?></td>
+								<td><?=$restaurantReview['branch']?></td>
+								<td><?=$restaurantReview['username']?></td>
+								<td><?=$restaurantReview['score']?></td>
+								<td><?=$restaurantReview['review']?></td>
 							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>	
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Steak Holy Cow</td>
-								<td>Surabaya</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>
-							<tr class="gradeA">
-								<td>Pepper lunch</td>
-								<td>Jakarta</td>
-								<td>100</td>
-								<td>text here</td>
-								<td><button class="btn btn-gray"><span class="icon-pen"></span></button>
-									<button class="btn btn-red"><span class="icon-trash-fill"></span></button></td>
-							</tr>														
+							<?php
+								}
+							?>
 						</tbody>
 					</table>
 				</div>
