@@ -94,7 +94,7 @@ should you have any questions.</p>
 								<td><?=$food['food_category_name']?></td>
 								<td><?=$food['food_name']?></td>
 								<td><?=$food['description']?></td>
-								<td><img src="<?=$food['image']?>" alt="<?=$food['food_name']?>" width="200px" height="200px" /></td>
+								<td><img src="images/foods/<?=$food['image']?>" alt="<?=$food['food_name']?>" width="200px" height="200px" /></td>
 								<td><?=$food['price']?></td>
 								<td>
 									<a href="?r=fork/addFood&id=<?=$food['restaurant_food_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>

@@ -87,7 +87,7 @@ should you have any questions.</p>
 							?>
 							<tr class="gradeA">
 								<td><?=$provider['provider_name']?></td>
-								<td><img src="<?=$provider['provider_image']?>" alt="<?=$provider['provider_name']?>" width="200px" height="200px" /></td>
+								<td><img src="images/providers/<?=$provider['provider_image']?>" alt="<?=$provider['provider_name']?>" width="200px" height="200px" /></td>
 								<td>
 									<a href="?r=fork/addProvider&id=<?=$provider['provider_id']?>"><button class="btn btn-gray"><span class="icon-pen"></span></button></a>
 									<button name2="<?=$provider['provider_id']?>" class="btn btn-red delete-button"><span class="icon-trash-fill"></span></button>
