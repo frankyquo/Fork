@@ -4032,3 +4032,107 @@ Stack trace:
 REQUEST_URI=/Fork/index.php?r=site/groupUsers
 in D:\Fork\protected\controllers\SiteController.php (406)
 in D:\Fork\index.php (13)
+2013/12/16 14:48:54 [error] [php] Undefined variable: groupList (D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php:511)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(286): SiteController->runAction()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#3 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/access
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (511)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/16 15:03:39 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\Fork\Fork\protected\views\site\menuGroupAccess.php:74)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php(515): SiteController->render()
+#3 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAccess()
+#4 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\xampp\htdocs\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/access
+in D:\xampp\htdocs\Fork\Fork\protected\views\site\menuGroupAccess.php (74)
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (515)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/16 15:05:17 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\Fork\Fork\protected\views\site\menuGroupAccess.php:76)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php(515): SiteController->render()
+#3 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAccess()
+#4 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\xampp\htdocs\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/access
+in D:\xampp\htdocs\Fork\Fork\protected\views\site\menuGroupAccess.php (76)
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (515)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/16 15:06:21 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\Fork\Fork\protected\views\site\menuGroupAccess.php:94)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(869): SiteController->renderFile()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(782): SiteController->renderPartial()
+#2 D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php(515): SiteController->render()
+#3 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionAccess()
+#4 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\Fork\framework\web\CController.php(286): SiteController->runAction()
+#6 D:\xampp\htdocs\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#8 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/access
+in D:\xampp\htdocs\Fork\Fork\protected\views\site\menuGroupAccess.php (94)
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (515)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/16 15:39:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "changeGroupAccess".' in D:\xampp\htdocs\Fork\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(270): CController->missingAction('changeGroupAcce...')
+#1 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('changeGroupAcce...')
+#2 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/changeGrou...')
+#3 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/changeGroupAccess
+HTTP_REFERER=http://localhost/Fork/Fork/index.php?r=site/access
+---
+2013/12/16 15:49:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.menugroupacess' doesn't exist. The SQL statement executed was: UPDATE menugroupacess SET status=1, userchange='hackedhacker', datechange=NOW() WHERE group_id='1' AND menu_id='1' AND application_id='1'.
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (539)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/16 15:49:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.menugroupacess' doesn't exist. The SQL statement executed was: UPDATE menugroupacess SET status=1, userchange='hackedhacker', datechange=NOW() WHERE group_id='1' AND menu_id='1' AND application_id='1'' in D:\xampp\htdocs\Fork\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php(539): CDbCommand->execute()
+#1 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionChangeGroupAccess()
+#2 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('changeGroupAcce...')
+#6 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/changeGrou...')
+#7 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/changeGroupAccess
+HTTP_REFERER=http://localhost/Fork/Fork/index.php?r=site/access
+---
+2013/12/16 16:38:26 [error] [php] Undefined variable: resultMenu (D:\xampp\htdocs\Fork\Fork\protected\components\Groups.php:47)
+Stack trace:
+#0 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\Fork\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\Fork\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\Fork\Fork\index.php(13): CWebApplication->run()
+REQUEST_URI=/Fork/Fork/index.php?r=site/addGroup
+in D:\xampp\htdocs\Fork\Fork\protected\components\Groups.php (47)
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (272)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
