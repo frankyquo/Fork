@@ -37,14 +37,22 @@ should you have any questions.</p>
 							<div class="field-group">
 								<label>Application:</label>
 								<div class="field">
-									<select name="cardtype" id="cardtype">
-										<option>Fork</option>
+									<select name="application_id" id="application_id">
+										<option <?php if($application_id==0) { ?>selected="selected" <?php }?> value="0" >Please Select An Application</option>
+										<?php
+											foreach($applicationList as $application)
+											{
+										?>
+										<option value="<?=$application['application_id']?>" <?php if($application_id===$application['application_id']) echo "selected=\"selected\""; ?> ><?=$application['application_name']?></option>
+										<?php
+											}
+										?>
 									</select>
 								</div>
 								<label>Group:</label>
 								<div class="field">
-									<select name="cardtype" id="cardtype">
-										<option>Admin</option>
+									<select name="group_id" id="group_id">
+										<option selected="selected">Please Select An Application First</option>
 									</select>
 								</div>
 							</div>
@@ -142,20 +150,13 @@ should you have any questions.</p>
 </div>
 
 <script>
-$(function () {
-	
-	$('#addMenu').live ('click', function (e) {
-		e.preventDefault ();
-		$.ajax({
-			url:'<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/accessPop',
-			type:'get',
-			success: function(data) {
-				$.modal({
-					title:'Add Menu',
-					html:data
-				});
-			}
-		});
+$('#application_id').change(function(){
+	$.ajax({
+		url:'<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/groupList&id='+$('#application_id').val(),
+		type:'get',
+		success: function(data){
+			$('#group_id').html(data);
+		}
 	});
 });
 
