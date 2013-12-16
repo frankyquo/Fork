@@ -18,6 +18,13 @@ class Groups
 		$groupList = $command->queryAll();
 		return $groupList;
 	}
+	public static function getByApplication($id)
+	{
+		$connection = Yii::app()->db;
+		$command = $connection->createCommand("SELECT group_id, group_name FROM groups WHERE stsrc='a' AND application_id='$id'");
+		$groupList = $command->queryAll();
+		return $groupList;
+	}
 	public static function get($id)
 	{
 		$connection = Yii::app()->db;
