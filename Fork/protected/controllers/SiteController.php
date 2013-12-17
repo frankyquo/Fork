@@ -532,8 +532,6 @@ class SiteController extends Controller
 			
 			if($_POST['checked']!=='checked')
 			{
-				$command = $connection->createCommand("INSERT INTO asd(asd) VALUES ('nilai checked = ".$_POST['checked']."')");
-				$command->execute();
 				$command = $connection->createCommand("UPDATE menugroupaccess SET status=0, userchange='".Yii::app()->user->name."', datechange=NOW() WHERE group_id='".$_POST['group_id']."' AND menu_id='".$_POST['menu_id']."' AND application_id='".$_POST['application_id']."'");
 			}
 			else

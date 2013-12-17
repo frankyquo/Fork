@@ -4196,3 +4196,21 @@ Stack trace:
 REQUEST_URI=/Fork/Fork/Fork/index.php?r=site/changeGroupAccess
 HTTP_REFERER=http://localhost/Fork/Fork/Fork/index.php?r=site/access
 ---
+2013/12/17 03:03:41 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.asd' doesn't exist. The SQL statement executed was: INSERT INTO asd(asd) VALUES ('nilai checked = undefined').
+in D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php (536)
+in D:\xampp\htdocs\Fork\Fork\index.php (13)
+2013/12/17 03:03:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.asd' doesn't exist. The SQL statement executed was: INSERT INTO asd(asd) VALUES ('nilai checked = undefined')' in D:\xampp\htdocs\Fork\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\xampp\htdocs\Fork\Fork\protected\controllers\SiteController.php(536): CDbCommand->execute()
+#1 D:\xampp\htdocs\Fork\framework\web\actions\CInlineAction.php(49): SiteController->actionChangeGroupAccess()
+#2 D:\xampp\htdocs\Fork\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\Fork\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\Fork\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(282): CController->run('changeGroupAcce...')
+#6 D:\xampp\htdocs\Fork\framework\web\CWebApplication.php(141): CWebApplication->runController('site/changeGrou...')
+#7 D:\xampp\htdocs\Fork\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\Fork\Fork\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/Fork/Fork/index.php?r=site/changeGroupAccess
+HTTP_REFERER=http://localhost/Fork/Fork/index.php?r=site/access
+---

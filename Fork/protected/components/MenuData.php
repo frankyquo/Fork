@@ -74,7 +74,7 @@ class MenuData
 		foreach($connection->createCommand("SELECT group_id FROM groups")->queryAll() as $group)
 		{
 			$group_id = $group['group_id'];
-			$command = $connection->createCommand("INSERT INTO menugroupaccess(group_id, menu_id, application_id, status, stsrc, userchange, datechange) VALUES ('".$group_id."', '".$menu_id."', '".$this->application_id."', '1', 'a', '".Yii::app()->user->name."', NOW())");
+			$command = $connection->createCommand("INSERT INTO menugroupaccess(group_id, menu_id, application_id, status, stsrc, userchange, datechange) VALUES ('".$group_id."', '".$menu_id."', '".$this->application_id."', 0, 'a', '".Yii::app()->user->name."', NOW())");
 			$command->execute();
 		}
 		return $resultMenu;

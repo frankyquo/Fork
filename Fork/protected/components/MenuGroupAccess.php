@@ -18,7 +18,7 @@ class MenuGroupAccess
 		if($app_id>0 && $group_id>0)
 		{
 			$connection = Yii::app()->db;
-			$command = $connection->createCommand("SELECT mga.menu_id, menu_name, menu_link, status FROM menu m JOIN menugroupaccess mga ON m.menu_id = mga.menu_id WHERE m.stsrc='a' AND mga.group_id='$group_id' AND mga.application_id='$app_id'");
+			$command = $connection->createCommand("SELECT mga.menu_id, menu_name, menu_link, status FROM menu m JOIN menugroupaccess mga ON m.menu_id = mga.menu_id WHERE m.stsrc='a' AND mga.group_id='$group_id' AND mga.application_id='$app_id' ORDER BY priority ASC");
 			return $command->queryAll();
 		}
 		else
