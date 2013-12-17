@@ -56,6 +56,14 @@ return array(
 		
 		//*
 		'db'=>array(
+			'connectionString' => 'mysql:host=localhost;dbname=fork',
+			'emulatePrepare' => true,
+			'username' => 'developer',
+			'password' => 'developer',
+			'charset' => 'utf8',
+		),//*/
+		/*
+		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=test',
 			'emulatePrepare' => true,
 			'username' => 'root',
